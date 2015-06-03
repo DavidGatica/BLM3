@@ -22,7 +22,10 @@ $unidad = $_POST['unidad'];
 $string2 = $_POST['catalogo'];
 $string3 = $_POST['descripcion'];
 $precio_uni = $_POST['precio_uni'];
+$descuento = $_POST['descuento'];
 $precio_total = $precio_uni * $cantidad;
+
+
 
 
 $string = str_replace(
@@ -36,7 +39,6 @@ $string2 = str_replace(
 $string3 = str_replace(
         array('à', 'ä', 'â', 'ª', 'À', 'Â', 'Ä', 'è', 'ë', 'ê', 'È', 'Ê', 'Ë', 'ì', 'ï', 'î', 'Ì', 'Ï', 'Î', 'ò', 'ö', 'ô', 'Ò', 'Ö', 'Ô', 'ù', 'ü', 'û', 'Ù', 'Û', 'Ü', "'"), array('á', 'a', 'a', 'a', 'Á', 'A', 'A', 'é', 'e', 'e', 'É', 'E', 'E', 'í', 'i', 'i', 'Í', 'I', 'I', 'ó', 'o', 'o', 'Ó', 'O', 'O', 'ú', 'u', 'u', 'Ú', 'U', 'U', "`"), $string3
 );
-
 
 
 $sql = "SELECT `id_partida` FROM Partidas where id_cotizacion='$id_cotizacion' ORDER BY `id_partida` DESC LIMIT 1";
@@ -53,8 +55,8 @@ if ($campo[0] == '') {
 $sql = "INSERT INTO Partidas (no_partida, id_partida, id_cotizacion, partida, cantidad, unidad, catalogo, descripcion, precio_uni, precio_total) VALUES ('$id_partida','$id_partida','$id_cotizacion','$string','$cantidad','$unidad','$string2','$string3','$precio_uni','$precio_total')";
 $resultado = query($sql, $conexion);
 
-
+/*
 if ($resultado) {
     header("Location: partidas.php");
-}
+}*/
 ?>

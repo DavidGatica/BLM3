@@ -1,6 +1,195 @@
+<?php
+session_start();
+
+//incluimos el archivo con las funciones
+                        include ("funciones_mysql.php");
+
+                        if (isset($_SESSION['cancelar'])) {
+                            $cancelar = $_SESSION['cancelar'];
+                        } else {
+                            $cancelar = 0;
+                        }
+
+                        header('Content-Type: text/html; charset=UTF-8');
+						
+						if (isset($_SESSION['empresa'])) 
+							{
+                                $empresa = $_SESSION['empresa'];
+                            }
+
+							else 
+							{
+                                $empresa = $_POST['empresa'];
+                                $_SESSION['empresa'] = $empresa;
+                            }
+
+
+
+//Funcion que conecta la base de datos
+                        $conexion = conectar();
+
+						$sql = "SELECT `id_direccion` FROM `Clientes` WHERE `empresa`='$empresa'";
+							$resultado = query($sql, $conexion);
+							while ($campo = mysql_fetch_array($resultado)) {
+								$id_direccion = $campo['id_direccion'];
+							}
+
+							$sql = "SELECT `id_contacto` FROM `Clientes` WHERE `empresa`='$empresa'";
+							$resultado = query($sql, $conexion);
+							while ($campo = mysql_fetch_array($resultado)) {
+								$id_contacto = $campo['id_contacto'];
+							}
+
+							$sql = "SELECT nombre_c, departamento, telefono1, telefono2, e_mail_c FROM Contacto WHERE id_contacto='$id_contacto'";
+							$resultado = query($sql, $conexion);
+							while ($campo = mysql_fetch_array($resultado)) {
+								$nombre_c = $campo['nombre_c'];
+								$departamento = $campo['departamento'];
+								$telefono1 = $campo['telefono1'];
+								$telefono2 = $campo['telefono2'];
+								$e_mail_c = $campo['e_mail_c'];
+							}
+
+							$sql = "SELECT nombre, apellido_p, apellido_m, e_mail FROM Usuarios WHERE id_usuario='$id_usuario'";
+							$resultado = query($sql, $conexion);
+							while ($campo = mysql_fetch_array($resultado)) {
+								$nombre = $campo['nombre'];
+								$apellido_p = $campo['apellido_p'];
+								$apellido_m = $campo['apellido_m'];
+								$e_mail = $campo['e_mail'];
+							}
+
+							$nombre = "$nombre " . "$apellido_p " . "$apellido_m";
+
+
+							$sql = "SELECT * FROM Direcciones WHERE id_direccion=$id_direccion";
+							$resultado = query($sql, $conexion);
+							while ($campo = @mysql_fetch_array($resultado)) {
+								$calle = $campo['calle'];
+								$num_int = $campo['num_int'];
+								$num_ext = $campo['num_ext'];
+								$municipio = $campo['municipio'];
+								$estado = $campo['estado'];
+								$cp = $campo['cp'];
+								$colonia = $campo['colonia'];
+							}
+
+
+
+							$sql = "SELECT `id_contacto` FROM Clientes WHERE empresa='$empresa'";
+							$resultado = query($sql, $conexion);
+							while ($campo = mysql_fetch_array($resultado)) {
+								$id_contacto = $campo['id_contacto'];
+							}
+
+							$sql = "SELECT `nombre_c`,`departamento`,`telefono1`,`telefono2`,`e_mail_c` FROM Contacto WHERE id_contacto=$id_contacto";
+							$resultado = query($sql, $conexion);
+							while ($campo = @mysql_fetch_array($resultado)) {
+								$nombre_c = $campo['nombre_c'];
+								$departamento = $campo['departamento'];
+								$telefono1 = $campo['telefono1'];
+								$telefono2 = $campo['telefono2'];
+								$e_mail_c = $campo['e_mail_c'];
+							}
+							
+							if (isset($_SESSION['cotiz_usuario'])) 
+							{
+                                $cotiz_usuario = $_SESSION['cotiz_usuario'];
+                            }
+							
+							$sql = "SELECT nombre, apellido_p, apellido_m, e_mail FROM Usuarios WHERE id_usuario='$cotiz_usuario'";
+							$resultado = query($sql, $conexion);
+							while ($campo = mysql_fetch_array($resultado)) {
+								$nombre = $campo['nombre'];
+								$apellido_p = $campo['apellido_p'];
+								$apellido_m = $campo['apellido_m'];
+								$e_mail = $campo['e_mail'];
+							}						
+							
+
+							$nombre = "$nombre " . "$apellido_p " . "$apellido_m";
+							
+							$datos_cliente= $empresa . " " . $num_int . " " .  $num_ext . " " . $colonia . " C.P" . $cp . " " . $municipio . " " . $estado;
+							$datos_contacto= $nombre_c . "\n" . "Departamento de" . $departamento . "\n" . "Tels: ". $telefono1 . ", " . $telefono2 . "\n" . $e_mail_c;
+							$datos_vendedor= $nombre . "\n" . $e_mail ;						
+							
+							
+							
+						if (isset($_SESSION['empresa'])) 
+							{
+                                $empresa = $_SESSION['empresa'];
+                            }
+
+							else 
+							{
+                                $empresa = $_POST['empresa'];
+                                $_SESSION['empresa'] = $empresa;
+                            }
+                       
+						
+						if (!isset($_SESSION['usuario'])) {							
+							$_SESSION['cotizacion'] = 'algo';
+                            header('Location: log_in.php');
+                        }
+						else{
+						
+						 if (isset($_SESSION['cotizacion'])) {
+                            $id_cotizacion = $_SESSION['cotizacion'];
+							 $_SESSION['cotizacion'] = $id_cotizacion;
+                        } 
+						
+						else 
+						{
+							
+							
+						
+                        $id_usuario = $_SESSION['usuario'];
+						
+                            $sql = "SELECT `id_cotizacion` FROM Cotizaciones ORDER BY `id_cotizacion` DESC LIMIT 1";
+                            $resultado = query($sql, $conexion);
+
+                            $campo = mysql_fetch_row($resultado);
+                            $id_cotizacion = $campo[0] + 1;
+
+                            if ($id_cotizacion == "") 
+							{
+                                $id_cotizacion = 1;
+                            }
+
+                            $_SESSION['cotizacion'] = $id_cotizacion;
+							
+                            $fecha = date('y.m.d');
+
+
+                            
+                            
+                            
+//Obtener el id_num_cliente por medio de empresa
+                            $sql = "SELECT * FROM `Clientes` WHERE `empresa` = '$empresa'";
+                            $resultado = query($sql, $conexion);
+                            $campo = mysql_fetch_array($resultado);
+                            $id_num_cliente = $campo['id_num_cliente'];
+                            $id_usuario = $campo['id_usuario'];
+
+
+//Agregar Campos en la Tabla Cotizaciones
+                            $sql = "INSERT INTO Cotizaciones (id_cotizacion, fecha, id_cliente, id_usuario) VALUES ('$id_cotizacion','$fecha','$id_num_cliente','$id_usuario')";
+                            $resultado = query($sql, $conexion);
+                        }}
+						
+						$sql = "SELECT * FROM Datos_Cotizacion WHERE id_cotizacion='$id_cotizacion'";
+							$resultado = query($sql, $conexion);
+							while ($campo = mysql_fetch_array($resultado)) {
+								$prueba = $campo['id_cotizacion'];
+							}
+
+												
+						if(!isset($prueba)){
+							$sqla = "INSERT INTO `Datos_Cotizacion` (id_cotizacion, datos_cliente, datos_contacto, datos_vendedor) values ('$id_cotizacion', '$datos_cliente', '$datos_contacto', '$datos_vendedor')";
+							$resultadoa = query($sqla, $conexion);}
+                        ?>
 <!DOCTYPE html >
 <html>
-
     <head>
         <title>Consecutivo de Cotizaciones</title>
         <meta name="keywords" content="" />
@@ -34,13 +223,16 @@
     <body>
         <div id="page">
             <div id="header">
-                <h1>Bestlight M&eacute;xico S.A. de C.V.</h1>
+                <h1>Best Light México SA de CV</h1>
             </div> <br><br><br>
 
             <div id="modificar">
 
-                <div id="titulo2">Generador de partidas para la cotización.</div>
-                <div align="center" style="color:#5A8D9A;">Favor de no modificar la columna "Contador"</div><br>
+                <div id="titulo2">Generador de partidas para la cotización.<br><br>
+                <?php echo "Cliente actual: $empresa";echo '<br>'; echo "Cotizaci&oacute;n No: $id_cotizacion" ?>
+                <br>Favor de no modificar la columna "Contador"<br>
+				
+				</div>
                 <div class="Tabla_Partidas">
                     <table  class="tablesorter" width="1000">
 
@@ -57,73 +249,12 @@
                             <td width="5%">Contador</td>
                         </tr>
 
-                        <?php
-//Capturamos el usuario autenticado
-                        session_start();
-
-//incluimos el archivo con las funciones
-                        include ("funciones_mysql.php");
-
-                        if (isset($_SESSION['cancelar'])) {
-                            $cancelar = $_SESSION['cancelar'];
-                        } else {
-                            $cancelar = 0;
-                        }
-
-                        if (!isset($_SESSION['usuario'])) {
-                            header('Location: log_in.php');
-                        }
-                        $id_usuario = $_SESSION['usuario'];
-
-                        header('Content-Type: text/html; charset=UTF-8');
-
-
-
-//Funcion que conecta la base de datos
-                        $conexion = conectar();
-
-                        if (isset($_SESSION['cotizacion'])) {
-                            $id_cotizacion = $_SESSION['cotizacion'];
-                        } else {
-                            $sql = "SELECT `id_cotizacion` FROM Cotizaciones ORDER BY `id_cotizacion` DESC LIMIT 1";
-                            $resultado = query($sql, $conexion);
-
-                            $campo = mysql_fetch_row($resultado);
-                            $id_cotizacion = $campo[0] + 1;
-
-                            if ($id_cotizacion == "") {
-                                $id_cotizacion = 1;
-                            }
-
-
-                            $_SESSION['cotizacion'] = $id_cotizacion;
-                            $fecha = date('y.m.d');
-
-
-                            if (isset($_SESSION['empresa'])) {
-                                $empresa = $_SESSION['empresa'];
-                            } else {
-                                $empresa = $_POST['empresa'];
-                                $_SESSION['empresa'] = $empresa;
-                            }
-//Obtener el id_num_cliente por medio de empresa
-                            $sql = "SELECT * FROM `Clientes` WHERE `empresa` = '$empresa'";
-                            $resultado = query($sql, $conexion);
-                            $campo = mysql_fetch_array($resultado);
-                            $id_num_cliente = $campo['id_num_cliente'];
-                            $id_usuario = $campo['id_usuario'];
-
-
-//Agregar Campos en la Tabla Cotizaciones
-                            $sql = "INSERT INTO Cotizaciones (id_cotizacion, fecha, id_cliente, id_usuario) VALUES ('$id_cotizacion','$fecha','$id_num_cliente','$id_usuario')";
-                            $resultado = query($sql, $conexion);
-                        }
-                        ?>
+                        
                         <form action="ordenar.php" method="POST">
                             <?php
                             $siguiente = 0;
 //Obtener Datos de la empresa a cotizar "tabla Partidas"
-                            $sql = "SELECT * FROM `Partidas` WHERE `id_cotizacion`='$id_cotizacion' ORDER BY id_partida";
+                            $sql = "SELECT * FROM `Partidas` WHERE `id_cotizacion`='$id_cotizacion' ORDER BY no_partida";
                             $resultado = query($sql, $conexion);
                             $contador = 1;
                             while ($campo = mysql_fetch_array($resultado)) {
@@ -138,7 +269,7 @@
                                 }
                                 echo
                                 "<tr>" .
-                                "<td>" . "<input type=text name='orden" . $contador . "' value=" . $campo['id_partida'] . " size=4px style='text-align: center;' required>" . "</td>" .
+                                "<td>" . "<input type=text name='orden" . $contador . "' value=" . $campo['no_partida'] . " size=4px style='text-align: center;' required>" . "</td>" .
                                 "<td>" . $campo['partida'] . "</td>";
                                 if ($campo['cantidad'] == 0) {
                                     echo
@@ -162,7 +293,7 @@
                                 }
                                 echo
                                 "<td align='right'> <a href='editar_partida.php?id_partida=" . $id_partida . "' style='margin:0 10px 0 -10px;' ><img src='images/edit.png'></a> <img src='images/delete.png' onclick='Eliminar(" . $id_partida . ")'>  </td>" .
-                                "<td>" . "<input type=text name='catalogo" . $contador . "' value=" . $campo['no_partida'] . " size=4px style='text-align: center;' required>" . "</td>" .
+                                "<td>" . "<input type=text name='catalogoo" . $contador . "' value=" . $campo['id_partida'] . " size=4px style='text-align: center;' required>" . "</td>" .
                                 "</tr>";
                                 $siguiente = $siguiente + 1;
                                 $contador = $contador + 1;
@@ -171,7 +302,7 @@
                     </table>
                 </div>
                 <input type=submit value='Reordenar' id="boton_reordenar">
-                </form>
+						</form>
                 <br><br><br>
 
                 <table>
@@ -195,6 +326,7 @@
 
                     </tr>
                 </table>
+
                 <div id="subir">
 <?php if ($cancelar == 0) { ?>
                         <table border="0" widht="100px" style="margin-top: -48px; float: right;"><tr><td>
@@ -207,6 +339,9 @@
 <?php } ?>
                 </div>
                 <br><br><br>
+				
+
+</html>
 
 
 

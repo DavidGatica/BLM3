@@ -99,7 +99,7 @@ $unidad = "";
 if (isset($_GET['partida'])) {
     $partida = $_GET['partida'];
 } else {
-    $partida = ' ';
+    $partida = '';
 }
 
 if (isset($_GET['catalogo'])) {
@@ -115,7 +115,7 @@ if (isset($_GET['catalogo'])) {
     }
 } else {
     $catalogo = "";
-    $descripcion = " ";
+    $descripcion = "";
 }
 ?>
 
@@ -123,7 +123,7 @@ if (isset($_GET['catalogo'])) {
     <body>
         <div id="page">
             <div id="header">
-                <h1>Bestlight M&eacute;xico S.A. de C.V.</h1>
+                <h1>Best Light México SA de CV</h1>
             </div> <br><br><br>
 
 
@@ -138,7 +138,7 @@ if ($formu == 1) {
             <div id="grande">
                 <tr><td>
 <?php if ($formu == 0 || $formu == 1) { ?>
-                            <div id="izq">Ingrese la partida:</div> <input type="text" class="cajita" name="partida" placeholder="Partida"  size="15" id="partida" value="<?php echo $partida; ?>"><br><br><br>
+                            <div id="izq">Ingrese la partida:</div> <input type="text" class="cajita" name="partida" placeholder="Partida"  size="15" id="partida" value="<?php echo $partida;?>"><br><br><br>
                             <div id="izq">Ingrese el cat&aacute;logo:</div><input type="text" class="cajita" name="catalogo" placeholder="Catálogo"  size="60" id="catalogo" value="<?php echo $catalogo; ?>"> <button onclick="datos1()" id="botonp">Siguiente</button><br><br><br>
 <?php } ?>
                         <?php if ($formu == 1) { ?>
@@ -179,11 +179,13 @@ if ($formu == 1) {
                             <!-- No hay required -->
 
                             <div id="izq">Precio unitario:</div><input type="number" class="cajita" name="precio_uni" placeholder="Precio unitario" id="precio"  size="15" min="0" step="any"><br><br><br>
+							
+							<div id="izq">Descuento (porcentaje):</div><input type="number" class="cajita float_left" name="descuento" placeholder="Descuento" id="precio"  size="15" min="0" step="any"><div class="color">%</div><br><br><br><br>
                         </td></tr>
                 </div>
 
 
-
+				<div id="botonces_centrados">
                 <div align="right"><button id="botonp" align="right" >Aceptar</button><br></div>
 
     <?php
@@ -192,6 +194,6 @@ if ($formu == 1) {
 ?>
 
 
-            <div align="left" <?php if ($formu == 1) { ?>style="margin-top:-45px;" <?php } ?>><a href="partidas.php"><input type="button" value="Atras" id="botonp"></a></div>
+            <div align="left" <?php if ($formu == 1) { ?>style="margin-top:-45px;" <?php } ?>><a href="partidas.php"><input type="button" value="Atras" id="botonp"></a></div></div>
 
 

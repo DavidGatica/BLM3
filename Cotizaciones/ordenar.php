@@ -8,7 +8,7 @@ if (!isset($_SESSION['usuario'])) {
 //incluimos el archivo con las funciones
 include ("funciones_mysql.php");
 
-$conexion = conectar();
+
 
 $orden1 = $_POST['orden1'];
 $orden2 = $_POST['orden2'];
@@ -42,130 +42,124 @@ $orden29 = $_POST['orden29'];
 $orden30 = $_POST['orden30'];
 
 
-$catalogo1 = $_POST['catalogo1'];
-$catalogo2 = $_POST['catalogo2'];
-$catalogo3 = $_POST['catalogo3'];
-$catalogo4 = $_POST['catalogo4'];
-$catalogo5 = $_POST['catalogo5'];
-$catalogo6 = $_POST['catalogo6'];
-$catalogo7 = $_POST['catalogo7'];
-$catalogo8 = $_POST['catalogo8'];
-$catalogo9 = $_POST['catalogo9'];
-$catalogo10 = $_POST['catalogo10'];
-$catalogo11 = $_POST['catalogo11'];
-$catalogo12 = $_POST['catalogo12'];
-$catalogo13 = $_POST['catalogo13'];
-$catalogo14 = $_POST['catalogo14'];
-$catalogo15 = $_POST['catalogo15'];
-$catalogo16 = $_POST['catalogo16'];
-$catalogo17 = $_POST['catalogo17'];
-$catalogo18 = $_POST['catalogo18'];
-$catalogo19 = $_POST['catalogo19'];
-$catalogo20 = $_POST['catalogo20'];
-$catalogo21 = $_POST['catalogo21'];
-$catalogo22 = $_POST['catalogo22'];
-$catalogo23 = $_POST['catalogo23'];
-$catalogo24 = $_POST['catalogo24'];
-$catalogo25 = $_POST['catalogo25'];
-$catalogo26 = $_POST['catalogo26'];
-$catalogo27 = $_POST['catalogo27'];
-$catalogo28 = $_POST['catalogo28'];
-$catalogo29 = $_POST['catalogo29'];
-$catalogo30 = $_POST['catalogo30'];
 
-$sqla = "UPDATE `Partidas` SET id_partida='$orden1' WHERE `no_partida`='$catalogo1'";
-$resultadoa = query($sqla, $conexion);
 
-$sql1 = "UPDATE `Partidas` SET id_partida='$orden2' WHERE `no_partida`='$catalogo2'";
+$catalogo1 = $_POST['catalogoo1'];
+$catalogo2 = $_POST['catalogoo2'];
+$catalogo3 = $_POST['catalogoo3'];
+$catalogo4 = $_POST['catalogoo4'];
+$catalogo5 = $_POST['catalogoo5'];
+$catalogo6 = $_POST['catalogoo6'];
+$catalogo7 = $_POST['catalogoo7'];
+$catalogo8 = $_POST['catalogoo8'];
+$catalogo9 = $_POST['catalogoo9'];
+$catalogo10 = $_POST['catalogoo10'];
+$catalogo11 = $_POST['catalogoo11'];
+$catalogo12 = $_POST['catalogoo12'];
+$catalogo13 = $_POST['catalogoo13'];
+$catalogo14 = $_POST['catalogoo14'];
+$catalogo15 = $_POST['catalogoo15'];
+$catalogo16 = $_POST['catalogoo16'];
+$catalogo17 = $_POST['catalogoo17'];
+$catalogo18 = $_POST['catalogoo18'];
+$catalogo19 = $_POST['catalogoo19'];
+$catalogo20 = $_POST['catalogoo20'];
+$catalogo21 = $_POST['catalogoo21'];
+$catalogo22 = $_POST['catalogoo22'];
+$catalogo23 = $_POST['catalogoo23'];
+$catalogo24 = $_POST['catalogoo24'];
+$catalogo25 = $_POST['catalogoo25'];
+$catalogo26 = $_POST['catalogoo26'];
+$catalogo27 = $_POST['catalogoo27'];
+$catalogo28 = $_POST['catalogoo28'];
+$catalogo29 = $_POST['catalogoo29'];
+$catalogo30 = $_POST['catalogoo30'];
+
+echo $orden10.'<br>'.$catalogo10;
+
+$conexion = conectar();
+
+
+$sql1 = "UPDATE `Partidas` SET no_partida='$orden1' WHERE `id_partida`='$catalogo1'";
 $resultado1 = query($sql1, $conexion);
 
-$sql2 = "UPDATE `Partidas` SET id_partida='$orden3' WHERE `no_partida`='$catalogo3'";
-$resultado2 = query($sql2, $conexion);
+$sql2 = "UPDATE `Partidas` SET no_partida='$orden2' WHERE `id_partida`='$catalogo2'";
+$resultadoa = query($sql2, $conexion);
 
-$sql3 = "UPDATE `Partidas` SET id_partida='$orden4' WHERE `no_partida`='$catalogo4'";
-$resultado3 = query($sql3, $conexion);
+$sql3 = "UPDATE `Partidas` SET no_partida='$orden3' WHERE `id_partida`='$catalogo3'";
+$resultadoa = query($sql3, $conexion);
 
-$sql4 = "UPDATE `Partidas` SET id_partida='$orden5' WHERE `no_partida`='$catalogo5'";
-$resultado4 = query($sql4, $conexion);
+$sql4 = "UPDATE `Partidas` SET no_partida='$orden4' WHERE `id_partida`='$catalogo4'";
+$resultadoa = query($sql4, $conexion);
 
-$sql5 = "UPDATE `Partidas` SET id_partida='$orden6' WHERE `no_partida`='$catalogo6'";
-$resultado5 = query($sql5, $conexion);
+$sql5 = "UPDATE `Partidas` SET no_partida='$orden5' WHERE `id_partida`='$catalogo5'";
+$resultadoa = query($sql5, $conexion);
 
-$sql6 = "UPDATE `Partidas` SET id_partida='$orden7' WHERE `no_partida`='$catalogo7'";
-$resultado6 = query($sql6, $conexion);
+$sql6 = "UPDATE `Partidas` SET no_partida='$orden6' WHERE `id_partida`='$catalogo6'";
+$resultadoa = query($sql6, $conexion);
 
-$sql7 = "UPDATE `Partidas` SET id_partida='$orden8' WHERE `no_partida`='$catalogo8'";
-$resultado7 = query($sql7, $conexion);
+$sql7 = "UPDATE `Partidas` SET no_partida='$orden7' WHERE `id_partida`='$catalogo7'";
+$resultadoa = query($sql7, $conexion);
 
-$sql8 = "UPDATE `Partidas` SET id_partida='$orden9' WHERE `no_partida`='$catalogo9'";
-$resultado8 = query($sql8, $conexion);
+$sql8 = "UPDATE `Partidas` SET no_partida='$orden8' WHERE `id_partida`='$catalogo8'";
+$resultadoa = query($sql8, $conexion);
 
-$sql9 = "UPDATE `Partidas` SET id_partida='$orden10' WHERE `no_partida`='$catalogo10'";
-$resultado9 = query($sql9, $conexion);
+$sql9 = "UPDATE `Partidas` SET no_partida='$orden9' WHERE `id_partida`='$catalogo9'";
+$resultadoa = query($sql9, $conexion);
 
-$sql10 = "UPDATE `Partidas` SET id_partida='$orden11' WHERE `no_partida`='$catalogo11'";
-$resultado10 = query($sql10, $conexion);
+$sql10 = "UPDATE `Partidas` SET no_partida='$orden10' WHERE `id_partida`='$catalogo10'";
+$resultadoa = query($sql10, $conexion);
 
-$sql11 = "UPDATE `Partidas` SET id_partida='$orden12' WHERE `no_partida`='$catalogo12'";
-$resultado11 = query($sql11, $conexion);
+$sql11 = "UPDATE `Partidas` SET no_partida='$orden11' WHERE `id_partida`='$catalogo11'";
+$resultadoa = query($sql11, $conexion);
 
-$sql12 = "UPDATE `Partidas` SET id_partida='$orden13' WHERE `no_partida`='$catalogo13'";
-$resultado12 = query($sql12, $conexion);
+$sql12 = "UPDATE `Partidas` SET no_partida='$orden12' WHERE `id_partida`='$catalogo12'";
+$resultadoa = query($sql12, $conexion);
 
-$sql13 = "UPDATE `Partidas` SET id_partida='$orden14' WHERE `no_partida`='$catalogo14'";
-$resultado13 = query($sql13, $conexion);
+$sql13 = "UPDATE `Partidas` SET no_partida='$orden13' WHERE `id_partida`='$catalogo13'";
+$resultadoa = query($sql13, $conexion);
 
-$sql14 = "UPDATE `Partidas` SET id_partida='$orden15' WHERE `no_partida`='$catalogo15'";
-$resultado14 = query($sql14, $conexion);
+$sql14 = "UPDATE `Partidas` SET no_partida='$orden14' WHERE `id_partida`='$catalogo14'";
+$resultadoa = query($sql14, $conexion);
 
-$sql15 = "UPDATE `Partidas` SET id_partida='$orden16' WHERE `no_partida`='$catalogo16'";
-$resultado15 = query($sql15, $conexion);
+$sql15 = "UPDATE `Partidas` SET no_partida='$orden15' WHERE `id_partida`='$catalogo15'";
+$resultadoa = query($sql15, $conexion);
 
-$sql16 = "UPDATE `Partidas` SET id_partida='$orden17' WHERE `no_partida`='$catalogo17'";
-$resultado16 = query($sql16, $conexion);
+$sql16 = "UPDATE `Partidas` SET no_partida='$orden16' WHERE `id_partida`='$catalogo16'";
+$resultadoa = query($sql16, $conexion);
 
-$sql17 = "UPDATE `Partidas` SET id_partida='$orden18' WHERE `no_partida`='$catalogo18'";
-$resultado17 = query($sql17, $conexion);
+$sql17 = "UPDATE `Partidas` SET no_partida='$orden17' WHERE `id_partida`='$catalogo17'";
+$resultadoa = query($sql17, $conexion);
 
-$sql18 = "UPDATE `Partidas` SET id_partida='$orden19' WHERE `no_partida`='$catalogo19'";
-$resultado18 = query($sql18, $conexion);
+$sql18 = "UPDATE `Partidas` SET no_partida='$orden18' WHERE `id_partida`='$catalogo18'";
+$resultadoa = query($sql18, $conexion);
 
-$sql19 = "UPDATE `Partidas` SET id_partida='$orden20' WHERE `no_partida`='$catalogo20'";
-$resultado19 = query($sql19, $conexion);
+$sql19 = "UPDATE `Partidas` SET no_partida='$orden19' WHERE `id_partida`='$catalogo19'";
+$resultadoa = query($sql19, $conexion);
 
-$sql20 = "UPDATE `Partidas` SET id_partida='$orden21' WHERE `no_partida`='$catalogo21'";
-$resultado20 = query($sql20, $conexion);
+$sql20 = "UPDATE `Partidas` SET no_partida='$orden20' WHERE `id_partida`='$catalogo20'";
+$resultadoa = query($sql2, $conexion);
 
-$sql21 = "UPDATE `Partidas` SET id_partida='$orden22' WHERE `no_partida`='$catalogo22'";
-$resultado21 = query($sql21, $conexion);
-
-$sql22 = "UPDATE `Partidas` SET id_partida='$orden23' WHERE `no_partida`='$catalogo23'";
-$resultado22 = query($sql22, $conexion);
-
-$sql23 = "UPDATE `Partidas` SET id_partida='$orden24' WHERE `no_partida`='$catalogo24'";
-$resultado23 = query($sql23, $conexion);
-
-$sql24 = "UPDATE `Partidas` SET id_partida='$orden25' WHERE `no_partida`='$catalogo25'";
-$resultado24 = query($sql24, $conexion);
-
-$sql25 = "UPDATE `Partidas` SET id_partida='$orden26' WHERE `no_partida`='$catalogo26'";
-$resultado25 = query($sql25, $conexion);
-
-$sql26 = "UPDATE `Partidas` SET id_partida='$orden27' WHERE `no_partida`='$catalogo27'";
-$resultado26 = query($sql26, $conexion);
-
-$sql27 = "UPDATE `Partidas` SET id_partida='$orden28' WHERE `no_partida`='$catalogo28'";
-$resultado27 = query($sql27, $conexion);
-
-$sql28 = "UPDATE `Partidas` SET id_partida='$orden29' WHERE `no_partida`='$catalogo29'";
-$resultado28 = query($sql28, $conexion);
-
-$sql29 = "UPDATE `Partidas` SET id_partida='$orden30' WHERE `no_partida`='$catalogo30'";
-$resultado29 = query($sql29, $conexion);
 ?>
-
+<!DOCTYPE html >
 <html>
+<head>
+        <title>Consecutivo de Cotizaciones</title>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="en" />
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
 
+    <body>
+        <div id="page">
+            <div id="header">
+                <h1>Artefactos Lumínicos SA de CV</h1>
+            </div>
+
+            <div id="main">
+                <div class="ic"></div>
     <script type="text/javascript">
         function regresar() {
             alert("El ordenamiento se ha realizado");

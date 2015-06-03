@@ -49,6 +49,7 @@ $apellido_m = $campo['apellido_m'];
             if ($cont % 2 == 0) {
                 $id_usuario = $campo['id_usuario'];
                 $id_direccion = $campo['id_direccion'];
+				$id_contacto = $campo['id_contacto'];
                 $sqla = "SELECT * FROM Direcciones WHERE id_direccion='$id_direccion'";
                 $resultadoa = query($sqla, $conexion);
                 $campoa = mysql_fetch_array($resultadoa);
@@ -62,7 +63,7 @@ $apellido_m = $campo['apellido_m'];
 
 
 
-                $id_contacto = $campo['id_contacto'];
+                
                 $sqlb = "SELECT * FROM Contacto WHERE id_contacto='$id_contacto'";
                 $resultadob = query($sqlb, $conexion);
                 $campob = mysql_fetch_array($resultadob);
@@ -90,16 +91,16 @@ $apellido_m = $campo['apellido_m'];
                 echo "<tr>";
             } else {
                 $id_direccion = $campo['id_direccion'];
-                $sqla = "SELECT * FROM Direcciones WHERE id_direccion='$id_direccion'";
-                $resultadoa = query($sqla, $conexion);
-                $campoa = mysql_fetch_array($resultadoa);
-                $calle = $campoa['calle'];
-                $num_int = $campoa['num_int'];
-                $num_ext = $campoa['num_ext'];
-                $colonia = $campoa['colonia'];
-                $municipio = $campoa['municipio'];
-                $estado = $campoa['estado'];
-                $cp = $campoa['cp'];
+                $sql6 = "SELECT * FROM Direcciones WHERE id_direccion='$id_direccion'";
+                $resultado6 = query($sql6, $conexion);
+                $campo6 = mysql_fetch_array($resultado6);
+                $calle = $campo6['calle'];
+                $num_int = $campo6['num_int'];
+                $num_ext = $campo6['num_ext'];
+                $colonia = $campo6['colonia'];
+                $municipio = $campo6['municipio'];
+                $estado = $campo6['estado'];
+                $cp = $campo6['cp'];
 
                 echo
                 "<tr>" .

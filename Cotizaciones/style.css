@@ -1312,6 +1312,20 @@ select {
     color: #5A8D9A;
     margin-right:60px;
 }
+
+.color {
+    font-size: 16px;
+    font-weight: bold;
+    color: #5A8D9A;
+    margin-left:1em;
+	float: left;
+}
+
+.float_left
+{
+	float: left;
+}
+
 #der {
     float: left;
     font-family: sans-serif;
@@ -1412,7 +1426,7 @@ select {
 hr.raya {
     border: 0;
     height: 0; /* Firefox... */ 
-    box-shadow: 0 0 10px 1px black;
+    box-shadow: 0 0 5px 1px black;
 } 
 hr.raya:after { /* Not really supposed to work, but does */ 
     content: "\00a0"; /* Prevent margin collapse */ } 
@@ -1548,4 +1562,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84cee0', end
     cursor:pointer;
 
 }
+
+.centrar
+{
+
+	margin: 0 auto;
+	text-align: center;
+
+}
+
+#botones_centrados
+{
+	margin: 0 auto;
+	text-align: center;
+	width: 10em;
+}
+
 
