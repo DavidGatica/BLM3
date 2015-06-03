@@ -116,7 +116,7 @@ while ($campo = mysql_fetch_array($resultado)) {
 
             <div id="header">
                 <img id="alsa" src="images/logoe1-2.png" width="120px">
-                <h1> <style> h1 {margin-left: 200px;}</style>Bestlight M&eacute;xico S.A. de C.V.</h1>
+                <h1> <style> h1 {margin-left: 200px;}</style>Best Light México S.A. de C.V.</h1>
                 <a  href="cerrar_sesion.php"><button id="boton_cerrar">Cerrar Sesión</button></a>
 
 
@@ -135,7 +135,7 @@ while ($campo = mysql_fetch_array($resultado)) {
 
                     <div id="menu2" style="margin-top: 100px;">
                         <ul>
-                            <li>  <img src="Imagenes/64px/1clientes.png" width="20px"><span><?php
+                            <li>  <img src="images/1clientes.png" width="20px"><span><?php
                                     if ($seccion == "alta" || $seccion == "baja" || $seccion == "cambio") {
                                         echo "<div id=seleccion>";
                                     }
@@ -145,15 +145,15 @@ while ($campo = mysql_fetch_array($resultado)) {
                                     }
                                     ?></span> 
                                 <ul>
-                                    <li onclick="agregar_c()"><img src="Imagenes/64px/2anadir.png" width="20px"><span >Agregar cliente</span> </li>
-                                    <li onclick="eliminar_c()"><img src="Imagenes/64px/1eliminar.png" width="20px"><span>Eliminar cliente</span></li>
-                                    <li onclick="modificar_c()"><img src="Imagenes/64px/1modificar.png" width="20px"><span>Modificar cliente</span></li>
-                                    <li onclick="visualizar_c()"><img src="Imagenes/64px/1ver.png" width="20px"><span>Visualizar clientes</span></li>
+                                    <li onclick="agregar_c()"><img src="images/2anadir.png" width="20px"><span >Agregar cliente</span> </li>
+                                    <li onclick="eliminar_c()"><img src="images/1eliminar.png" width="20px"><span>Eliminar cliente</span></li>
+                                    <li onclick="modificar_c()"><img src="images/1modificar.png" width="20px"><span>Modificar cliente</span></li>
+                                    <li onclick="visualizar_c()"><img src="images/1ver.png" width="20px"><span>Visualizar clientes</span></li>
                                 </ul>               
                             </li> 
 
 
-                            <li onclick="cotizaciones()"><img src="Imagenes/64px/1cotizaciones.png" width="20px"><span><?php
+                            <li onclick="cotizaciones()"><img src="images/1cotizaciones.png" width="20px"><span><?php
                                     if ($seccion == "cotizaciones") {
                                         echo "<div id=seleccion>";
                                     }
@@ -163,7 +163,7 @@ while ($campo = mysql_fetch_array($resultado)) {
                                     }
                                     ?></span></li>
 
-                            <li onclick="cotizar()"><img src="Imagenes/64px/1generar.png" width="20px"><span><?php
+                            <li onclick="cotizar()"><img src="images/1generar.png" width="20px"><span><?php
                                     if ($seccion == "cotizar") {
                                         echo "<div id=seleccion>";
                                     }
@@ -174,7 +174,7 @@ while ($campo = mysql_fetch_array($resultado)) {
                                     ?></span></li>
 
 
-                            <li><img src="Imagenes/64px/1usuarios.png" width="15px"><span><?php
+                            <li><img src="images/1usuarios.png" width="15px"><span><?php
                                     if ($seccion == "altaus" || $seccion == "bajaus" || $seccion == "cambious") {
                                         echo "<div id=seleccion>";
                                     }
@@ -184,13 +184,13 @@ while ($campo = mysql_fetch_array($resultado)) {
                                     }
                                     ?></span>
                                 <ul>
-                                    <li onclick="agregar_u()"><img src="Imagenes/64px/2anadir.png" width="20px"><span>Agregar usuario</span></li>
-                                    <li onclick="eliminar_u()"><img src="Imagenes/64px/1eliminar.png" width="20px"><span>Eliminar usuario</span></li>
-                                    <li onclick="modificar_u()"><img src="Imagenes/64px/1modificar.png" width="20px"><span>Modificar usuario</span></li>
+                                    <li onclick="agregar_u()"><img src="images/2anadir.png" width="20px"><span>Agregar usuario</span></li>
+                                    <li onclick="eliminar_u()"><img src="images/1eliminar.png" width="20px"><span>Eliminar usuario</span></li>
+                                    <li onclick="modificar_u()"><img src="images/1modificar.png" width="20px"><span>Modificar usuario</span></li>
                                 </ul>       
                             </li>
 
-                            <li><img src="Imagenes/64px/1productos.png" width="17px"><span> <?php
+                            <li><img src="images/1productos.png" width="17px"><span> <?php
                                     if ($seccion == "alta_p" || $seccion == "baja_p" || $seccion == "cambio_p") {
                                         echo "<div id=seleccion>";
                                     }
@@ -200,10 +200,10 @@ while ($campo = mysql_fetch_array($resultado)) {
                                     }
                                     ?></span>
                                 <ul>
-                                    <li onclick="agregar_p()"><img src="Imagenes/64px/2anadir.png" width="20px"><span>Agregar producto</span></li>
-                                    <li onclick="eliminar_p()"><img src="Imagenes/64px/1eliminar.png" width="20px"><span>Eliminar producto</span></li>
-                                    <li onclick="modificar_p()"><img src="Imagenes/64px/1modificar.png" width="20px"><span>Modificar producto</span></li>
-                                    <li onclick="ver_p()"><img src="Imagenes/64px/1ver.png" width="20px"><span>Visualizar productos</span></li>
+                                    <li onclick="agregar_p()"><img src="images/2anadir.png" width="20px"><span>Agregar producto</span></li>
+                                    <li onclick="eliminar_p()"><img src="images/1eliminar.png" width="20px"><span>Eliminar producto</span></li>
+                                    <li onclick="modificar_p()"><img src="images/1modificar.png" width="20px"><span>Modificar producto</span></li>
+                                    <li onclick="ver_p()"><img src="images/1ver.png" width="20px"><span>Visualizar productos</span></li>
                                 </ul>       
                             </li>
                         </ul>
