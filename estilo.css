@@ -1,6 +1,4 @@
-body{
-margin: 0;
-padding: 0;
+html,body{
 height:100%;
 }
 
@@ -202,20 +200,21 @@ border-radius:25px;
 	margin: 1em;
 }
 
+
 .break
 {
 	clear: both;
 }
 
-#encabezado_negro
-{
-	width: 100%;
-	background-color: #717171;
-	height: 5em;
+.texto7{
+text-shadow: grey 1px -2px 1.5px; 
+	font-family:DroidSansRegular;
+	font-size: 15pt;  
+	color: #000000;
+	position:relative;
+	top:-60px;
+	left:-40px;
+	text-decoration: overline; 
+	
+	
 }
-
-.espacio
-{
-	margin: 0.5em 0 0 0;
-}
-
