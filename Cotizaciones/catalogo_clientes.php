@@ -90,6 +90,19 @@ $apellido_m = $campo['apellido_m'];
                 }
                 echo "<tr>";
             } else {
+				$id_usuario = $campo['id_usuario'];
+                $id_direccion = $campo['id_direccion'];
+				$id_contacto = $campo['id_contacto'];
+				
+				$sqlc = "SELECT * FROM Contacto WHERE id_contacto='$id_contacto'";
+                $resultadoc = query($sqlc, $conexion);
+                $campoc = mysql_fetch_array($resultadoc);
+                $nombre_c = $campoc['nombre_c'];
+                $departamento = $campoc['departamento'];
+                $telefono1 = $campoc['telefono1'];
+                $telefono2 = $campoc['telefono2'];
+                $e_mail_c = $campoc['e_mail_c'];
+				
                 $id_direccion = $campo['id_direccion'];
                 $sql6 = "SELECT * FROM Direcciones WHERE id_direccion='$id_direccion'";
                 $resultado6 = query($sql6, $conexion);
