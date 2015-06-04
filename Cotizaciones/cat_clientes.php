@@ -34,9 +34,9 @@ if (!isset($_SESSION['usuario'])) {
     <body>
 
 
-        <div style="margin-left:450px;" id=tform>
-            <img align="center" src="images/logoe1-2.png" width="80">
-            Herramienta de visualizacion de clientes
+        <div style="margin: 0 auto; width: 500px;" id=tform>
+            <img align="center" src="images/gifalsa.png" width="100px">
+            <div align="right">Herramienta de visualizacion de clientes</div>
         </div>
 
         <div align="center" style="margin-top:30px;">

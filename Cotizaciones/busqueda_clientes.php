@@ -25,8 +25,9 @@ $apellido_m = $campo['apellido_m'];
     <table width="1000px"> 
         <tr>
         <thead>
-        <th width='4%'><h3>RFC</h3></th>
+        <th width='4%'><h3>No.</h3></th>        
         <th width='10%'><h3>Empresa</h3></th>
+		<th width='4%'><h3>RFC</h3></th>
         <th width='43%'><h3>Dirección</h3></th>
         <th width='43%'><h3>Contacto</h3></th>
         <?php
@@ -37,7 +38,9 @@ $apellido_m = $campo['apellido_m'];
         </thead>
         </tr>
         <?php
-        echo "<div align='center'><div id='caja_cat'>Clientes de <br>$nombre $apellido_p $apellido_m</div></div><br>";
+		if ($permiso1 == 2) {
+        echo "<div align='center'><div id='caja_cat' >Clientes de <br>$nombre $apellido_p $apellido_m</div></div><br>";
+		}
         $cont = 2;
         if ($permiso == 2) {
             $sql = "select * from Clientes where id_cliente like '%$rfc%' AND id_usuario = '$usuario' AND desactivado = 0";
@@ -48,22 +51,22 @@ $apellido_m = $campo['apellido_m'];
         echo "<div align='center'><div id='caja_cat2'>Busqueda: $rfc</div></div><br> ";
         while ($campo = mysql_fetch_array($resultado)) {
             if ($cont % 2 == 0) {
-                $id_usuario = $campo['id_usuario'];
+				$id_usuario = $campo['id_usuario'];
                 $id_direccion = $campo['id_direccion'];
+				$id_contacto = $campo['id_contacto'];
+				$permiso1 = $campo['permiso'];
+				
+				
                 $sqla = "SELECT * FROM Direcciones WHERE id_direccion='$id_direccion'";
                 $resultadoa = query($sqla, $conexion);
                 $campoa = mysql_fetch_array($resultadoa);
-                $calle = $campoa['calle'];
-                $num_int = $campoa['num_int'];
-                $num_ext = $campoa['num_ext'];
+                $calle_num = $campoa['calle_num'];
                 $colonia = $campoa['colonia'];
                 $municipio = $campoa['municipio'];
                 $estado = $campoa['estado'];
                 $cp = $campoa['cp'];
 
-
-
-                $id_contacto = $campo['id_contacto'];
+                
                 $sqlb = "SELECT * FROM Contacto WHERE id_contacto='$id_contacto'";
                 $resultadob = query($sqlb, $conexion);
                 $campob = mysql_fetch_array($resultadob);
@@ -78,38 +81,52 @@ $apellido_m = $campo['apellido_m'];
                 $campo5 = mysql_fetch_array($resultado5);
                 $nombre_usuario = "" . $campo5['nombre'] . " " . $campo5['apellido_p'];
 
+
                 echo
                 "<tr>" .
-                "<td id='sombra2'>" . $campo['id_cliente'] . "</td>" .
-                "<td id='sombra2'>" . $campo['empresa'] . "</td>" .
-                "<td id='sombra2'>" . $calle . "--" . $num_int . "--" . $num_ext . "--" . $colonia . "--" . $municipio . "--" . $estado . "--" . $cp . "</td>" .
+				"<td id='sombra2'>" . $campo['id_num_cliente'] . "</td>" .
+				"<td id='sombra2'>" . $campo['empresa'] . "</td>" .
+                "<td id='sombra2'>" . $campo['id_cliente'] . "</td>" .                
+                "<td id='sombra2'>" . $calle_num . "--" . $colonia . "--" . $municipio . "--" . $estado . "--" . $cp . "</td>" .
                 "<td id='sombra2'>" . $nombre_c . "-" . $departamento . "--" . $telefono1 . "--" . $telefono2 . "--" . $e_mail_c . "</td>";
                 if ($permiso == 1) {
-                    echo "<td id='sombra2'>" . $nombre_usuario . "</td>";
+                    echo "<td id='sombra2'>" . $permiso1 . " " .$nombre_usuario . "</td>";
                 }
                 echo "<tr>";
             } else {
+				
+				 $id_usuario = $campo['id_usuario'];
+                $id_direccion = $campo['id_direccion'];
+				$id_contacto = $campo['id_contacto'];
 
                 $id_direccion = $campo['id_direccion'];
                 $sqla = "SELECT * FROM Direcciones WHERE id_direccion='$id_direccion'";
                 $resultadoa = query($sqla, $conexion);
                 $campoa = mysql_fetch_array($resultadoa);
-                $calle = $campoa['calle'];
-                $num_int = $campoa['num_int'];
-                $num_ext = $campoa['num_ext'];
+                $calle_num = $campoa['calle_num'];
                 $colonia = $campoa['colonia'];
                 $municipio = $campoa['municipio'];
                 $estado = $campoa['estado'];
                 $cp = $campoa['cp'];
+				
+				$sqlb = "SELECT * FROM Contacto WHERE id_contacto='$id_contacto'";
+                $resultadob = query($sqlb, $conexion);
+                $campob = mysql_fetch_array($resultadob);
+                $nombre_c = $campob['nombre_c'];
+                $departamento = $campob['departamento'];
+                $telefono1 = $campob['telefono1'];
+                $telefono2 = $campob['telefono2'];
+                $e_mail_c = $campob['e_mail_c'];
 
                 echo
                 "<tr>" .
+				"<td id='sombra'>" . $campo['id_num_cliente'] . "</td>" .
+				"<td id='sombra'>" . $campo['empresa'] . "</td>" .
                 "<td id='sombra'>" . $campo['id_cliente'] . "</td>" .
-                "<td id='sombra'>" . $campo['empresa'] . "</td>" .
-                "<td id='sombra'>" . $calle . "--" . $num_int . "--" . $num_ext . "--" . $colonia . "--" . $municipio . "--" . $estado . "--" . $cp . "</td>" .
+                "<td id='sombra'>" . $calle_num . "--" . $colonia . "--" . $municipio . "--" . $estado . "--" . $cp . "</td>" .
                 "<td id='sombra'>" . $nombre_c . "-" . $departamento . "--" . $telefono1 . "--" . $telefono2 . "--" . $e_mail_c . "</td>";
                 if ($permiso == 1) {
-                    echo "<td id='sombra'>" . $nombre_usuario . "</td>";
+                    echo "<td id='sombra2'>" . $permiso1 . " " .$nombre_usuario . "</td>";
                 }
                 echo "<tr>";
             }

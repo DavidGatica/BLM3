@@ -1578,4 +1578,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84cee0', end
 	width: 10em;
 }
 
+.break
+{
+	clear: both;
+}
+
 

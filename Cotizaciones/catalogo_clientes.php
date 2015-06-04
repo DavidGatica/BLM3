@@ -14,22 +14,23 @@ $usuario = $_SESSION['usuario'];
 $sql = "SELECT nombre, apellido_p, apellido_m, permiso FROM Usuarios WHERE id_usuario = '$usuario'";
 $resultado = query($sql, $conexion);
 $campo = mysql_fetch_array($resultado);
-$permiso = $campo['permiso'];
+$permiso1 = $campo['permiso'];
 $nombre = $campo['nombre'];
 $apellido_p = $campo['apellido_p'];
 $apellido_m = $campo['apellido_m'];
 ?>
 
 <div class="datagrid">
-    <table width="1000px"> 
+    <table width="50em"> 
         <tr>
         <thead>
-        <th width='4%'><h3>RFC</h3></th>
+        <th width='4%'><h3>No.</h3></th>        
         <th width='10%'><h3>Empresa</h3></th>
+		<th width='4%'><h3>RFC</h3></th>
         <th width='43%'><h3>Dirección</h3></th>
         <th width='43%'><h3>Contacto</h3></th>
         <?php
-        if ($permiso == 1) {
+        if ($permiso1 == 1) {
             echo "<th width='10%'><h3>Vendedor</h";
         }
         ?>
@@ -37,7 +38,7 @@ $apellido_m = $campo['apellido_m'];
         </tr>
         <?php
         $cont = 2;
-        if ($permiso == 2) {
+        if ($permiso1 == 2) {
             echo "<div align='center'><div id='caja_cat' align='center'>Clientes de <br>$nombre $apellido_p $apellido_m:</div></div><br>";
             $sql = "SELECT * FROM Clientes WHERE id_usuario = '$usuario' and desactivado='0'";
         } else {
@@ -50,10 +51,14 @@ $apellido_m = $campo['apellido_m'];
                 $id_usuario = $campo['id_usuario'];
                 $id_direccion = $campo['id_direccion'];
 				$id_contacto = $campo['id_contacto'];
+				$id_num_cliente = $campo['id_num_cliente'];
+				$permiso = $campo['permiso'];
+				
+				
                 $sqla = "SELECT * FROM Direcciones WHERE id_direccion='$id_direccion'";
                 $resultadoa = query($sqla, $conexion);
                 $campoa = mysql_fetch_array($resultadoa);
-                $calle = $campoa['calle'];
+                $calle_num = $campoa['calle_num'];
                 $num_int = $campoa['num_int'];
                 $num_ext = $campoa['num_ext'];
                 $colonia = $campoa['colonia'];
@@ -81,12 +86,13 @@ $apellido_m = $campo['apellido_m'];
 
                 echo
                 "<tr>" .
-                "<td id='sombra2'>" . $campo['id_cliente'] . "</td>" .
-                "<td id='sombra2'>" . $campo['empresa'] . "</td>" .
-                "<td id='sombra2'>" . $calle . "--" . $num_int . "--" . $num_ext . "--" . $colonia . "--" . $municipio . "--" . $estado . "--" . $cp . "</td>" .
+                "<td id='sombra2'>" . $campo['id_num_cliente'] . "</td>" .
+				"<td id='sombra2'>" . $campo['empresa'] . "</td>" .
+				"<td id='sombra2'>" . $campo['id_cliente'] . "</td>" .
+                "<td id='sombra2'>" . $calle_num . "--" . $colonia . "--" . $municipio . "--" . $estado . "--" . $cp . "</td>" .
                 "<td id='sombra2'>" . $nombre_c . "-" . $departamento . "--" . $telefono1 . "--" . $telefono2 . "--" . $e_mail_c . "</td>";
-                if ($permiso == 1) {
-                    echo "<td id='sombra2'>" . $nombre_usuario . "</td>";
+                if ($permiso1 == 1) {
+                    echo "<td id='sombra2'>" . $permiso . " " .$nombre_usuario . "</td>";
                 }
                 echo "<tr>";
             } else {
@@ -107,7 +113,7 @@ $apellido_m = $campo['apellido_m'];
                 $sql6 = "SELECT * FROM Direcciones WHERE id_direccion='$id_direccion'";
                 $resultado6 = query($sql6, $conexion);
                 $campo6 = mysql_fetch_array($resultado6);
-                $calle = $campo6['calle'];
+                $calle_num = $campo6['calle_num'];
                 $num_int = $campo6['num_int'];
                 $num_ext = $campo6['num_ext'];
                 $colonia = $campo6['colonia'];
@@ -117,12 +123,13 @@ $apellido_m = $campo['apellido_m'];
 
                 echo
                 "<tr>" .
-                "<td id='sombra'>" . $campo['id_cliente'] . "</td>" .
+				"<td id='sombra2'>" . $campo['id_num_cliente'] . "</td>" .				
                 "<td id='sombra'>" . $campo['empresa'] . "</td>" .
-                "<td id='sombra'>" . $calle . "--" . $num_int . "--" . $num_ext . "--" . $colonia . "--" . $municipio . "--" . $estado . "--" . $cp . "</td>" .
+                "<td id='sombra'>" . $campo['id_cliente'] . "</td>" .
+                "<td id='sombra'>" . $calle_num . "--" . $colonia . "--" . $municipio . "--" . $estado . "--" . $cp . "</td>" .
                 "<td id='sombra'>" . $nombre_c . "-" . $departamento . "--" . $telefono1 . "--" . $telefono2 . "--" . $e_mail_c . "</td>";
-                if ($permiso == 1) {
-                    echo "<td id='sombra'>" . $nombre_usuario . "</td>";
+                if ($permiso1 == 1) {
+                    echo "<td id='sombra'>" . $permiso . " " .$nombre_usuario . "</td>";
                 }
                 echo "<tr>";
             }
