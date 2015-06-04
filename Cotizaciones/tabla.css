@@ -166,4 +166,16 @@ color: #004666;
     text-align: center;
 }
 
+.break
+{
+	clear: both;
+}
+
+.centrar
+{
+	margin: 0 auto;
+	text-align: center;
+}
+
+
 
