@@ -100,8 +100,6 @@ while ($campo = mysql_fetch_array($resultado)) {
             location.href = "cat_prod.php";
         }
 
-
-
     </script>
 
 

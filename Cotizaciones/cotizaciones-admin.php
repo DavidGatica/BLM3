@@ -1,9 +1,5 @@
-<link href="tabla2.css" rel="stylesheet" type="text/css" />
-<style type="text/css" media="screen">
-    A:link {color: black; font-size: 8pt; font-family: arial; text-decoration: none }
-    A:hover {color: black; font-size: 8pt; font-family: arial; text-decoration: none }
-    A:visited {color: black; font-size: 8pt; font-family: arial; text-decoration: none }
-</style>
+
+<div id="contenido">
 
 <script>
     function Eliminar(id_cotizacion) {
@@ -72,10 +68,10 @@ while ($campo = mysql_fetch_array($resultado)) {
 if ($cont == 1) {
     ?>
     
-    <div id="barra">
+    
 
         <div class="CSSTableGenerator" >
-            <table border=2 align="center">
+            <table>
 
                 <tr>
 
@@ -83,7 +79,7 @@ if ($cont == 1) {
                     <td width="10%">Fecha</td>
                     <td width="43%">Cliente</td>
                     <td width="25%">Vendedor</td>
-                    <td width="12%" height="25px" colspan="3">Gesti&oacute;n</td>
+                    <td width="12%" height="25px" colspan="4">Gesti&oacute;n</td>
 
 
                 </tr>
@@ -126,19 +122,30 @@ if ($cont == 1) {
                     $resultado2 = query($sql2, $conexion);
                     $campo2 = mysql_fetch_array($resultado2);
                     $empresa = $campo2['empresa'];
+					$permiso = $campo2['permiso'];
 
 
                     echo "<td>" . $campo2['empresa'] . "</td>";
 
-                    echo "<td>" . $vendedor . "</td>";
+					if($permiso == "Administrador")
+					{
+						echo "<td>" . $permiso . "</td>";
+						
+					}		
+					
+					else{
+                    echo "<td>" . $vendedor . "</td>";}
 
-                    echo "<td height='35px'> "
-                    . "<a href='ver_cotizacion.php?id_cotizacion=" . $id_cotizacion . "' ><div class='ver' align='center'>Ver</div></a></td><td height='35px'>"
-                    . "<a href='editar_cotizacion.php?id_cotizacion=" . $id_cotizacion . "' ><div class='editar' align='center'> Editar</div></a> <br> <a href='reusar.php?id_cotizacion=" . $id_cotizacion . "' ><div class='reusar' align='center'>Reusar</div></a></td><td>";
+                    echo "<td height='26px'> "
+                    . "<a href='ver_cotizacion.php?id_cotizacion=" . $id_cotizacion . "' ><div class='ver' align='center'>Ver</div></a></td>
+					<td height='26px'><a href='editar_cotizacion.php?id_cotizacion=" . $id_cotizacion . "' ><div class='editar' align='center'> Editar</div></a></td>
+					<td height='26px'><a href='reusar.php?id_cotizacion=" . $id_cotizacion . "' ><div class='reusar' align='center'>Reusar</div></a></td>
+					
+					<td height='26px'>";
 
 
                     if ($activo == 1) {
-                        echo "<div class='eliminar' align='center' onclick='Eliminar(" . $id_cotizacion . ")'> Eliminar</div></td>";
+                        echo "<div class='eliminart' align='center' onclick='Eliminar(" . $id_cotizacion . ")'> Eliminar</div></td>";
                     }
                     if ($activo == 0) {
                         echo "<div class='restaurar' align='center' onclick='Restaurar(" . $id_cotizacion . ")'> Activar</div></td>";
@@ -149,7 +156,7 @@ if ($cont == 1) {
                 ?>
             </table>
         </div>
-    </div>
+ 
 
 <?php } ?>
 
@@ -157,6 +164,7 @@ if ($cont == 1) {
     <div id="errorimg">
         <img  src="images/error.png"></div>
 <?php } ?>
+</div>
 
 
 
