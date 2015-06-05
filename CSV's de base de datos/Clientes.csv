@@ -1,0 +1,166 @@
+id_num_cliente;id_cliente;empresa;id_direccion;id_contacto;id_usuario;desactivado;permiso
+1;;ALFONSO MEZA MARMOLEJO;1;1;Administrador;0;Administrador
+2;;ALUMBRADO, S.A. DE C.V.;2;2;Administrador;0;Administrador
+3;;ARTICULOS ELECTRICOS INDUSTRIALES DEL CARMEN, SA CV;3;3;Administrador;0;Administrador
+4;;ARTICULOS ELECTRICOS INDUSTRIALES DEL CARMEN, SA CV;4;4;Administrador;0;Administrador
+5;;ARTINOV, S.A. DE C.V.;5;5;Administrador;0;Administrador
+6;;ASIC ILUMINACION;6;6;Administrador;0;Administrador
+7;;COEL (HIDALGO);7;7;Administrador;0;Administrador
+8;;EUROELECTRICA, S.A. DE C.V.;8;8;Administrador;0;Administrador
+9;;"COEL (QUER&Eacute;TARO)";9;9;Administrador;0;Administrador
+10;;COEL (VICTORIA);10;10;Administrador;0;Administrador
+11;;COEL DE ACAPULCO, S.A. DE C.V.;11;11;Administrador;0;Administrador
+12;;COEL DE PUEBLA;12;12;Administrador;0;Administrador
+13;;COMALKA INTERNATIONAL;13;13;Administrador;0;Administrador
+14;;COMERCIALIZADORA ELECTRICA SAN LUIS;14;14;Administrador;0;Administrador
+15;;COMERCIALIZADORA HNOS ALVAREZ FLORES;15;15;Administrador;0;Administrador
+16;;CONDICOM S.A DE C.V.;16;16;Administrador;0;Administrador
+17;;CONSTRUCCIONES LUXES S.A. DE C.V;17;17;Administrador;0;Administrador
+18;;DELECTRIC;18;18;Administrador;0;Administrador
+19;;DISTRIBUCION CONTROL E ILUMINACION;19;19;Administrador;0;Administrador
+20;;ELECTRICA GARCIA;20;20;Administrador;0;Administrador
+21;;DISTRIBUIDORA ELECTRICA DIAZ ARMENTA;21;21;Administrador;0;Administrador
+22;;DISTRIBUIDORA ELECTRICA GRIJALVA S.A, DE C.V.;22;22;Administrador;0;Administrador
+23;;DISTRIBUIDORA SANTIAGO;23;23;Administrador;0;Administrador
+24;;DURATTON, S.A. DE C.V.;24;24;Administrador;0;Administrador
+25;;ELECTRICA MEXICANA DE ANTEQUERA S. A. DE C. V.;25;25;Administrador;0;Administrador
+26;;ELECTRICA Y PLOMERIA SILVA S.A. DE C.V.;26;26;Administrador;0;Administrador
+27;;ELECTRICO, S.A. DE C.V.;27;27;Administrador;0;Administrador
+28;;"ELECTRO ILUMINACI&Oacute;N TAPAT&Iacute;A";28;28;Administrador;0;Administrador
+29;;FERRELECTRO;29;29;Administrador;0;Administrador
+30;;FRANCISCO JAVIER SANTAMARIA BUENTELLO (ISL);30;30;Administrador;0;Administrador
+31;;GREENFLEX DE MEXICO;31;31;Administrador;0;Administrador
+32;;GREY BULL INGENIERIA EN CONCRETO, S.A. DE C.V.;32;32;Administrador;0;Administrador
+33;;GRUPO  ELECTRICO  CAFRAL;33;33;Administrador;0;Administrador
+34;;GRUPO ALCIONE (ACAPULCO);34;34;Administrador;0;Administrador
+35;;GRUPO ALCIONE (TOLUCA);35;35;Administrador;0;Administrador
+36;;GRUPO ALCIONE ECATEPEC;36;36;Administrador;0;Administrador
+37;;GRUPO ALCIONE MORELOS (CIVAC);37;37;Administrador;0;Administrador
+38;;GRUPO ALCIONE MORELOS (PRADERA);38;38;Administrador;0;Administrador
+39;;GRUPO ALCIONE QUERETARO;39;39;Administrador;0;Administrador
+40;;GRUPO ALCIONE TLALPAN;40;40;Administrador;0;Administrador
+41;;GRUPO ALCIONE, S.A. DE C.V.;41;41;Administrador;0;Administrador
+42;;"GRUPO ELECTRICO CAFRAL (SAN JUAN DEL R&Iacute;O)";42;42;Administrador;0;Administrador
+43;;GRUPO ISC, SA DE CV;43;43;Administrador;0;Administrador
+44;;GRUPO LUMIERE;44;44;Administrador;0;Administrador
+45;;HZ SUMINISTROS INDUSTRIALES, SA DE CV;45;45;Administrador;0;Administrador
+46;;ILUMINACION VERSATIL;46;46;Administrador;0;Administrador
+47;;IMPORTADORA Y COMERCIALIZADORA ELECTRICA DEL GOLFO S. A. DE C. V.;47;47;Administrador;0;Administrador
+48;;INDUSTRIAL ELECTRICA DE CHIHUAHUA;48;48;Administrador;0;Administrador
+49;;INGENIERIA Y ABASTECIMIENTO SA DE CV;49;49;Administrador;0;Administrador
+50;;INGENIERIA Y SUMINISTROS DE ALUMBRADO;50;50;Administrador;0;Administrador
+51;;INSTALACIONES Y ASESORIA INDUSTRIAL DE TOLUCA S.A. DE C.V.;51;51;Administrador;0;Administrador
+52;;JALCO ILUMINACION;52;52;Administrador;0;Administrador
+53;;LUMEN EQUIPO ELECTRICO INDUSTRIAL;53;53;Administrador;0;Administrador
+54;;LUMICOLOR EQUIPO ELECTRICO INDUSTRIAL;54;54;Administrador;0;Administrador
+55;;MACRO DISTRIBUCIONES ELECTRICAS S.A. DE C.V.;55;55;Administrador;0;Administrador
+56;;MATERIALES ELECTRICOS TECNO LASSER;56;56;Administrador;0;Administrador
+57;;POTENCIA, CONTROL Y DISTRIBUCION;57;57;Administrador;0;Administrador
+58;;PRINSUS, SA DE CV;58;58;Administrador;0;Administrador
+59;;PROV. DE EQUIPO FEDERAL PACIFIC ELECTRIC;59;59;Administrador;0;Administrador
+60;;PROV. DE MATERIALES ELECTRICOS DEL SURESTE;60;60;Administrador;0;Administrador
+61;;"PROVEEDORES DE EQUIPO Y MATERIAL EL&Eacute;CTRICO, S.A. DE C.V.";61;61;Administrador;0;Administrador
+62;;REILUMINACION S.A. DE C.V.;62;62;Administrador;0;Administrador
+63;;REPRESENTACIONES Y DISEÑOS ELECTRO-HIDRAULICOS DEL SURESTE;63;63;Administrador;0;Administrador
+64;;SATELITE ILUMINACION Y PROYECTOS;64;64;Administrador;0;Administrador
+65;;SMART SPACES;65;65;Administrador;0;Administrador
+66;;SOLUCIONES EN CONTROL Y SISTEMAS INDUSTRIALES;66;66;Administrador;0;Administrador
+67;;TALANCON ILUMINACION (TOLUCA);67;67;Administrador;0;Administrador
+68;;TECNOLUZ  DEL CARIBE;68;68;Administrador;0;Administrador
+69;;TELETEC;69;69;Administrador;0;Administrador
+70;;TEMPLE ELECTRICIDAD, S.A. DE C.V.;70;70;Administrador;0;Administrador
+71;;GAVT ILUMINACION;71;71;Administrador;0;Administrador
+72;;ILUMINACION ECOLOGICA DE MEXICO;72;72;Administrador;0;Administrador
+73;;SANTOS NAVARRO INGENIEROS;73;73;Administrador;0;Administrador
+74;;ABSA SONORA,S.A. DE C.V.;74;74;Administrador;0;Administrador
+75;;BREAKER, S.A. DE C.V.;75;75;Administrador;0;Administrador
+76;;COEL (DEL NORTE);76;76;Administrador;0;Administrador
+77;;COEL (JALISCO);77;77;Administrador;0;Administrador
+78;;COEL (REGIOMONTANA);78;78;Administrador;0;Administrador
+79;;"COEL DEL BAJ&Iacute;O";79;79;Administrador;0;Administrador
+80;;COEL DEL BAJIO. S.A. DE C.V. SUC. MORELIA;80;80;Administrador;0;Administrador
+81;;COMERCIALIZADORA ELECTRICA DE GUADALAJARA (UN CORREO MAS);81;81;Administrador;0;Administrador
+82;;"CONSTRUCTORES DE OBRAS EL&Eacute;CTRICAS";82;82;Administrador;0;Administrador
+83;;DECORA ILUMINACION;83;83;Administrador;0;Administrador
+84;;DIST. DE MATERIALES ELECTRICOS DE GUADALAJARA;84;84;Administrador;0;Administrador
+85;;DISTRIBUCIONES RG Y CIA.;85;85;Administrador;0;Administrador
+86;;DISTRIBUIDORA DE CABLES DEL NOROESTE SA DE CV;86;86;Administrador;0;Administrador
+87;;DISTRIBUIDORA DE CABLES DEL NOROESTE,S.A. DE C.V.;87;87;Administrador;0;Administrador
+88;;DISTRIBUIDORA ELECTRICA ASCENCIO;88;88;Administrador;0;Administrador
+89;;DISTRIBUIDORA ELECTROMECANICA DE MONCLOVA S.A;89;89;Administrador;0;Administrador
+90;;"DURANGO ELECTROMEC&Aacute;NICA";90;90;Administrador;0;Administrador
+91;;ECOZA;91;91;Administrador;0;Administrador
+92;;ELECON SUMINISTROS;92;92;Administrador;0;Administrador
+93;;ELECTRICA GOMEZ SA DE CV;93;93;Administrador;0;Administrador
+94;;ELECTRICA LEYVA, SA DE CV;94;94;Administrador;0;Administrador
+95;;ELECTRICA LUX, SA DE CV;95;95;Administrador;0;Administrador
+96;;ELECTRICOS UNIDOS DE DELICIAS;96;96;Administrador;0;Administrador
+97;;ELECTRITODO, S.A DE C.V.;97;97;Administrador;0;Administrador
+98;;ELECTRO CONSTRUCCIONES SISOCO;98;98;Administrador;0;Administrador
+99;;ELECTRO EQUIPO INTERNACIONAL;99;99;Administrador;0;Administrador
+100;;ELECTRO INDUSTRIAL OLIDE;100;100;Administrador;0;Administrador
+101;;"ELECTRO INDUSTRIAL TAPAT&Iacute;A";101;101;Administrador;0;Administrador
+102;;ELECTROMATERIALES SENSA;102;102;Administrador;0;Administrador
+103;;ELEKTRON DEL BAJIO, S.A. DE C.V.;103;103;Administrador;0;Administrador
+104;;ENERGIA ELECTRICA SA DE CV;104;104;Administrador;0;Administrador
+105;;FARRE ELECTRIC DE OCCIDENTE;105;105;Administrador;0;Administrador
+106;;ELECTRICA MICHOACANA;106;106;Administrador;0;Administrador
+107;;GP ELECTROMECANICA, S.A. DE C.V.;107;107;Administrador;0;Administrador
+108;;GRUPO ALCIONE, S.A. DE C.V. SUC. CELAYA;108;108;Administrador;0;Administrador
+109;;GRUPO ALCIONE, S.A. DE C.V. SUC. IRAPUATO;109;109;Administrador;0;Administrador
+110;;GRUPO ALCIONE, S.A. DE C.V. SUC. LEON;110;110;Administrador;0;Administrador
+111;;GRUPO ELECTRICO, SA DE CV;111;111;Administrador;0;Administrador
+112;;GRUPO SENSA;112;112;Administrador;0;Administrador
+113;;GRUPO TALANCON, S.A. DE C.V. SUC. AGUASCALIENTES (CONSTRULITA);113;113;Administrador;0;Administrador
+114;;GRUPO TALANCON, S.A. DE C.V. SUC. CELAYA (CONSTRULITA);114;114;Administrador;0;Administrador
+115;;HAESA COMERCIAL, S.A. DE C.V.;115;115;Administrador;0;Administrador
+116;;IMPORTADORA Y DISTRIBUIDORA COMERCIAL DEL GOLFO SA DE CV;116;116;Administrador;0;Administrador
+117;;IMPULSORA INDUSTRIAL GUADALAJARA;117;117;Administrador;0;Administrador
+118;;PRODELEC S.A. DE C.V.;118;118;Administrador;0;Administrador
+119;;LUIS DIAZ INFANTE RODRIGUEZ LEAL (COMERCIAL ELECTRICA);119;119;Administrador;0;Administrador
+120;;LUMICENTRO, S.A DE C.V.;120;120;Administrador;0;Administrador
+121;;MATERIAL ELECTRICO RAULIN;121;121;Administrador;0;Administrador
+122;;MATERIALES ELECTRICOS DE DURANGO;122;122;Administrador;0;Administrador
+123;;"ORGANIZACI&Oacute;N ELECTRICA VILLALOBOS";123;123;Administrador;0;Administrador
+124;;PARTES ELECTRICAS ALCALA SA DE CV;124;124;Administrador;0;Administrador
+125;;REPRESENTACIONES PARGA, S.A. DE C.V.;125;125;Administrador;0;Administrador
+126;;RISOUL (TORREON);126;126;Administrador;0;Administrador
+127;;RISOUL Y CIA, S. A. DE C. V.;127;127;Administrador;0;Administrador
+128;;RISOUL Y CIA, S. A. De C. V. SUC. SALTILLO;128;128;Administrador;0;Administrador
+129;;RUBEN GUTIERREZ SANTIAGO;129;129;Administrador;0;Administrador
+130;;SENSA SURTIDORA ELECTRICA SA DE CV;130;130;Administrador;0;Administrador
+131;;SISTEMAS DE ILUMINACION ESPECIALIZADA, S.A DE C.V. (AGO);131;131;Administrador;0;Administrador
+132;;SURTIDORA ELECTRICA DEL NOROESTE SA DE CV;132;132;Administrador;0;Administrador
+133;;TECNICA ELECTRICA DE PARRAL;133;133;Administrador;0;Administrador
+134;;TECNICA ELECTRICA DE PARRAL;134;134;Administrador;0;Administrador
+135;;TECNO ELECTRICA DEL GOLFO;135;135;Administrador;0;Administrador
+136;;"TECNO ELECTRICA POTOS&Iacute;";136;136;Administrador;0;Administrador
+137;;TECNOLOGIA ELECTRICA INTEGRAL, S.A. DE C.V.;137;137;Administrador;0;Administrador
+138;;TODO ELECTRIC DIAZ;138;138;Administrador;0;Administrador
+139;;BOMBAS IDEAL S.A. DE C.V. (VANGUARDIA ELECTRO INDUSTRIAL);139;139;Administrador;0;Administrador
+140;;ENERGIA ELECTRICA SA DE CV;140;140;Administrador;0;Administrador
+141;;MILENIUM CENTRO DE ILUMINACION (ESTAN MUY INTERESADOS);141;141;Administrador;0;Administrador
+142;;CASA ESTHNOS, S.A. DE C.V.;142;142;Administrador;0;Administrador
+143;;ELECTRICA AB;143;143;Administrador;0;Administrador
+144;;ELECTRILUZ;144;144;Administrador;0;Administrador
+145;;G Y G ILUMINACION;145;145;Administrador;0;Administrador
+146;;INTELLISWITCH S.A. DE C.V.;146;146;Administrador;0;Administrador
+147;;DELECTRIC S.A. DE C.V.;147;147;Administrador;0;Administrador
+148;;RISOUL Y CIA S.A. DE C.V.;148;148;Administrador;0;Administrador
+149;;INDUSTRIAL DE TERMINALES S.A. DE C.V.;149;149;Administrador;0;Administrador
+150;;EUROELECTRICA IZTAPALAPA;150;150;Administrador;0;Administrador
+151;;EUROELECTRICA TOLUCA;151;151;Administrador;0;Administrador
+152;;COEL ILUMINACION;152;152;Administrador;0;Administrador
+153;;MAYOREO ELECTRICO DE MONTERREY;153;153;Administrador;0;Administrador
+154;;M G INDUSTRIAL ELECTRICA,S.A.DE C.V;154;154;Administrador;0;Administrador
+155;;DIRECO;155;155;Administrador;0;Administrador
+156;;TRETA ILUMINACION S.A. DE C.V.;156;156;Administrador;0;Administrador
+157;;ILUMINACION TOTAL;157;157;Administrador;0;Administrador
+158;;COEL SURESTE S.A. de C.V.;158;158;Administrador;0;Administrador
+159;;CORPORATIVO DE MATERIALES (GPO. BOXITO);159;159;Administrador;0;Administrador
+160;;SUMINISTROS ELECTRICOS LUMINICOS Y FERRETEROS DEL MAYAB;160;160;Administrador;0;Administrador
+161;;ILUMINACION DEL SURESTE, S.A. DE C.V.;161;161;Administrador;0;Administrador
+162;;"DISTRIBUIDORA EL&Eacute;CTRICA DEL SURESTE";162;162;Administrador;0;Administrador
+163;;ELECTRICA DEL CARIBE;163;163;Administrador;0;Administrador
+164;;SAGSA;164;164;Administrador;0;Administrador
+165;;GRAFICA Y ARQUITECTURA;165;165;Administrador;0;Administrador
