@@ -16,16 +16,16 @@
 			<div class="mover"><img src="images/1clientes.png" class="icono_encabezado"></div>
 			<div class="linea_verticalfd"></div>
 			
-			<img src="images/1cotizaciones.png" class="icono_encabezado">
+			<div class="mover"><img src="images/1cotizaciones.png" class="icono_encabezado"></div>
 			<div class="linea_verticalfd"></div>
 			
-			<img src="images/1generar.png" class="icono_encabezado">
+			<div class="mover"><img src="images/1generar.png" class="icono_encabezado"></div>
 			<div class="linea_verticalfd"></div>
 			
-			<img src="images/1usuarios.png" class="icono_encabezado">
+			<div class="mover"><img src="images/1usuarios.png" class="icono_encabezado"></div>
 			<div class="linea_verticalfd"></div>
 			
-			<img src="images/1productos.png" class="icono_encabezado">
+			<div class="mover"><img src="images/1productos.png" class="icono_encabezado"></div>
 			<div class="linea_verticalfd"></div>
 			
 			<img src="images/1sesion.png" class="icono_encabezado">
