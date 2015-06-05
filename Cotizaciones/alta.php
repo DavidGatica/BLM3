@@ -8,10 +8,7 @@
 
             <input type="text" class="formu" placeholder="RFC de la empresa" name="rfc" autofocus >
             <input type="text" class="formu" placeholder="Raz&oacute;n social" name="empresa" autofocus required>
-            <input type="text" class="formu" placeholder="Calle" name="calle" autofocus >
-            <input type="text" class="formu" placeholder="N&uacute;mero interior" name="num_int" autofocus >
-            <input type="text" class="formu" placeholder="N&uacute;mero exterior" name="num_ext" autofocus>
-            <input type="text" class="formu" placeholder="Colonia" name="colonia" autofocus >
+            <input type="text" class="formu" placeholder="Calle y número" name="calle_num" autofocus >
             <input type="text" class="formu" placeholder="Municipio/Delegacion" name="municipio" autofocus >    
             <input type="text" class="formu" placeholder="Estado" name="estado" autofocus >
             <input type="text" class="formu" placeholder="C&oacute;digo Postal" name="cp" autofocus >

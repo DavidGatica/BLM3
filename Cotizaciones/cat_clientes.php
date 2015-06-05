@@ -70,7 +70,7 @@ if (!isset($_SESSION['usuario'])) {
                     <td valign="top">
                         Salir:
                         <br><br>
-                        <a href="administracion.php?sec=clientes">
+                        <a href="administracion.php">
                             <input name="button" type="submit" value="Salir" /></a>
                     </td></tr>
 

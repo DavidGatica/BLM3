@@ -14,10 +14,7 @@ $id_user = $_SESSION['usuario'];
 
 $rfc = $_POST['rfc'];
 $empresa = $_POST['empresa'];
-$calle = $_POST['calle'];
-$num_int = $_POST['num_int'];
-$num_ext = $_POST['num_ext'];
-$colonia = $_POST['colonia'];
+$calle_num = $_POST['calle_num'];
 $municipio = $_POST['municipio'];
 $estado = $_POST['estado'];
 $cp = $_POST['cp'];
@@ -68,6 +65,7 @@ $conexion = conectar();
   else
   {
  */
+ 
 
 //Obtener el id_num_cliente Siguente
 $sql = "SELECT `id_num_cliente` FROM Clientes ORDER BY `id_num_cliente` DESC LIMIT 1";
@@ -92,19 +90,22 @@ while ($campo = mysql_fetch_row($resultado)) {
     $id_contacto = $campo[0] + 1;
 }
 
+
+
 //Agregar Campos en la Tabla Clientes
 $sql = "INSERT INTO Clientes (id_num_cliente, id_cliente, empresa, id_direccion, id_contacto, id_usuario, desactivado) VALUES ('$id_num_cliente', '$rfc','$empresa','$id_direccion','$id_contacto','$id_user','0')";
 $resultado = query($sql, $conexion);
 
 
 //Agregar Campos en la Tabla Direcciones
-$sql = "INSERT INTO Direcciones (id_direccion, calle, num_int, num_ext, municipio, estado, cp, colonia) VALUES ('$id_direccion','$calle','$num_int','$num_ext','$municipio','$estado','$cp','$colonia')";
+$sql = "INSERT INTO Direcciones (id_direccion, calle_num, municipio, estado, cp) VALUES ('$id_direccion','$calle_num','$municipio','$estado','$cp')";
 $resultado = query($sql, $conexion);
 
 
 //Agregar Campos en la Tabla Contacto
 $sql = "INSERT INTO Contacto (id_contacto, nombre_c, departamento, telefono1, telefono2, e_mail_c) VALUES ('$id_contacto','$contacto','$departamento','$telefono1','$telefono2','$email')";
 $resultado = query($sql, $conexion);
+
 ?>
 
 <!DOCTYPE html >

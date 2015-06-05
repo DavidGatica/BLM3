@@ -10,31 +10,9 @@ body {
     padding-bottom: 20px;
     color: #C7D8E8;    
 	height: 100%;
-    background: rgba(255,255,255,1);
-    background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,239,229,1) 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(50%, rgba(255,255,255,1)), color-stop(100%, rgba(255,239,229,1)));
-    background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,239,229,1) 100%);
-    background: -o-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,239,229,1) 100%);
-    background: -ms-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,239,229,1) 100%);
-    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,239,229,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffefe5', GradientType=1 );
-
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 
-bodier {
-    padding-bottom: 20px;
-    font: 81.25% "Trebuchet MS", Arial, Helvetica, sans-serif;
-    
-background: rgba(255,255,255,1);
-background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(247,247,247,1) 47%, rgba(242,242,242,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(247,247,247,1)), color-stop(100%, rgba(242,242,242,1)));
-background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(247,247,247,1) 47%, rgba(242,242,242,1) 100%);
-background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(247,247,247,1) 47%, rgba(242,242,242,1) 100%);
-background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(247,247,247,1) 47%, rgba(242,242,242,1) 100%);
-background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(247,247,247,1) 47%, rgba(242,242,242,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2', GradientType=0 );
-
-}
 
 a:link
 {
@@ -59,7 +37,7 @@ h1 {
     padding-top: 30px;
     width: 550px;
     font-weight: normal;
-    font-size: 38px;
+    font-size: 33px;
     line-height: 52px;
     text-align: center;
     color: #ff8400;
@@ -107,7 +85,6 @@ ul {
     left: 750px;
     width: 200px;
     height: 52px;
-    background: #1B2024 url(images/menu.jpg) no-repeat;
     border-radius: 15px
 }
 
@@ -134,7 +111,6 @@ ul {
 #intro {
     height: 320px;
     padding-left: 390px;
-    background: #B0D9F9 url(images/intro.jpg) no-repeat;
 }
 
 #intro h2 {
@@ -153,7 +129,6 @@ ul {
 
 #intro a{
 
-    font-family: consolas, monaco, "Lucida Console", monospace;
     color: #FFFFFF;
     font-size: 50;
     padding: 0;
@@ -216,7 +191,7 @@ ul {
 /* main */
 
 #main {
-    background: #4C5070 url(images/main.gif) repeat-y;
+    background: #E5E6E7;
 }
 
 /* sidebar */
@@ -302,7 +277,6 @@ ul {
     margin-right:35px;
     margin-left:20px;
     margin-top:30px;
-    font-family:Georgia,serif,Times; 
     font-size:16px; 
     font-weight: bold;
     color: #FAAC58;
@@ -354,8 +328,18 @@ ul {
 
 
 input {
-    font-family: inherit;
     color: black;
+	transition: padding .25s;	
+}
+
+input[placeholder]
+{
+	color: #999999;
+}
+
+textarea[placeholder]
+{
+	color: #999999;
 }
 
 .sign-up-input {
@@ -424,7 +408,6 @@ z.sign-up-button:hover {
 
 #list8 p {
     margin-left: -10px;
-    font-family:Georgia,serif,Times; 
     font-size:20px; 
     margin-top: 20px;
     color:#bfe1f1;
@@ -443,7 +426,6 @@ z.sign-up-button:hover {
     margin-top:200px;
     margin-bottom:10px;
     margin-left:5px;
-    font-family:Georgia,serif,Times; 
     font-size:19px; 
     color:#84cee0;
     font-weight: bold;
@@ -455,7 +437,6 @@ z.sign-up-button:hover {
     margin-top: -20px;
     margin-bottom: 40px;
     margin-left:100px;
-    font-family:Georgia,serif,Times; 
     font-size:20px; 
     color:#5A8D9A;
     font-weight: bold;
@@ -467,7 +448,6 @@ z.sign-up-button:hover {
     margin-top: 35px;
     margin-bottom: 40px;
     margin-left:100px;
-    font-family:Georgia,serif,Times; 
     font-size:20px; 
 
     color:#5A8D9A;
@@ -481,7 +461,6 @@ z.sign-up-button:hover {
     margin-top: -20px;
     margin-bottom: 40px;
     margin-left:250px;
-    font-family:Georgia,serif,Times; 
     font-size:20px; 
 
     color:#4386A5;
@@ -495,7 +474,6 @@ z.sign-up-button:hover {
     margin-top: -20px;
     margin-bottom: 40px;
     margin-left:233px;
-    font-family:Georgia,serif,Times; 
     font-size:20px; 
 
     color:#4386A5;
@@ -510,13 +488,24 @@ z.sign-up-button:hover {
 
 .formu {
     width: 250px;
-    height: 50px;
+	padding: 5px;
     margin-bottom: 25px;
     margin-left: 10px;  
-    padding: 0 5px 2px;
-    font-size: 14px;
+    font-size: 12px;
     border: 2px solid #ebebeb;
-    border-radius: 15px;  
+    border-radius: 5px;  
+}
+
+.formu:hover
+{
+	box-shadow: 0 0 9px #05D305;
+}
+
+.formu:focus
+{
+	border-color: #4BBF55;
+	box-shadow: 0 0 9px #4BBF55;
+	padding: 0.6em;
 }
 
 
@@ -600,7 +589,6 @@ box-shadow: 10px 10px 0px 0px rgba(122,115,85,1);
 
 #regresar p {
     margin-left: -3px;
-    font-family:Georgia,serif,Times; 
     font-size:15px; 
     margin-top: 20px;
     color:#bfe1f1;
@@ -639,7 +627,6 @@ box-shadow: 10px 10px 0px 0px rgba(122,115,85,1);
 #cambioselect{
     margin-bottom:30px;
     margin-left:10px;
-    font-family: verdana; 
     font-size: 17px; 
     color: black; 
     background-color: #F2F5A9;
@@ -652,7 +639,6 @@ box-shadow: 10px 10px 0px 0px rgba(122,115,85,1);
 #bajaselect{
     margin-bottom:30px;
     margin-left:10px;
-    font-family: verdana; 
     font-size: 17px; 
     color: white; 
     background-color: #f0776c;
@@ -664,7 +650,6 @@ box-shadow: 10px 10px 0px 0px rgba(122,115,85,1);
 #cotizarselect{
     margin-bottom:30px;
     margin-left:10px;
-    font-family: verdana; 
     font-size: 17px; 
     color: white; 
     background-color: #0B4C5F;
@@ -726,7 +711,6 @@ box-shadow: 10px 10px 0px 0px rgba(122,115,85,1);
     border: 2px solid #DBE1EB;
     text-align: center;
     font-size: 12px;
-    font-family: Arial, Verdana;
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 0px;
@@ -749,7 +733,6 @@ box-shadow: 10px 10px 0px 0px rgba(122,115,85,1);
     border: 3px solid #0000;
     text-align: left;
     font-size: 11px;
-    font-family: Verdana, Arial;
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px;
@@ -770,7 +753,6 @@ box-shadow: 10px 10px 0px 0px rgba(122,115,85,1);
     border: 3px solid #0000;
     text-align: center;
     font-size: 11px;
-    font-family: Verdana, Arial;
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px;
@@ -794,7 +776,6 @@ box-shadow: 10px 10px 0px 0px rgba(122,115,85,1);
     text-align: center;
     font-size: 10px;
     font-weight: bold;
-    font-family: Arial Black, Verdana;
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 0px;
@@ -866,7 +847,6 @@ regresar.button:active{
 /*fomr_cotizacion.php*/
 .divisa{    
     font-size: 50px;
-    font-family: 'Impact', cursive;
 }
 
 
@@ -930,7 +910,6 @@ regresar.button:active{
     background-color: transparent;
     text-align: center;
     font-size: 12px;
-    font-family: Arial, Verdana;
     color: #E0F8F7;
 } 
 
@@ -939,7 +918,6 @@ regresar.button:active{
     background-color: transparent;
     text-align: right;
     font-size: 12px;
-    font-family: Arial, Verdana;
     color: #E0F8F7;
 } 
 
@@ -959,7 +937,6 @@ h5 {
     border: 2px solid #DBE1EB;
     text-align: center;
     font-size: 12px;
-    font-family: Arial, Verdana;
     padding-left: -5px;
     padding-right: -5px;
     padding-top: 2px;
@@ -1139,7 +1116,6 @@ select {
     margin-right:35px;
     margin-left:20px;
     margin-top:30px;
-    font-family:Georgia,serif,Times; 
     font-size:15px; 
     font-weight: bold;
     color: #FAAC58;
@@ -1185,7 +1161,6 @@ select {
     margin-right:35px;
     margin-left:20px;
     margin-top:30px;
-    font-family:Georgia,serif,Times; 
     font-size:14px; 
     font-weight: bold;
     color: #FAAC58;
@@ -1207,7 +1182,6 @@ select {
     margin-top:20px;
     margin-bottom:10px;
     margin-left:65px;
-    font-family:Georgia,serif,Times; 
     font-size:19px; 
     color:#5A8D9A;
     font-weight: bold;
@@ -1215,7 +1189,6 @@ select {
 
 #producto {
     margin-bottom: 3px;
-    font-family:Georgia,serif,Times; 
     font-size:14px; 
     font-weight: bold;
     color: #FAAC58;
@@ -1276,7 +1249,6 @@ select {
 
 
 .lenotas{
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     color: #C7D8E8;
     font-size: 12;
 }
@@ -1286,7 +1258,6 @@ select {
     margin-right:35px;
     margin-left:35px;
     margin-top:30px;
-    font-family:Georgia,serif,Times; 
     font-size:14px; 
     font-weight: bold;
     color: #FAAC58;
@@ -1305,7 +1276,6 @@ select {
 
 #izq {
     float: left;
-    font-family: sans-serif;
     font-size: 16px;
     font-weight: bold;
     width: 200px;
@@ -1328,7 +1298,6 @@ select {
 
 #der {
     float: left;
-    font-family: sans-serif;
     font-size: 16px;
     font-weight: bold;
     width: 480px;
@@ -1366,7 +1335,6 @@ select {
     -webkit-border-radius: 10px 10px 0px 0px;
     border: 0px outset #000000;
 
-    font-family: Georgia,serif,Times;
     color: whitesmoke;
     font-weight: bold;
     font-size: 14px;
@@ -1388,7 +1356,6 @@ select {
 
 #datos_coti{
     text-align: center;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     color: #000000;
     font-size: 12;
     padding: 5;
@@ -1405,7 +1372,6 @@ select {
 
 #homee {
     padding-top: 0;
-    font-family: Georgia, Times, “Times New Roman”, serif;
     color: #3944A8;
     font-size: 35px;
     padding: 5;
@@ -1415,7 +1381,6 @@ select {
 }
 
 #homee2{
-    font-family: Georgia, Times, “Times New Roman”, serif;
     color: #D9E6FF;
     font-size: 15px;
     padding: 5;
@@ -1433,7 +1398,6 @@ hr.raya:after { /* Not really supposed to work, but does */
 
 
 #adouser{
-    font-family:Georgia,serif,Times; 
     font-size:19px; 
     color:#5A8D9A;
     font-weight: bold;
@@ -1457,7 +1421,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84cee0', end
     border: 0px solid #000000;
 
 
-    font-family: Georgia, Times, “Times New Roman”, serif;
     color: #000000;
     font-size: 15;
     padding: 5;
@@ -1478,7 +1441,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84cee0', end
     -webkit-border-radius: 50px 50px 50px 50px;
     border: 23px solid #d3e1ec;
     margin: 30px 0 0 0;
-    font-family: Georgia, Times, “Times New Roman”, serif;
     color: #D4E2ED;
     font-size: 20px;
     padding: 5;
@@ -1501,7 +1463,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84cee0', end
     -webkit-border-radius: 50px 50px 50px 50px;
     border: 23px solid #c9ffff;
     margin: 30px 0 0 0;
-    font-family: Georgia, Times, “Times New Roman”, serif;
     color: #D4E2ED;
     font-size: 20px;
     padding: 5;
@@ -1526,8 +1487,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84cee0', end
     border: 5px outset #C9FFFF;
 
 
-
-    font-family: Georgia, Times, “Times New Roman”, serif;
     color: #BEF7F7;
     font-size: 17px;
     font-weight: bold;
@@ -1554,7 +1513,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84cee0', end
 
 
 
-    font-family: Georgia, Times, “Times New Roman”, serif;
     color: black;
     font-size: 10px;
     text-align: center;
