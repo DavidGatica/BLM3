@@ -1,10 +1,17 @@
-<link href="style.css" rel="stylesheet" type="text/css" />
-<title>Home</title>
-<body><div style="margin: 30px 0 0 -40px;">
-		<br />
-		<br />
-		<br />
-		<br />
-        <div class="centrar"><img src="images/gifalsa.png"></div>
-    </div>
-</body>
+<!DOCTYPE html >
+
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="stylenuevo.css" rel="stylesheet" type="text/css" />
+    </head>
+
+
+	<body>	
+			<div class="centrar">
+				<img src="images/logo_home.jpg" id="logoHome">
+			</div>
+	</body>
+
+</html>
