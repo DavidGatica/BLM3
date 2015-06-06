@@ -9,8 +9,11 @@
 
 
 	<body>	
-			<div class="centrar">
-				<img src="images/logo_home.jpg" id="logoHome">
+			<div class="contenido bienvenida">
+				<img src="images/logo_home.png" id="logoHome">
+				<br />
+				<br />
+				<h2>Bienvenido(a)</h2>
 			</div>
 	</body>
 

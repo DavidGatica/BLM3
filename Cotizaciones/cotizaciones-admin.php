@@ -137,18 +137,18 @@ if ($cont == 1) {
                     echo "<td>" . $vendedor . "</td>";}
 
                     echo "<td height='26px'> "
-                    . "<a href='ver_cotizacion.php?id_cotizacion=" . $id_cotizacion . "' ><div class='ver' align='center'>Ver</div></a></td>
-					<td height='26px'><a href='editar_cotizacion.php?id_cotizacion=" . $id_cotizacion . "' ><div class='editar' align='center'> Editar</div></a></td>
-					<td height='26px'><a href='reusar.php?id_cotizacion=" . $id_cotizacion . "' ><div class='reusar' align='center'>Reusar</div></a></td>
+                    . "<a href='ver_cotizacion.php?id_cotizacion=" . $id_cotizacion . "' class='gestion'>Ver</a></td>
+					<td height='26px'><a href='editar_cotizacion.php?id_cotizacion=" . $id_cotizacion . "' class='gestion'>Editar</a></td>
+					<td height='26px'><a href='reusar.php?id_cotizacion=" . $id_cotizacion . "' class='gestion'>Reusar</a></td>
 					
 					<td height='26px'>";
 
 
                     if ($activo == 1) {
-                        echo "<div class='eliminart' align='center' onclick='Eliminar(" . $id_cotizacion . ")'> Eliminar</div></td>";
+                        echo "<div class='eliminart gestion' align='center' onclick='Eliminar(" . $id_cotizacion . ")'> Eliminar</div></td>";
                     }
                     if ($activo == 0) {
-                        echo "<div class='restaurar' align='center' onclick='Restaurar(" . $id_cotizacion . ")'> Activar</div></td>";
+                        echo "<div class='restaurar gestion' align='center' onclick='Restaurar(" . $id_cotizacion . ")'> Activar</div></td>";
                     }
 
                     echo "</tr>";

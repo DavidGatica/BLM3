@@ -37,7 +37,7 @@
 					<br />
 					
 					
-					<input type="submit" value="Cotizar" class="botonChico">
+					<div class="hover"><input type="submit" value="Cotizar" class="botonChico"></div>
 
 			
 			</div>

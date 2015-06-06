@@ -67,9 +67,11 @@ h2
 #encabezado_negro
 {
 	width: 100%;
+	top: 0;
 	height: 3em;
 	background: #434343;
 	overflow: hidden;
+	position: fixed;
 }
 
 #logo_encabezado
@@ -202,32 +204,49 @@ h2
 {
 	width: 30em;
 	margin: 7em 0 0 0;
-	transition: width 0.5s, margin 0.5s;
+	transition: width 0.5s, margin 0.5s, -webkit-filter 0.5s;
 }
 
 #logoHome:hover
 {
 	margin-top: 6em;
-	width: 32em;
+	width: 31em;
+	 -webkit-filter: drop-shadow(-3px 3px 3px #434343);
+}
+
+.bienvenida
+{
+	color: white;
+	transition: 0.5s;
+}
+
+.bienvenida:hover
+{
+	text-shadow: 0 0 15px #434343;
 }
 
 .botonChico
 {
-	padding: 0.5em;
+	padding: 0.5em 0.8em 0.5em 0.4em;
 	background: #434343;
 	color: white;
 	border: none;
+	border-left: 5px solid #434343;
+	cursor: pointer;
+	box-sizing: border-box;
+	transition: box-shadow 0.2s, border 0.2s;
 }
 
 .botonChico:hover
 {
-	box-shadow: 0 0 5px #da6f2c;
+	box-shadow: 0 0 10px #da6f2c;
+	border-left: 5px solid #e4722b;
 }
 
 .botonChico:active
 {
-	box-shadow: 0 0 8px #da6f2c;
-	border: 0.1em solid #b25012;
+	box-shadow: none;
+	transition: box-shadow 0.1s;
 }
 
 .CSSTableGenerator {
@@ -286,9 +305,9 @@ h2
     text-align:center;
     padding:11px;
     font-size:10px;
-    font-family:Georgia;
     font-weight:normal;
     color:#000000;
+	transition: background 0.2s;
 }
 
 .CSSTableGenerator td:hover
@@ -318,7 +337,6 @@ h2
     text-align:center;
     border-width:0px 0px 1px 1px;
     font-size:14px;
-    font-family:Georgia;
     font-weight:bold;
 	color: #DB6E2C;
 }
@@ -341,4 +359,15 @@ h2
 .eliminart
 {
 	cursor: pointer;
+}
+
+.gestion
+{
+	transition: color 0.1s, text-decoration 0.3s;
+}
+
+.gestion:hover
+{
+	color: #db6e2c;
+	text-decoration: underline;
 }
