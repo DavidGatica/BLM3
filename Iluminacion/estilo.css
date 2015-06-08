@@ -270,11 +270,35 @@ margin: 0 auto;
         margin: 0 auto;
 		
 		width: 63.8em;
-		height:4.5em;
+		height:3.0em;
 		padding:.5em;
 		box-sizing:border-box;
 		background:#38444b;		
 }
+
+#arribaa{
+        margin: 0 0 0 10em;
+		
+		width: 63.8em;
+		height:3.0em;
+		padding:.5em;
+		box-sizing:border-box;
+		background:#38444b;		
+}
+
+#buscar{
+        
+		
+		width: 11.8em;
+		height:0.5em;
+		position:relative;
+	float:right;
+		
+		
+		
+}
+
+
 
 
 }

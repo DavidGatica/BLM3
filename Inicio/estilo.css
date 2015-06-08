@@ -240,7 +240,7 @@ margin: 0 auto;
 #contenedor{
         margin: 0 auto;
 		margin-top: 2em;
-		width: 72.8em;
+		width: 70.6em;
 		height:4.5em;
 		padding:.5em;
 		box-sizing:border-box;
@@ -251,4 +251,27 @@ margin: 0 auto;
 #youtube{
 	position:relative;
 	float:right;
+}
+
+
+#arribaa{
+        margin: 0 auto;
+		
+		width: 70.0em;
+		height:3.0em;
+		padding:.5em;
+		box-sizing:border-box;
+		background:#38444b;	
+}
+
+#buscar{
+        
+		
+		width: 11.8em;
+		height:0.5em;
+		position:relative;
+	float:right;
+		
+		
+		
 }
