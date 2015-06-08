@@ -29,6 +29,7 @@ a:link
 	margin: 0 auto;
 	margin-top: 5em;
 	width: 40em;
+	min-height: 43.8em;
 	overflow: auto;
 }
 
@@ -89,6 +90,18 @@ h2
 	float: left;
 	height: 2.4em;
 	border-right: 0.1em solid #727272;
+}
+
+.lineaHover
+{
+	border-bottom:3px solid #434343;	
+	transition: 0.3s;
+}
+
+.lineaHover:hover
+{
+	border-bottom:3px solid #e6712b;
+	-webkit-filter: drop-shadow(-3px 3px 3px #e4722b);
 }
 
 #iconos
@@ -358,7 +371,6 @@ footer
 	height: 3em;
 	border-top: 1px solid #c7c7c7;
 	background: #e6e6e6;	
-	margin-top: 12em;
 }
 
 

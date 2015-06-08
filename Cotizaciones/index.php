@@ -85,37 +85,37 @@ else
 			
 			<div class="linea_vertical"></div>
 			
-			<a href="index.php"><img src="images/1home.png" class="iconoi_encabezado"></a>
+			<a href="index.php"><img src="images/1home.png" class="iconoi_encabezado lineaHover"></a>
 			
 			<div id="iconos">
 
 					<?php 
 					if($usuario=="holi"){
 			echo '
-				<img onclick="cotizar()" src="images/1generar.png" class="icono_encabezado">
+				<img onclick="cotizar()" src="images/1generar.png" class="icono_encabezado lineaHover">
 				<div class="linea_verticalfd"></div>
 				
-				<img onclick="cotizaciones()" src="images/1cotizaciones.png" class="icono_encabezado">
+				<img onclick="cotizaciones()" src="images/1cotizaciones.png" class="icono_encabezado lineaHover">
 				<div class="linea_verticalfd"></div>			
 				
 				<div class="mover">
 				
-					<img src="images/1clientes.png" class="icono_encabezado clientes">
+					<img src="images/1clientes.png" class="icono_encabezado clientes lineaHover">
 					
 					<div class="agregar">
-							<img onclick="agregar_c()" src="images/2anadir.png" class="icono_encabezado agregar">
+							<img onclick="agregar_c()" src="images/2anadir.png" class="icono_encabezado agregar lineaHover">
 					</div>
 					
 					<div class="eliminar">
-							<img onclick="eliminar_c()" src="images/1eliminar.png" class="icono_encabezado agregar">
+							<img onclick="eliminar_c()" src="images/1eliminar.png" class="icono_encabezado agregar lineaHover">
 					</div>
 					
 					<div onclick="modificar_c()" class="modificar">
-							<img src="images/1modificar.png" class="icono_encabezado agregar">
+							<img src="images/1modificar.png" class="icono_encabezado agregar lineaHover">
 					</div>
 					
 					<div class="visualizar">
-							<img onclick="visualizar_c()" src="images/1ver.png" class="icono_encabezado agregar">
+							<img onclick="visualizar_c()" src="images/1ver.png" class="icono_encabezado agregar lineaHover">
 					</div>
 						
 				</div>
@@ -123,18 +123,18 @@ else
 				
 				<div class="mover2">
 				
-				<img src="images/1usuarios.png" class="icono_encabezado">
+				<img src="images/1usuarios.png" class="icono_encabezado lineaHover">
 				
 					<div class="agregar">
-							<img onclick="agregar_u()" src="images/2anadir.png" class="icono_encabezado agregar">
+							<img onclick="agregar_u()" src="images/2anadir.png" class="icono_encabezado agregar lineaHover">
 					</div>
 					
 					<div class="eliminar">
-							<img onclick="eliminar_u()" src="images/1eliminar.png" class="icono_encabezado agregar">
+							<img onclick="eliminar_u()" src="images/1eliminar.png" class="icono_encabezado agregar lineaHover">
 					</div>
 					
 					<div class="modificar">
-							<img onclick="visualizar_u()" src="images/1modificar.png" class="icono_encabezado agregar">
+							<img onclick="visualizar_u()" src="images/1modificar.png" class="icono_encabezado agregar lineaHover">
 					</div>
 				
 				</div>
@@ -142,28 +142,29 @@ else
 				
 				<div class="mover">
 				
-				<img src="images/1productos.png" class="icono_encabezado">
+				<img src="images/1productos.png" class="icono_encabezado lineaHover">
 				
 					<div class="agregar">
-							<img onclick="agregar_p()" src="images/2anadir.png" class="icono_encabezado agregar">
+							<img onclick="agregar_p()" src="images/2anadir.png" class="icono_encabezado agregar lineaHover">
 					</div>
 					
 					<div class="eliminar">
-							<img onclick="eliminar_p()" src="images/1eliminar.png" class="icono_encabezado agregar">
+							<img onclick="eliminar_p()" src="images/1eliminar.png" class="icono_encabezado agregar lineaHover">
 					</div>
 					
 					<div class="modificar">
-							<img onclick="modificar_p()" src="images/1modificar.png" class="icono_encabezado agregar">
+							<img onclick="modificar_p()" src="images/1modificar.png" class="icono_encabezado agregar lineaHover">
 					</div>
 					
 					<div class="visualizar">
-							<img onclick="ver_p()" src="images/1ver.png" class="icono_encabezado agregar">
+							<img onclick="ver_p()" src="images/1ver.png" class="icono_encabezado agregar lineaHover">
 					</div>
 				
 				</div>
+				';} ?>
 				<div class="linea_verticalfd"></div>
-					';} ?>
-				<img onclick="log_in()" src="images/1sesion.png" class="icono_encabezado">
+					
+				<img onclick="log_in()" src="images/1sesion.png" class="icono_encabezado lineaHover">
 			</div>
 		</div>
 		
