@@ -9,7 +9,7 @@
 
 
 	<body>	
-			<div class="contenido bienvenida">
+			<div id="contenido" class="bienvenida">
 				<img src="images/logo_home.png" id="logoHome">
 				<br />
 				<br />

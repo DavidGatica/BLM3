@@ -246,7 +246,7 @@ while ($campo = mysql_fetch_array($resultado)) {
                     </div>
                 </div>
 	
-    <body>
+    </body>
 	
 </html>
 
