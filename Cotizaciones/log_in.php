@@ -4,7 +4,7 @@ if (!isset($_GET['op']))
     $op = NULL;
 else
     $op = $_GET['op'];
-
+$atras="algo";
 
 
 
@@ -27,6 +27,7 @@ while ($campo = mysql_fetch_array($resultado)) {
 
 <body>
     <div id="contenido">
+    <div id="contenidoCont">
 
 
 <?php
@@ -51,14 +52,16 @@ if (isset($_SESSION['usuario'])) {
     }
 } else {
     ?>
-
-
+				
+				<div class="centrar">
+				<p>Ingrese sus datos</p><br /><br /><br />
                 <form action="validar_usuario.php" method="POST">
 
-                    <input type="text" class="sign-up-input" placeholder="Usuario" name="id_usuario" autofocus required>
-                    <input type="password" class="sign-up-input" placeholder="Contraseña" name="password" required>
-                    <input type="submit" value="Entrar" class="sign-up-button">
+                    <input type="text" class="inputChico" placeholder="Usuario" name="id_usuario" autofocus required><br /><br />
+                    <input type="password" class="inputChico" placeholder="Contraseña" name="password" required><br /><br />
+                    <input type="submit" value="Iniciar" class="botonChico">
                 </form>
+				</div>
 
 
     <?php
@@ -66,7 +69,7 @@ if (isset($_SESSION['usuario'])) {
 ?>
 
 
-
+		</div>
         </div>
 
             <?php if ($op == 'desactivado') { ?>

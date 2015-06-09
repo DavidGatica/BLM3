@@ -22,18 +22,7 @@ else
     $seccion = $_GET['sec'];
 
 ?>
-
-<head>
-    <title>Consecutivo de cotizaciones</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="language" content="en" />
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">  
-    <link href="stylenuevo.css" rel="stylesheet" type="text/css" />
-</head>
-
-	<body> 
+<html>
 <script>
 	function agregar_c() {
 		location.href = "?sec=alta";
@@ -80,6 +69,19 @@ else
 	}
 
 </script>
+<head>
+    <title>Consecutivo de cotizaciones</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="en" />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">  
+    <link href="stylenuevo.css" rel="stylesheet" type="text/css" />
+</head>
+
+	<body> 
+	<div id="Contenido">
+
 		<div id="encabezado_negro">
 			<a href="http://www.bestlightmexico.com.mx" target="new"><img src="images/logo_encabezado.png" id="logo_encabezado"></a>
 			
@@ -169,7 +171,7 @@ else
 		</div>
 		
 		                <!-- content / DERECHA-->
-		<div id="contenido">
+		<div id="contenidoCont">
 			                      
 
 				<?php	
@@ -230,13 +232,15 @@ else
 
 		</div>
 		
+		</div>
+		
 		<footer>
 			
 			<?php
 
 				if($atras=="algo"){
 				echo '
-			<div class="efectArrow"><img src="images/arrowLeft.png" id="arrowLeft"></div>
+			<div class="efectArrow"><a href="'?><?=$_SERVER['HTTP_REFERER']?><?php echo '"><img src="images/arrowLeft.png" id="arrowLeft"></div>
 			
 			<div class="lineaVerticalPie"></div>
 				'; }
