@@ -41,12 +41,12 @@ while ($row = mysql_fetch_assoc($result)) {
 
 
 if ($usuario == 'ninguno' || $pass == 'ninguno') {
-    session_destroy();
-    header("Location: log_in.php?op=mal");
+    $_SESSION=null;
+    header("Location: index.php?sec=log_in&op=mal");
 } else {
 
 //GUARDA QUERY EN $query
-    $query = "SELECT `permiso`, activo FROM `Usuarios` WHERE `id_usuario`='$id_usuario' ";
+    $query = "SELECT * FROM `Usuarios` WHERE `id_usuario`='$id_usuario' ";
 
 //GENERA LA QUERY
     $result = mysql_query($query);
@@ -60,12 +60,12 @@ if ($usuario == 'ninguno' || $pass == 'ninguno') {
 
     if ($permiso == '1' && $activo == '1') {
         $_SESSION['permiso'] = '1';
-        header("Location: administracion.php");
+        header("Location: index.php");
     }
 
     if ($permiso == '2' && $activo == '1') {
         $_SESSION['permiso'] = '2';
-        header("Location: ventas.php");
+        header("Location: index.php");
     }
 
     if ($activo == '0') {

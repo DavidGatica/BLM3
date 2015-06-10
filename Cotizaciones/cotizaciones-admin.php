@@ -1,5 +1,6 @@
 
 <div id="contenido">
+<div id="contenidoCont">
 
 <script>
     function Eliminar(id_cotizacion) {
@@ -29,6 +30,7 @@
 </script>
 
 <?php
+$atras="algo";
 //Capturamos el usuario autenticado
 
 
@@ -164,6 +166,7 @@ if ($cont == 1) {
     <div id="errorimg">
         <img  src="images/error.png"></div>
 <?php } ?>
+</div>
 </div>
 
 

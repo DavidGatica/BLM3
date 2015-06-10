@@ -53,6 +53,7 @@ h2
 	width: 100%;
 	height: 3em;
 	background: #434343;
+	position: fixed;
 	overflow: hidden;
 }
 
@@ -103,7 +104,12 @@ h2
 .lineaHover:hover
 {
 	border-bottom:3px solid #e6712b;
-	-webkit-filter: drop-shadow(-3px 3px 3px #e4722b);
+	-webkit-filter: drop-shadow( 0 0 5px #e4722b);
+}
+
+.sombraHover:hover
+{
+	-webkit-filter: drop-shadow( 0 0 5px #e4722b);
 }
 
 #iconos
@@ -304,9 +310,44 @@ h2
 	transition: background 0.2s;
 }
 
-.CSSTableGenerator td:hover
+.CSSTableGenerator tr:hover
+{
+    transition: background 0.2s;
+}
+
+.CSSTableGenerator tr:hover
 {
     background: #DDDDDD;
+}
+
+.CSSTableGenerator td:hover
+{
+    background: #F0F0F0;
+}
+
+.CSSTableGenerator tr:first-child td:nth-child(5):hover
+{
+    background: #434343;
+}
+
+.CSSTableGenerator td:nth-child(5):hover
+{
+    background: #f2e178;
+}
+
+.CSSTableGenerator td:nth-child(6):hover
+{
+    background: #43e5b8;
+}
+
+.CSSTableGenerator td:nth-child(7):hover
+{
+    background: #69d2db;
+}
+
+.CSSTableGenerator td:nth-child(8):hover
+{
+    background: #ce6666;
 }
 
 .CSSTableGenerator tr:last-child td
@@ -406,7 +447,7 @@ footer
 .lineaVerticalPie
 {
 	margin-left: 0.4em;
-	margin-right: 1em;
+	margin-right: 0.4em;
 	margin-top: 0.5em;
 	float: left;
 	height: 2em;
@@ -432,6 +473,25 @@ footer
 	box-shadow: 0 0 10px #41fe0a;
 	border:1px solid #41fe0a;
 	padding: 0.7em;
+}
+
+#sesionFooter
+{
+	float: left;
+	color: #7e7e7e;
+	margin: 0.8em 0 0 0 ;
+}
+
+#versionFooter
+{
+	float: left;
+	color: #7e7e7e;
+	margin: 0.8em 0.6em 0 0 ;
+}
+
+#derechaFooter
+{
+	float: right;
 }
 
 @media only screen 
@@ -533,11 +593,52 @@ and (min-width : 1360px)
 }
 
 @media only screen 
+and (min-width : 642px)
+and (min-device-height : 768px)
+{
+	#contenido
+	{
+		min-height: 35.8em;
+	}
+	#contenidoCont
+	{
+		padding: 2em;
+	}
+}
+
+@media only screen 
+and (min-width : 673px)
+and (min-device-height : 768px)
+{
+	#contenido
+	{
+		min-height: 33.3em;
+	}
+	#contenidoCont
+	{
+		padding: 2em;
+	}
+}
+
+@media only screen 
+and (min-width : 1304px)
+{
+	#contenido
+	{
+		min-height: 37.1em;
+	}
+	#contenidoCont
+	{
+		padding: 2em;
+	}
+}
+
+@media only screen 
 and (min-width : 1366px)
 {
 	#contenido
 	{
-		min-height: 31.6em;
+		min-height: 34.6em;
 	}
 	#contenidoCont
 	{
@@ -611,11 +712,12 @@ and (min-width : 1680px)
 }
 
 @media only screen 
-and (min-width : 1920px)
+and (min-width : 919px)
+and (min-device-height : 1080px)
 {
 	#contenido
 	{
-		min-height: 43.6em;
+		min-height: 47.8em;
 	}
 	#contenidoCont
 	{
@@ -633,7 +735,43 @@ and (min-device-height : 1080px)
 {
 	#contenido
 	{
-		min-height: 43.6em;
+		min-height: 45.3em;
+	}
+	#contenidoCont
+	{
+		padding: 5em;
+	}
+	#logoHome
+	{
+	width: 50em;
+	}
+}
+
+@media only screen 
+and (min-width : 1858px)
+and (min-device-height : 1080px)
+{
+	#contenido
+	{
+		min-height: 49.1em;
+	}
+	#contenidoCont
+	{
+		padding: 5em;
+	}
+	#logoHome
+	{
+	width: 50em;
+	}
+}
+
+@media only screen 
+and (min-width : 1920px)
+and (min-device-height : 1080px)
+{
+	#contenido
+	{
+		min-height: 46.6em;
 	}
 	#contenidoCont
 	{

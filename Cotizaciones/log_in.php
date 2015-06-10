@@ -4,6 +4,8 @@ if (!isset($_GET['op']))
     $op = NULL;
 else
     $op = $_GET['op'];
+
+
 $atras="algo";
 
 
@@ -32,24 +34,24 @@ while ($campo = mysql_fetch_array($resultado)) {
 
 <?php
 if (isset($_SESSION['usuario'])) {
-    $id_usuario = $_SESSION['usuario'];
-//Funcion que conecta la base de datos
-//GUARDA QUERY EN $query
-    $query = "SELECT `permiso`, activo FROM `Usuarios` WHERE `id_usuario`='$id_usuario' ";
-//GENERA LA QUERY
-    $result = mysql_query($query);
-//SI EXISTE RESULTADO GUARDA LAS VARIABLES
-    while ($campo = mysql_fetch_array($result)) {
-        $permiso = $campo['permiso'];
-        $activo = $campo['activo'];
-    }
-    if ($permiso == '1' && $activo == '1') {
-        header("Location: administracion.php");
-    }
+		$id_usuario = $_SESSION['usuario'];
+	//Funcion que conecta la base de datos
+	//GUARDA QUERY EN $query
+		$query = "SELECT `permiso`, activo FROM `Usuarios` WHERE `id_usuario`='$id_usuario' ";
+	//GENERA LA QUERY
+		$result = mysql_query($query);
+	//SI EXISTE RESULTADO GUARDA LAS VARIABLES
+		while ($campo = mysql_fetch_array($result)) {
+			$permiso = $campo['permiso'];
+			$activo = $campo['activo'];
+		}
+		if ($permiso == '1' && $activo == '1') {
+			header("Location: index.php?permiso=administracion&idUsuario=$id_usuario");
+		}
 
-    if ($permiso == '2' && $activo == '1') {
-        header("Location: ventas.php");
-    }
+		if ($permiso == '2' && $activo == '1') {
+			header("Location: index.php?permiso=ventas");
+		}
 } else {
     ?>
 				

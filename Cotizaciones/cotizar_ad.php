@@ -1,5 +1,8 @@
 <html>
     <?php
+	
+	$atras="algo";
+	
     //Usuario Conectado
 
 /*
@@ -16,30 +19,32 @@
 
         ?>
 		<div id="contenido">
-			<div class="centrar">
-				<p>Seleccione el cliente a cotizar.</p>
-				<br />
-				<br />
-				<br />
-				<form action="partidas.php" method="POST">
-					<?php
-					$sql = "SELECT `empresa` FROM `Clientes` WHERE desactivado= 0 ORDER BY `empresa`";
-					$resultado = query($sql, $conexion);
-					echo '<select name=empresa>';
-					while ($campo = mysql_fetch_array($resultado)) {
-						echo '<option>' . $campo["empresa"] . '</option>';
-						$conectar = 1;
-					}
-					echo '</select>';
-					?>
+			<div id="contenidoCont">		
+				<div class="centrar">
+					<p>Seleccione el cliente a cotizar.</p>
 					<br />
 					<br />
 					<br />
-					
-					
-					<div class="hover"><input type="submit" value="Cotizar" class="botonChico"></div>
+					<form action="partidas.php" method="POST">
+						<?php
+						$sql = "SELECT `empresa` FROM `Clientes` WHERE desactivado= 0 ORDER BY `empresa`";
+						$resultado = query($sql, $conexion);
+						echo '<select name=empresa>';
+						while ($campo = mysql_fetch_array($resultado)) {
+							echo '<option>' . $campo["empresa"] . '</option>';
+							$conectar = 1;
+						}
+						echo '</select>';
+						?>
+						<br />
+						<br />
+						<br />
+						
+						
+						<div class="hover"><input type="submit" value="Cotizar" class="botonChico"></div>
 
-			
+				
+				</div>
 			</div>
 		</div>		
 </html>
