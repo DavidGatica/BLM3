@@ -626,3 +626,21 @@ and (min-width : 1920px)
 	width: 50em;
 	}
 }
+
+@media only screen 
+and (min-width : 952px)
+and (min-device-height : 1080px)
+{
+	#contenido
+	{
+		min-height: 43.6em;
+	}
+	#contenidoCont
+	{
+		padding: 5em;
+	}
+	#logoHome
+	{
+	width: 50em;
+	}
+}
