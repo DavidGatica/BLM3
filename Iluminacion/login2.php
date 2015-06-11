@@ -16,9 +16,10 @@ if($_POST['usuario']==null || $_POST['password']==null ){
 $usuario=$_POST['usuario'];
 $password=$_POST['password'];
 }
-
+echo $usuario;
+echo $password;
 //GUARDA QUERY EN $query
-$query = "SELECT `id_usuario`, `password` FROM `Registrar` WHERE `id_usuario`='$usuario' and `password`='$password'";
+$query = "SELECT `id_usuario`, `password` FROM `Registro` WHERE `id_usuario`='$usuario' and `password`='$password'";
 
 //GENERA LA QUERY
 $result = mysql_query($query);
@@ -38,7 +39,7 @@ while ($row = mysql_fetch_assoc($result)) {
 
 if ($usuario == 'ninguno' || $pass == 'ninguno') {
     session_destroy();
-    header("Location: login4.html");
+    header("Location: login4.html?op=mal");
 } else {
 
 //GUARDA QUERY EN $query

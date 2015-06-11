@@ -1,4 +1,19 @@
 <!<!DOCTYPE html>
+<?php
+
+if(!isset($_GET['op']))
+$op=null;
+else 
+$op=$_GET['op'];
+if($op=='mal'){
+?>
+<script>
+alert('ERROR\n Usuario o contraseña incorrectos, intente de nuevo');
+
+
+</script>
+<?php } ?>
+
 <html>
 <head>
 <meta charset="UTF-8">
