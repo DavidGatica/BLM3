@@ -3,9 +3,6 @@ if (!isset($_SESSION['usuario'])) {
     header('Location: log_in.php');
 }
 
-header('Content-Type: text/html; charset=UTF-8');
-//incluimos el archivo con las funciones
-include ("funciones_mysql.php");
 
 //Funcion que conecta la base de datos
 $conexion = conectar();
@@ -18,26 +15,7 @@ $permiso1 = $campo['permiso'];
 $nombre = $campo['nombre'];
 $apellido_p = $campo['apellido_p'];
 $apellido_m = $campo['apellido_m'];
-?>
 
-<div class="datagrid">
-    <table width="50em"> 
-        <tr>
-        <thead>
-        <th width='4%'><h3>No.</h3></th>        
-        <th width='10%'><h3>Empresa</h3></th>
-		<th width='4%'><h3>RFC</h3></th>
-        <th width='43%'><h3>Dirección</h3></th>
-        <th width='43%'><h3>Contacto</h3></th>
-        <?php
-        if ($permiso1 == 1) {
-            echo "<th width='10%'><h3>Vendedor</h";
-        }
-        ?>
-        </thead>
-        </tr>
-        <?php
-        $cont = 2;
         if ($permiso1 == 2) {
             echo "<div align='center'><div id='caja_cat' align='center'>Clientes de <br>$nombre $apellido_p $apellido_m:</div></div><br>";
             $sql = "SELECT * FROM Clientes WHERE id_usuario = '$usuario' and desactivado='0'";
@@ -45,6 +23,27 @@ $apellido_m = $campo['apellido_m'];
             echo "<div align='center'><div id='caja_cat''>Todos los Clientes:</div></div><br>";
             $sql = "SELECT * FROM Clientes WHERE desactivado = 0";
         }
+?>
+
+<div class="CSSTableGenerator">
+    <table width="50em"> 
+        <tr>
+        <thead>
+        <td>No.</td>        
+        <td>Empresa</td>
+		<td>RFC</td>
+        <td>Dirección</td>
+        <td>Contacto</td>
+        <?php
+        if ($permiso1 == 1) {
+            echo "<td><h3>Vendedor</td>";
+        }
+        ?>
+        </thead>
+        </tr>
+        <?php
+        $cont = 2;
+
         $resultado = query($sql, $conexion);
         while ($campo = mysql_fetch_array($resultado)) {
             if ($cont % 2 == 0) {

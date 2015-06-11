@@ -29,9 +29,7 @@ if (!isset($_SESSION['usuario'])) {
 	
 	<script>
 	function todo() {
-	location.href = "?opcion=todo";
-	}
-	
+	location.href = "?sec=visualizarC&opcion=todo";
 	}
 
 	</script>
@@ -84,7 +82,7 @@ if (!isset($_SESSION['usuario'])) {
 		<div>
         <?php
         if ($opcion == "todo") {
-            require_once("catalogo_clientes.php");
+            include("catalogo_clientes.php");
         }
 
         if ($rfc != "nada") {
