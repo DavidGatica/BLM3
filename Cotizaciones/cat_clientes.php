@@ -38,43 +38,43 @@ if (!isset($_SESSION['usuario'])) {
 		<div id="contenidoCont">
 		<div class="centrar">
        <p>Herramienta de visualizacion de clientes</p>
+	   <br><br>
 
-        <div align="center" style="margin-top:30px;">
-            <table cellspacing="30px" border=0>
-
-                <tr><td valign="top" > 
+						<div class="alineaIzquierda centrar">
                         Mostrar todo:
                         <br><br>
-                        <input type="button" value="Mostrar Todo" onclick="todo()">
-                    </td>
+                        <input type="button" value="Mostrar todo" onclick="todo()" class="botonChico">
+						</div>
 
-
-                    <td valign="top"  > 
+						<div class="alineaIzquierda centrar">
                         Buscar por rfc:
                         <br><br>
                         <form action="cat_clientes.php" method="POST">
-                            <input type=text name=rfc required> 
-                            <input type=submit value="Buscar">
+                            <input type=text name=rfc required> <br><br>
+                            <input type=submit value="Buscar" class="botonChico">
                         </form>
-                    </td>
+						</div>
 
-                    <td valign="top"  > 
+						<div class="alineaIzquierda centrar">
                         Buscar por nombre de la empresa:
                         <br><br>
                         <form action="cat_clientes.php" method="POST">
-                            <input type=text name=empresa required> 
-                            <input type=submit value="Buscar">
+                            <input type=text name=empresa required> <br><br>
+                            <input type=submit value="Buscar" class="botonChico">
                         </form>
-                    </td>
+						</div>
 
-                    <td valign="top">
+						<div class="alineaIzquierda centrar">
                         Salir:
                         <br><br>
                         <a href="administracion.php">
-                            <input name="button" type="submit" value="Salir" /></a>
-                    </td></tr>
+                            <input name="button" type="submit" value="Salir" class="botonChico"/></a>
+						</div>
+						
+						<div class="break"></div>
+						<br><br><br>
 
-            </table>
+
 
         </div>
 

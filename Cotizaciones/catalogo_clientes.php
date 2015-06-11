@@ -26,21 +26,8 @@ $apellido_m = $campo['apellido_m'];
 ?>
 
 <div class="CSSTableGenerator">
-    <table width="50em"> 
-        <tr>
-        <thead>
-        <td>No.</td>        
-        <td>Empresa</td>
-		<td>RFC</td>
-        <td>Dirección</td>
-        <td>Contacto</td>
-        <?php
-        if ($permiso1 == 1) {
-            echo "<td><h3>Vendedor</td>";
-        }
-        ?>
-        </thead>
-        </tr>
+    <table> 
+
         <?php
         $cont = 2;
 
@@ -83,15 +70,28 @@ $apellido_m = $campo['apellido_m'];
                 $nombre_usuario = "" . $campo5['nombre'] . " " . $campo5['apellido_p'];
 
 
-                echo
+                echo ' <tr>
+       
+        <td>No.</td>        
+        <td>Empresa</td>
+		<td>RFC</td>
+        <td>Dirección</td>
+        <td>Contacto</td> ';
+        
+        if ($permiso1 == 1) {
+            echo '<td>Vendedor</td>';
+        }
+        
+        echo '
+        </tr>' .
                 "<tr>" .
-                "<td id='sombra2'>" . $campo['id_num_cliente'] . "</td>" .
-				"<td id='sombra2'>" . $campo['empresa'] . "</td>" .
-				"<td id='sombra2'>" . $campo['id_cliente'] . "</td>" .
-                "<td id='sombra2'>" . $calle_num . "--" . $colonia . "--" . $municipio . "--" . $estado . "--" . $cp . "</td>" .
-                "<td id='sombra2'>" . $nombre_c . "-" . $departamento . "--" . $telefono1 . "--" . $telefono2 . "--" . $e_mail_c . "</td>";
+                "<td>" . $campo['id_num_cliente'] . "</td>" .
+				"<td>" . $campo['empresa'] . "</td>" .
+				"<td>" . $campo['id_cliente'] . "</td>" .
+                "<td>" . $calle_num . "--" . $colonia . "--" . $municipio . "--" . $estado . "--" . $cp . "</td>" .
+                "<td>" . $nombre_c . "-" . $departamento . "--" . $telefono1 . "--" . $telefono2 . "--" . $e_mail_c . "</td>";
                 if ($permiso1 == 1) {
-                    echo "<td id='sombra2'>" . $permiso . " " .$nombre_usuario . "</td>";
+                    echo "<td>" . $permiso . " " .$nombre_usuario . "</td>";
                 }
                 echo "<tr>";
             } else {
@@ -122,13 +122,13 @@ $apellido_m = $campo['apellido_m'];
 
                 echo
                 "<tr>" .
-				"<td id='sombra2'>" . $campo['id_num_cliente'] . "</td>" .				
-                "<td id='sombra'>" . $campo['empresa'] . "</td>" .
-                "<td id='sombra'>" . $campo['id_cliente'] . "</td>" .
-                "<td id='sombra'>" . $calle_num . "--" . $colonia . "--" . $municipio . "--" . $estado . "--" . $cp . "</td>" .
-                "<td id='sombra'>" . $nombre_c . "-" . $departamento . "--" . $telefono1 . "--" . $telefono2 . "--" . $e_mail_c . "</td>";
+				"<td>" . $campo['id_num_cliente'] . "</td>" .				
+                "<td>" . $campo['empresa'] . "</td>" .
+                "<td>" . $campo['id_cliente'] . "</td>" .
+                "<td>" . $calle_num . "--" . $colonia . "--" . $municipio . "--" . $estado . "--" . $cp . "</td>" .
+                "<td>" . $nombre_c . "-" . $departamento . "--" . $telefono1 . "--" . $telefono2 . "--" . $e_mail_c . "</td>";
                 if ($permiso1 == 1) {
-                    echo "<td id='sombra'>" . $permiso . " " .$nombre_usuario . "</td>";
+                    echo "<td>" . $permiso . " " .$nombre_usuario . "</td>";
                 }
                 echo "<tr>";
             }

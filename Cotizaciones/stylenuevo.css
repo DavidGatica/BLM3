@@ -321,6 +321,8 @@ h2
     background: #434343;
 }
 
+
+
 .CSSTableGenerator td:nth-child(5):hover
 {
     background: #f2e178;
@@ -356,7 +358,7 @@ h2
     border-width:0px 0px 0px 0px;
 }
 
-.CSSTableGenerator tr:first-child td
+.CSSTableGenerator tr:first-child  td
 {
     background: #434343;
     border:0px solid white;
@@ -380,6 +382,10 @@ h2
 .CSSTableGenerator tr:first-child td:last-child
 {
     border-width:0px 0px 1px 1px;
+}
+.CSSTableGenerator tr:nth-child(1)
+{
+    background: #ffffff;
 }
 
 .eliminart
@@ -415,12 +421,23 @@ footer
 	text-align: center;
 }
 
+.break
+{
+	clear: both;
+}
+
 .efectArrow
 {
 	float: left;
 	width: 2.7em;
 	height: 2.7em;	
 	cursor: pointer;
+}
+
+.alineaIzquierda
+{
+	float: left;
+	margin: 0 1em;
 }
 
 .efectArrow:hover
