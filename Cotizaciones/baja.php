@@ -1,5 +1,7 @@
 <html>
-
+<div id="contenido">
+<div id="contenidoCont">
+<div class="centrar">
     <script type="text/javascript">
         function irAlIndice() {
 
@@ -32,7 +34,19 @@
     $conexion = conectar();
 
     $cont = 0;
-    $sql = "SELECT `empresa` FROM `Clientes` WHERE `id_usuario` = '$id_usuario' AND `desactivado` = '0' ";
+	
+	$sql = "SELECT * FROM Usuarios Where id_usuario = '$id_usuario'";
+	$resultado = query($sql, $conexion);
+	 while ($campo = mysql_fetch_array($resultado)) {
+                $permiso = $campo['permiso'];
+            }
+			
+	if($permiso==1){	
+    $sql = "SELECT * FROM `Clientes` WHERE `desactivado` = '0' ";
+	}
+	else{
+	$sql = "SELECT `empresa` FROM `Clientes` WHERE `id_usuario` = '$id_usuario' AND `desactivado` = '0' ";
+	}
     $resultado = query($sql, $conexion);
     while ($campo = mysql_fetch_array($resultado)) {
         $cont = 1;
@@ -65,10 +79,11 @@
         if ($cont == 0) {
             ?>
 
-            <div id="errorimg">
-                <img   src="images/error.png" margin-left="40px"></div>
+            <div class="errorRegistros centrar">NO HAY REGISTROS</div>
 <?php } ?>
 
 
-
+</div>
+</div>
+</div>
 </html>

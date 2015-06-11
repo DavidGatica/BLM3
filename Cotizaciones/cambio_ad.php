@@ -1,17 +1,18 @@
 <html>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="language" content="en" />
+
+<div id="contenido">
+<div id="contenidoCont">
+<div class="centrar">
 
     <?php
 //Usuario Conectado
     session_start();
 
+	$atras="algo";
 
     if (!isset($_SESSION['usuario'])) {
         header('Location: relogin.php');
     }
-//incluimos el archivo con las funciones
-    include ("funciones_mysql.php");
 
 
     $id_usuario = $_SESSION['usuario'];
@@ -29,7 +30,10 @@
 
     if ($cont == 1) {
         ?>
-        <div id="addcliente">Seleccione el cliente a modificar:</div>
+        <p>Seleccione el cliente a modificar:</p>
+		<br />
+		<br />
+		<br />
         <form action="cambiousuario.php" method="POST">
             <?php
 //Usuario Conectado
@@ -45,16 +49,19 @@
             }
             echo '</select>';
             ?>
-
-            <input type="submit" value="MODIFICAR!" class="formu-button" >
+					<br />
+		<br />
+		<br />
+            <input type="submit" value="Modificar" class="botonChico" >
 
         <?php }
         if ($cont == 0) {
             ?>
-            <div id="errorimg">
-                <img  src="images/error.png" margin-left="40px"></div>
+            <div class="errorRegistros centrar">NO HAY REGISTROS</div>
 
 <?php } ?>
 
-
+</div>
+</div>
+</div>
 </html>

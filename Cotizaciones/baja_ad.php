@@ -1,4 +1,29 @@
 <html>
+<div id="contenido">
+<div id="contenidoCont">
+<div class="centrar">   
+   <?php
+//Usuario Conectado
+    session_start();
+
+	$atras="algo";
+        $id_usuario = $_SESSION['usuario'];
+
+
+//Funcion que conecta la base de datos
+        $conexion = conectar();
+
+        $cont = 0;
+        $sql = "SELECT empresa FROM Clientes";
+        $resultado = query($sql, $conexion);
+        while ($campo = mysql_fetch_array($resultado)) {
+            $cont = 1;
+        }
+		
+
+        if ($cont == 1) {
+            ?>
+
 
     <script type="text/javascript">
         function irAlIndice() {
@@ -13,35 +38,12 @@
 
     </script>
 
-    <?php
-//Usuario Conectado
-    session_start();
 
 
-    if (!isset($_SESSION['usuario'])) {
-        header('Location: relogin.php');
-    } else {
-//incluimos el archivo con las funciones
-        include ("funciones_mysql.php");
-
-
-        $id_usuario = $_SESSION['usuario'];
-
-
-//Funcion que conecta la base de datos
-        $conexion = conectar();
-
-        $cont = 0;
-        $sql = "SELECT `empresa` FROM `Clientes` ";
-        $resultado = query($sql, $conexion);
-        while ($campo = mysql_fetch_array($resultado)) {
-            $cont = 1;
-        }
-
-        if ($cont == 1) {
-            ?>
-
-            <div id="addcliente">Seleccione el cliente que desea eliminar:</div>
+            <p>Seleccione el cliente que desea eliminar:</p>
+			<br />
+			<br />
+			<br />
             <form action="bajausuario.php" method="POST">
 
 
@@ -54,24 +56,27 @@
                 //Generamos el menu desplegable
                 echo '<select id=bajaselect name=empresa>';
                 while ($campo = mysql_fetch_array($resultado)) {
-                    echo '<option>' . $campo["empresa"];
+                    echo '<option>' . $campo['empresa'];
                 }
                 echo '</select>';
                 ?>
-
-                <input type="submit" value="ELIMINAR!" class="formu-button" >
+<br />
+			<br />
+			<br />
+                <input type="submit" value="Eliminar" class="botonChico" >
 
             <?php
             }
-            if ($cont == 0) {
+            else{
                 ?>
 
-                <div id="errorimg">
-                    <img   src="images/error.png" margin-left="40px"></div>
+                <div class="errorRegistros centrar">NO HAY REGISTROS</div>
             <?php }
-        }
+        
         ?>
 
-
+</div>
+</div>
+</div>
 
 </html>

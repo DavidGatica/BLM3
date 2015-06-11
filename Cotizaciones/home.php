@@ -11,8 +11,6 @@
 	<body>	
 			<div id="contenido" class="bienvenida">
 			<div id="contenidoCont">
-				<br />
-				<br />
 				<img src="images/logo_home.png" id="logoHome">
 				<br />
 				<br />

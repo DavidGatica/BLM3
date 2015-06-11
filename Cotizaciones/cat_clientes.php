@@ -1,5 +1,6 @@
 <?php
 session_start();
+$atras="algo";
 if (!isset($_SESSION['usuario'])) {
     ?> 
     <?php header('Location: cerrar_sesion.php'); ?>
@@ -23,21 +24,22 @@ if (!isset($_SESSION['usuario'])) {
     else
         $empresa = $_POST['empresa'];
     ?>
-    <head>
-        <title>Clientes</title>
-        <meta name="keywords" content="" />
-        <meta name="description" content="" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="language" content="en" />
-        <link href="tabla.css" rel="stylesheet" type="text/css" />
-    </head>
+	
     <body>
+	
+	<script>
+	function todo() {
+	location.href = "?opcion=todo";
+	}
+	
+	}
 
-
-        <div style="margin: 0 auto; width: 500px;" id=tform>
-            <img align="center" src="images/gifalsa.png" width="100px">
-            <div align="right">Herramienta de visualizacion de clientes</div>
-        </div>
+	</script>
+	
+		<div id="contenido">
+		<div id="contenidoCont">
+		<div class="centrar">
+       <p>Herramienta de visualizacion de clientes</p>
 
         <div align="center" style="margin-top:30px;">
             <table cellspacing="30px" border=0>
@@ -45,7 +47,7 @@ if (!isset($_SESSION['usuario'])) {
                 <tr><td valign="top" > 
                         Mostrar todo:
                         <br><br>
-                        <a href="cat_clientes.php?opcion=todo"><input type="button" value="Mostrar Todo"></a> 
+                        <input type="button" value="Mostrar Todo" onclick="todo()">
                     </td>
 
 
@@ -79,10 +81,10 @@ if (!isset($_SESSION['usuario'])) {
         </div>
 
 
-
+		<div>
         <?php
         if ($opcion == "todo") {
-            include("catalogo_clientes.php");
+            require_once("catalogo_clientes.php");
         }
 
         if ($rfc != "nada") {
@@ -94,5 +96,8 @@ if (!isset($_SESSION['usuario'])) {
         }
     }
     ?>
-
+		</div>
+</div>
+</div>
+</div>
 </body>

@@ -54,7 +54,7 @@ $nombreCompleto = $nombre . " " . $apellido_p;
 		location.href = "?sec=cambio";
 	}
 	function visualizar_c() {
-		location.href = "cat_clientes.php";
+		location.href = "?sec=visualizarC";
 	}
 	function cotizaciones() {
 		location.href = "?sec=cotizaciones";
@@ -204,7 +204,8 @@ $nombreCompleto = $nombre . " " . $apellido_p;
 				}	
 				?>
 				
-			</div></div>
+			</div>
+			</div>
 		
 		
 		
@@ -226,10 +227,14 @@ $nombreCompleto = $nombre . " " . $apellido_p;
 					require_once("alta.php");
 				}
 				if ($seccion == "baja") {
-					require_once("baja.php");
+					require_once("baja_ad.php");
 				}
 				if ($seccion == "cambio") {
-					require_once("cambio.php");
+					require_once("cambio_ad.php");
+				}
+				
+				if($seccion == "visualizarC"){
+					require_once("cat_clientes.php");
 				}
 
 				if ($seccion == "cotizaciones") {
@@ -265,7 +270,7 @@ $nombreCompleto = $nombre . " " . $apellido_p;
 				}
 				if ($seccion == "version") {
 					require_once("version.php");
-				}
+				}				
 				?>    		
 
 		</div>

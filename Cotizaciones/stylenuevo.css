@@ -18,16 +18,7 @@ p
 	font-size: 2em;
 }
 
-input
-{
-	border-style: none;
-}
 
-input:focus
-{
-	border-style: none;
-	outline:0px;
-}
 
 a:link
 {
@@ -115,8 +106,9 @@ h2
 #iconos
 {	
 	float: right;
-	margin-right: 1em;
+	width: 28.9em;
 }
+
 
 .icono_encabezado
 {
@@ -150,20 +142,20 @@ h2
 .mover
 {
 	float: left;
-	width: 1.2em;
-	transition: width 0.5s;
+	width: 1em;
+	transition: width 0.4s;
 }
 
 .mover:hover
 {
-	width: 11.5em;	
+	width: 11em;	
 }
 
 .mover2
 {
 	float: left;
 	width: 1.2em;
-	transition: width 0.5s;
+	transition: width 0.4s;
 }
 
 .mover2:hover
@@ -178,8 +170,7 @@ h2
 
 .agregar
 {
-	position: relative;
-	padding-left: 1.2em;
+	margin-left: 1em;
 }
 
 .eliminar
@@ -457,6 +448,7 @@ footer
 .inputChico
 {
 	padding: 0.5em;
+	margin: 0.5em 2em;
 	border:2px solid #787878;	
 	border-radius:2px;
 	transition: 0.2s;
@@ -492,6 +484,16 @@ footer
 #derechaFooter
 {
 	float: right;
+}
+
+.errorRegistros
+{
+	font-size: 2em;
+	width: 10em;
+	margin-top: 5em;
+	border: 3px solid #ca0000;
+	padding: 1em;
+	font-weight: bold;
 }
 
 @media only screen 
@@ -638,11 +640,11 @@ and (min-width : 1366px)
 {
 	#contenido
 	{
-		min-height: 33.1em;
+		min-height: 33.6em;
 	}
 	#contenidoCont
 	{
-		padding: 2em;
+		padding: 2.5em;
 	}
 }
 
@@ -735,11 +737,11 @@ and (min-device-height : 1080px)
 {
 	#contenido
 	{
-		min-height: 45.3em;
+		min-height: 49.3em;
 	}
 	#contenidoCont
 	{
-		padding: 5em;
+		padding: 3em;
 	}
 	#logoHome
 	{
@@ -757,7 +759,7 @@ and (min-device-height : 1080px)
 	}
 	#contenidoCont
 	{
-		padding: 5em;
+		padding: 2em;
 	}
 	#logoHome
 	{
@@ -771,11 +773,11 @@ and (min-device-height : 1080px)
 {
 	#contenido
 	{
-		min-height: 46.6em;
+		min-height: 50.6em;
 	}
 	#contenidoCont
 	{
-		padding: 5em;
+		padding: 3em;
 	}
 	#logoHome
 	{
