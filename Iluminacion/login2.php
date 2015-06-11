@@ -2,24 +2,24 @@
 
 session_start();
 
-//incluimos el archivo con las funciones
-include ("funciones_mysql.php");
 
-//Funcion que conecta la base de datos
-$conexion = conectar();
+$_SESSION['usuario'] = $_POST['usuario'];
+$_SESSION['password'] = $_POST['password'];
 
-if($_POST['usuario']==null || $_POST['password']==null ){
-	$usuario="ninguno";
-	$password="ninguno";
-}else{
-	
-$usuario=$_POST['usuario'];
-$password=$_POST['password'];
-}
-echo $usuario;
-echo $password;
+$id_usuario = $_SESSION['usuario'];
+$password = $_SESSION['password'];
+
+$usuario = 'ninguno';
+$pass = 'ninguno';
+
+//CONECTA Y SELECCIONA BASE DE DATOS
+$link = mysql_connect("localhost", "bestl_servidor", "Zzs99vmoNT1krok!");
+mysql_select_db("bestli01_pagina_cotizaciones", $link) OR DIE("Error: No es posible establecer la conexi&oacute;n");
+
+
+
 //GUARDA QUERY EN $query
-$query = "SELECT `id_usuario`, `password` FROM `Registro` WHERE `id_usuario`='$usuario' and `password`='$password'";
+$query = "SELECT * FROM Registro WHERE id_usuario='$id_usuario' AND password='$password'";
 
 //GENERA LA QUERY
 $result = mysql_query($query);
@@ -28,8 +28,8 @@ $result = mysql_query($query);
 while ($row = mysql_fetch_assoc($result)) {
 
 //SI EXISTE RESULTADO HACE EL IF	
-    if ($row['id_usuario'] == $usuario) {
-        $id_usuario = $row['id_usuario'];
+    if ($row['id_usuario'] == $id_usuario) {
+        $usuario = $row['id_usuario'];
         $pass = $row['password'];
     }
 }
@@ -38,12 +38,15 @@ while ($row = mysql_fetch_assoc($result)) {
 
 
 if ($usuario == 'ninguno' || $pass == 'ninguno') {
-    session_destroy();
-    header("Location: login4.html?op=mal");
-} else {
+    $_SESSION=null;
+    header("Location: login4.php?op=mal");
+} 
+else {
+	
+	echo "hola";
 
 //GUARDA QUERY EN $query
-    $query = "SELECT * FROM `Usuarios` WHERE `id_usuario`='$id_usuario' ";
+    $query = "SELECT * FROM `Registro` WHERE `id_usuario`='$usuario' ";
 
 //GENERA LA QUERY
     $result = mysql_query($query);
@@ -54,16 +57,14 @@ if ($usuario == 'ninguno' || $pass == 'ninguno') {
     }
 
 
-    if ($tipo_usuario == 'Usuario' ) {
-        $_SESSION['tipo_usuario'] = 'Usuario';
-        header("Location: index.html");
-    }
-
-     if ($tipo_usuario == 'Trabajador' ) {
-        $_SESSION['tipo_usuario'] = 'Trabajador';
-        header("Location: index.html");
-    }
-
     
+        $_SESSION['tipo_usuario'] = $tipo_usuario;
+        header("Location: index.html");
+    
+
 }
 ?>
+
+
+
+

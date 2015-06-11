@@ -1,18 +1,12 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <?php
 
-if(!isset($_GET['op']))
-$op=null;
-else 
-$op=$_GET['op'];
-if($op=='mal'){
-?>
-<script>
-alert('ERROR\n Usuario o contraseña incorrectos, intente de nuevo');
+if(!isset($_GET['op'])){
+$op="nada";}
+else {
+$op=$_GET['op']; }
 
-
-</script>
-<?php } ?>
+ ?>
 
 <html>
 <head>
@@ -267,6 +261,16 @@ Contraseña:
 </div>
 
 <br>
+
+
+<script>
+	var op = "<?php echo $op; ?>" ;
+	if(op=="mal")
+alert('ERROR\n Usuario o contraseña incorrectos, intente de nuevo');
+
+
+</script>
+
 </body>
 
 </html>
