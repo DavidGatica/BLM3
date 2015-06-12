@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['usuario'])){
+	
+	echo '<a href="cerrar.php" >Cerrar Sesión</a>';
+}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es-ES" lang="es-ES">
 <script>
@@ -177,7 +184,7 @@ Iluminación Fotovoltaica Profesional
 
 <td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/contactanos.php" id="inicio"> Contáctanos</a></td>
 
-<td><a href="http://www.bestlightmexico.com.mx/iluminacion/login4.php" id="inicio">Iniciar Sesión</a>&nbsp;&nbsp;&nbsp;
+<td><?php if(isset($_SESSION['usuario'])) {echo "Bienvenido ".$_SESSION['usuario'];}else{echo '<a href="login4.php" id="inicio">Iniciar Sesión</a>';}?>&nbsp;&nbsp;&nbsp;
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 

@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['usuario'])){
+	
+	echo '<a href="cerrar.php" >Cerrar Sesión</a>';
+}
+?>
 <!DOCTYPE html>
 <html>
 <script>
@@ -10,19 +17,42 @@
   ga('send', 'pageview');
 
 </script>
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link href="estilo.css" rel="stylesheet" type="text/css">
 <LINK REL="SHORTCUT ICON" TYPE="IMAGE/ICO" HREF="ico.png">
 <body style="padding:0; margin:0">
 
+<div id="arriba">
+	<div id="buscar">
+<script>
+  (function() {
+    var cx = '013486087382821800792:hnrpeclmfyg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:searchbox-only></gcse:searchbox-only>
+</div></div>
+
 <div align="center" >
-<div id="logos_centrados2"><IMG SRC="logo.png" height="90px" align="left"> <IMG SRC="logocarmanah.png" height="70" align="right"></div>
+<div id="logos_centrados"><IMG SRC="logo.png" height="90px" align="left"> <IMG SRC="logocarmanah.png" height="70" align="right"></div>
 <div class="break"></div>
-<br>
+<br />
 
 <div class="texto7">
 Iluminación Fotovoltaica Profesional 
 </div>
+
+<table bgcolor="#38444B" width="1020" >
+
+<tr >
  
 <td style=" border-right: 2px ridge white;">&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -35,7 +65,7 @@ Iluminación Fotovoltaica Profesional
 <td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/conocenos.php" id="inicio"> ¿Quiénes somos?</a></td> 
 <td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/videos.php" id="inicio"> Videos</a></td> 
 <td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/contactanos.php" id="inicio"> Contáctanos</a></td>
-<td><a href="login4.php" id="inicio">Iniciar Sesión</a>&nbsp;&nbsp;&nbsp;
+<td><?php if(isset($_SESSION['usuario'])) {echo "Bienvenido ".$_SESSION['usuario'];}else{echo '<a href="login4.php" id="inicio">Iniciar Sesión</a>';}?>&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
@@ -49,7 +79,7 @@ Iluminación Fotovoltaica Profesional
 
 <!-- INICIO BANNER -->
 <script>if (typeof em5 === 'undefined'){var em5 = window.addEventListener ? "addEventListener" : "attachEvent";var er5 = window[em5];var me5 = em5 == "attachEvent" ? "onmessage" : "message";er5(me5,function (e) {var s5= e.data;if (s5.substring(0,10) == "changeSize"){document.getElementById(s5.substring(s5.indexOf("html5maker")+10)).style.height=s5.substring(10, s5.indexOf("html5maker"));}},false);}</script>
-<iframe id="html5616fc098eba3fd30d0eae0d7b8e8414dced308184923" src="616fc098eba3fd30d0eae0d7b8e8414dced308184923/616fc098eba3fd30d0eae0d7b8e8414dced308184923.php" width="100%" height="334" frameborder="0" scrolling="no" allowTransparency="true"></iframe>
+<iframe id="html59af5add044ce4f88d20ca13e23f398463c4c89d28fc7" src="9af5add044ce4f88d20ca13e23f398463c4c89d28fc7/9af5add044ce4f88d20ca13e23f398463c4c89d28fc7.php" width="100%" height="334" frameborder="0" scrolling="no" allowTransparency="true"></iframe>
 <!-- FIN BANNER -->
 
  <br><br>
@@ -58,11 +88,11 @@ Iluminación Fotovoltaica Profesional
 
 <td width="550" style=" border-right: 2px ridge black;">
 
-<p align="justify" id="texto1">
-Iluminacion a la interperie (Exteriores) <br> <br>
+<p align="justify" id="textoo">
+Iluminación a la interperie (Exteriores) <br> <br>
 </p>
 <p align="justify" id="texto">
-En este sistema de iluminación exterior, fuera de conexión a la red eléctrica hemos ganado la confianza de los gobiernos e indutrias a nivel mundial, debido al alto grado de rendimiento y avanzada tecnología, en aplicaciones como; calles, primarias, estacionamientos, parques, vías, autopistas y avenidas. Con más de 500,000 sistemas en diferentes partes del mundo. <br><br>
+En este sistema de iluminación exterior, fuera de conexión a la red electrica hemos ganado la confianza de los gobiernos e indutrias a nivel mundial, debido al alto grado de rendimiento y avanzada tecnología, en aplicaciones como; calles, primarias, estacionamientos, parques, vías, autopistas y avenidas. Con más de 500,000 sistemas en diferentes partes del mundo. <br><br>
 
 Cubrimos también mercados como:<br>
 Aviación y Obstrucción<br>
@@ -86,10 +116,20 @@ Es una empresa canadiense que desde hace más de 15 años, ha venido trabajando 
 
 
 <br>
+
 <div align="center" >
 
+<div id="contenedor">
 
-<table bgcolor="#5A5657" width="1020"  border="0" cellpadding="2" heigth="100">
+<a href="https://www.youtube.com/channel/UChpLTqTCVyJl2tgeCuZ8CIQ/videos" target="new" >
+<img alt="youtube" src="youtube.png" title="Best Ligth México on Youtube" id="youtube">
+</a>
+
+</div>
+
+
+
+<table bgcolor="#38444B" width="1020"  border="0" cellpadding="2" heigth="100">
 <tr>
 <td >&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -107,8 +147,10 @@ Es una empresa canadiense que desde hace más de 15 años, ha venido trabajando 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 </tr>
 </table>
-<a href="http://www.bestlightmexico.com.mx/attachments/File/apblm.pdf" id="texto9" align="center"> Aviso de Privacidad</a>
+
+<a href="http://www.bestlightmexico.com.mx/attachments/File/apblm.pdf" id="texto9" align="center"> Aviso de Privacidad<br><br></a>
 </div>
+
 <br>
 </body>
 </html>
