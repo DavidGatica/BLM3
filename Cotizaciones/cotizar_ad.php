@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 
 <html>
+	<body>
 		<div id="contenido">
 			<div id="contenidoCont">		
 				<div class="centrar">
@@ -40,5 +41,6 @@
 					</form>				
 				</div>
 			</div>
-		</div>		
+		</div>
+	</body>
 </html>
