@@ -18,6 +18,11 @@ p
 	font-size: 2em;
 }
 
+select option:hover
+{
+	border: 5px solid green;
+}
+
 
 
 a:link
@@ -437,7 +442,7 @@ footer
 .alineaIzquierda
 {
 	float: left;
-	margin: 0 1em;
+	margin: 0 0.5em;
 }
 
 .efectArrow:hover
@@ -511,6 +516,37 @@ footer
 	border: 3px solid #ca0000;
 	padding: 1em;
 	font-weight: bold;
+}
+
+#buscadoresCentrados
+{
+	width: 45em;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.areaText
+{
+	width: 24.1em;
+	height: 5em;
+	padding: 0.5em;
+	margin: 0.5em 2em;
+	border:2px solid #787878;	
+	border-radius:2px;
+	transition: 0.2s;
+}
+
+.areaText:hover
+{
+	box-shadow: 0 0 10px #e4722b;
+	border:2px solid #fb8c48;
+}
+
+.areaText:focus
+{
+	box-shadow: 0 0 10px #41fe0a;
+	border:1px solid #41fe0a;
+	padding: 0.7em;
 }
 
 @media only screen 

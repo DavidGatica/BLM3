@@ -1,4 +1,7 @@
 <html>
+	<div id="contenido">
+	<div id="contenidoCont">
+	<div class="centrar">
     <script type="text/javascript">
         function irAlIndice() {
             if (confirm("¿Quieres Eliminarlo")) {
@@ -8,11 +11,12 @@
     </script>
 
     <br><br>
-    <div id="adouser"><div style="margin-left: 55px;">Seleccione el usuario que desea eliminar:</div></div>
+    <p>Seleccione el usuario que desea eliminar:</p>
+	<br>
+	<br>
+	<br>
+	
     <form action="bajausuarion.php" method="POST">
-
-
-
         <?php
 //Usuario Conectado
 
@@ -37,19 +41,25 @@
             $resultado = query($sql, $conexion);
 
 //Generamos el menu desplegable
-            echo '<select id=bajaselect name=nombre>';
+            echo '<select id=bajaselect name=nombre class="inputChico">';
             while ($campo = mysql_fetch_array($resultado)) {
                 echo '<option>' . $campo["nombre"] ;
             }
             echo '</select>';
             ?>
-
-            <input type="submit" value="Eliminar" class="formu-button" >
+			<br>
+			<br>
+			<br>
+            <input type="submit" value="Eliminar" class="botonChico" >
 
         </form>
 
 
     <?php } ?>
+	
+	</div>
+	</div>
+	</div>
 </html>
 
 

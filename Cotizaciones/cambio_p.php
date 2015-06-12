@@ -1,4 +1,7 @@
 <html>
+	<div id="contenido">
+	<div id="contenidoCont">
+	<div class="centrar">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="en" />
 
@@ -25,10 +28,13 @@
         if ($cont == 1) {
             ?>
 
-            <div id="addproducto">Seleccione el producto que desea cambiar:</div>
+            <p>Seleccione el producto que desea cambiar:</p>
+			
+			<br />
+			<br />
+			<br />
+			
             <form action="cambioproducto.php" method="POST">
-
-
 
         <?php
 //Seleccionamos Los nombres de los clientes segun usuario
@@ -36,22 +42,27 @@
         $resultado = query($sql, $conexion);
 
         //Generamos el menu desplegable
-        echo '<select id=cambioselect name=catalogo>';
+        echo '<select id=cambioselect name=catalogo class="inputChico">';
         while ($campo = mysql_fetch_array($resultado)) {
             echo '<option>' . $campo["id_catalogo"];
         }
         echo '</select>';
         ?>
+		<br />
+		<br />
+		<br />
 
-                <input type="submit" value="Modificar" class="formu-button" >
+                <input type="submit" value="Modificar" class="botonChico" >
 
             <?php }
             if ($cont == 0) {
                 ?>
 
-                <div id="errorimg">
-                    <img   src="images/error.png" margin-left="40px"></div>
+                <div class="errorRegistros centrar">NO HAY REGISTROS</div>
     <?php } ?>
 
         <?php } ?>
+		</div>
+		</div>
+		</div>
 </html>

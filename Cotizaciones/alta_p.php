@@ -3,11 +3,17 @@
 
 <?php } else { ?>
     <html>
-        <div id="addproducto">Ingrese los datos del producto que desea agregar:</div>
+		<div id="contenido">
+		<div id="contenidoCont">
+		<div class="centrar">
+        <p>Ingrese los datos del producto que desea agregar:</p>
+		<br>
+		<br>
+		<br>
 
         <form action="altaproducto.php" method="POST">   
-            <input type="text" class="formu" placeholder="C&aacute;talogo" name="catalogo" autofocus required>
-            <select style="background-color: white" class="formu" name="unidad" required>
+            <input type="text" class="inputChico" placeholder="C&aacute;talogo" name="catalogo" autofocus required>
+            <select style="background-color: white" class="inputChico" name="unidad" required>
                 <option style="background-color: #DADADA" disabled selected>Unidad</option>
                 <option value="PZA." >PZA.</option>
                 <option value="JGO.">JGO.</option>
@@ -17,8 +23,15 @@
                 <option value="N/A">N/A</option>
                 <option value="S/N">S/N</option>
             </select>
-            <textarea class="areatext" placeholder="Descripci&oacute;n" name="descripcion" required></textarea>
-            <input type="submit" value="Agregar" class="formu-button">
+			<br>
+			<br>
+            <textarea class="areaText" placeholder="Descripci&oacute;n" name="descripcion" required></textarea>
+           			<br>
+			<br>
+		   <input type="submit" value="Agregar" class="botonChico">
         </form>
     <?php } ?>
+	</div>
+	</div>
+	</div>
 </html>

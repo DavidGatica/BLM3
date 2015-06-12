@@ -81,7 +81,7 @@ $nombreCompleto = $nombre . " " . $apellido_p;
 		location.href = "?sec=cambio_p";
 	}
 	function ver_p() {
-		location.href = "cat_prod.php";
+		location.href = "?sec=verP";
 	}	
 	
 	function log_in() {
@@ -167,7 +167,7 @@ $nombreCompleto = $nombre . " " . $apellido_p;
 					</div>
 					
 					<div class="modificar">
-							<img onclick="visualizar_u()" src="images/1modificar.png" class="icono_encabezado agregar sombraHover">
+							<img onclick="modificar_u()" src="images/1modificar.png" class="icono_encabezado agregar sombraHover">
 					</div></div>
 				<div class="linea_verticalfd"></div>
 				
@@ -270,6 +270,10 @@ $nombreCompleto = $nombre . " " . $apellido_p;
 				}
 				if ($seccion == "version") {
 					require_once("version.php");
+				}						
+				
+				if ($seccion == "verP") {
+					require_once("cat_prod.php");
 				}				
 				?>    		
 

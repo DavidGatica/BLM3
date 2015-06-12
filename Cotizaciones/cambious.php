@@ -1,6 +1,12 @@
 <html>
+	<div id="contenido">
+	<div id="contenidoCont">
+	<div class="centrar">
     <br><br>
-    <div id="adouser"><div style="margin-left: 95px;">Seleccione el usuario a modificar:</div></div>
+    <p>Seleccione el usuario a modificar:</p>
+	<br />
+	<br />
+	<br />
     <form action="cambiousuarion.php" method="POST">
         <?php
 //Usuario Conectado
@@ -22,14 +28,19 @@
             $resultado = query($sql, $conexion);
 
 //Generamos el menu desplegable
-            echo '<select id=cambioselect name=nombre>';
+            echo '<select id=cambioselect name=nombre class="inputChico">';
             while ($campo = mysql_fetch_array($resultado)) {
                 echo '<option value="' . $campo["nombre"] . '"' . '>' . $campo["nombre"];
             }
             echo '</select>';
             ?>
-
-            <input type="submit" value="Modificar" class="formu-button">
+			<br>
+			<br>
+			<br>
+            <input type="submit" value="Modificar" class="botonChico">
 
         <?php } ?>
+		</div>
+		</div>
+		</div>
         </html>

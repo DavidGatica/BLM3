@@ -25,58 +25,59 @@ if (!isset($_SESSION['usuario'])) {
     else
         $descripcion = $_POST['descripcion'];
     ?>
+	<html>
+		<div id="contenido">
+		<div id="contenidoCont">
+		<div class="centrar">
     <head>
         <title>Catálogo de Productos</title>
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="en" />
-        <link href="tabla.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
 
 
-        <div style="margin-left:450px;" id=tform>
-            <img align="center" src="images/logoe1-2.png" width="120" height="100">
-            Cat&aacute;logo de productos
-        </div>
+        
+            <p>Cat&aacute;logo de productos</p>
+			<br />
+			<br />
+			<br />
 
-        <div align="center" style="margin-top:30px;">
-            <table cellspacing="30px" border=0>
-
-                <tr><td valign="top" > 
+        <div id="buscadoresCentrados"> 
+						
+						<div class="alineaIzquierda centrar">
                         Mostrar todo:
                         <br><br>
-                        <a href="cat_prod.php?opcion=todo"><input type="button" value="Mostrar todo"></a> 
-                    </td>
-
-
-                    <td valign="top"  > 
+						<input type="button" value="Mostrar todo" class="botonChico">
+						</div>
+                    
+						<div class="alineaIzquierda centrar">
                         Buscar por catalogo:
                         <br><br>
                         <form action="cat_prod.php" method="POST">
-                            <input type=text name=producto required> 
-                            <input type=submit value="Buscar">
+                            <input type=text name=producto class="inpuChico" required> <br /><br />
+                            <input type=submit value="Buscar" class="botonChico">
                         </form>
-                    </td>
-
-                    <td valign="top"  > 
+						</div>
+						
+						<div class="alineaIzquierda centrar">
                         Buscar por descripción:
                         <br><br>
                         <form action="cat_prod.php" method="POST">
-                            <input type=text name=descripcion required> 
-                            <input type=submit value="Buscar">
+                            <input type=text name=descripcion class="inpuChico" required> <br /><br />
+                            <input type=submit value="Buscar" class="botonChico">
                         </form>
-                    </td>
-
-                    <td valign="top">
+						</div>
+						
+						<div class="alineaIzquierda centrar">
                         Salir:
                         <br><br>
                         <a href="administracion.php?sec=productos">
-                            <input name="button" type="submit" value="Salir" /></a>
-                    </td></tr>
-
-            </table>
+                        <input name="button" type="submit" value="Salir" class="botonChico" /></a>
+						</div
+                  
 
         </div>
 
@@ -96,8 +97,11 @@ if (!isset($_SESSION['usuario'])) {
         }
     }
     ?>
-
+	</div>
+	</div>
+	</div>
 </body>
+</html>
 
 
 

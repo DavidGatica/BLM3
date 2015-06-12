@@ -1,5 +1,7 @@
 <html>
-
+	<div id="contenido">
+	<div id="contenidoCont">
+	<div class="centrar">
     <script type="text/javascript">
         function irAlIndice() {
 
@@ -36,7 +38,10 @@
         if ($cont == 1) {
             ?>
 
-            <div id="addproducto">Seleccione el producto que desea eliminar:</div>
+            <p>Seleccione el producto que desea eliminar:</p>
+			<br>
+			<br>
+			<br>
             <form action="bajaproducto.php" method="POST">
 
 
@@ -47,23 +52,27 @@
         $resultado = query($sql, $conexion);
 
         //Generamos el menu desplegable
-        echo '<select id=bajaselect name=catalogo>';
+        echo '<select id=bajaselect name=catalogo class="inputChico">';
         while ($campo = mysql_fetch_array($resultado)) {
             echo '<option>' . $campo["id_catalogo"];
         }
         echo '</select>';
         ?>
-
-                <input type="submit" value="Eliminar" class="formu-button" >
+		<br>
+		<br>
+		<br>
+                <input type="submit" value="Eliminar" class="botonChico" >
             </form>
             <?php }
             if ($cont == 0) {
                 ?>
 
-            <div id="errorimg">
-                <img   src="images/error.png" margin-left="40px"></div>
+            <div class="errorRegistros centrar">NO HAY REGISTROS</div>
     <?php } ?>
 
 
     <?php } ?>
+	</div>
+	</div>
+	</div>
 </html>

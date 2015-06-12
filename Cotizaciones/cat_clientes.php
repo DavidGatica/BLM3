@@ -39,36 +39,39 @@ if (!isset($_SESSION['usuario'])) {
 		<div class="centrar">
        <p>Herramienta de visualizacion de clientes</p>
 	   <br><br>
+						<div id="buscadoresCentrados">
+						
+							<div class="alineaIzquierda centrar">
+							Mostrar todo:
+							<br><br>
+							<input type="button" value="Mostrar todo" onclick="todo()" class="botonChico">
+							</div>
 
-						<div class="alineaIzquierda centrar">
-                        Mostrar todo:
-                        <br><br>
-                        <input type="button" value="Mostrar todo" onclick="todo()" class="botonChico">
-						</div>
+							<div class="alineaIzquierda centrar">
+							Buscar por rfc:
+							<br><br>
+							<form action="cat_clientes.php" method="POST">
+								<input type=text name=rfc class="inputChico" required> <br><br>
+								<input type=submit value="Buscar" class="botonChico">
+							</form>
+							</div>
 
-						<div class="alineaIzquierda centrar">
-                        Buscar por rfc:
-                        <br><br>
-                        <form action="cat_clientes.php" method="POST">
-                            <input type=text name=rfc required> <br><br>
-                            <input type=submit value="Buscar" class="botonChico">
-                        </form>
-						</div>
+							<div class="alineaIzquierda centrar">
+							Buscar por nombre de empresa:
+							<br><br>
+							<form action="cat_clientes.php" method="POST">
+								<input type=text name=empresa class="inputChico" required> <br><br>
+								<input type=submit value="Buscar" class="botonChico">
+							</form>
+							</div>
 
-						<div class="alineaIzquierda centrar">
-                        Buscar por nombre de la empresa:
-                        <br><br>
-                        <form action="cat_clientes.php" method="POST">
-                            <input type=text name=empresa required> <br><br>
-                            <input type=submit value="Buscar" class="botonChico">
-                        </form>
-						</div>
-
-						<div class="alineaIzquierda centrar">
-                        Salir:
-                        <br><br>
-                        <a href="administracion.php">
-                            <input name="button" type="submit" value="Salir" class="botonChico"/></a>
+							<div class="alineaIzquierda centrar">
+							Salir:
+							<br><br>
+							<a href="administracion.php">
+								<input name="button" type="submit" value="Salir" class="botonChico"/></a>
+							</div>
+						
 						</div>
 						
 						<div class="break"></div>

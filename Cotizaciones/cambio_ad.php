@@ -42,7 +42,7 @@
             $resultado = query($sql, $conexion);
 
 //Generamos el menu desplegable
-            echo '<select id=cambioselect name=empresa>';
+            echo '<select id=cambioselect name=empresa class="inputChico">';
 
             while ($campo = mysql_fetch_array($resultado)) {
                 echo '<option>' . $campo["empresa"];
