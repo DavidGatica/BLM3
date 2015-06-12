@@ -28,7 +28,7 @@ $resultadoa = query($sqla, $conexion);
     <script type="text/javascript">
         function regresar() {
             alert("El registro se llevo a cabo con exito");
-            document.location.href = 'index.html';
+            document.location.href = 'index.php';
         }
         regresar()
 

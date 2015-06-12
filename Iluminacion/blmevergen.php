@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="estilo.css" rel="stylesheet" type="text/css">
+<LINK REL="SHORTCUT ICON" TYPE="IMAGE/ICO" HREF="ico.png">
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -10,12 +14,8 @@
   ga('send', 'pageview');
 
 </script>
-
-
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link href="estilo.css" rel="stylesheet" type="text/css">
-<LINK REL="SHORTCUT ICON" TYPE="IMAGE/ICO" HREF="ico.png">
-<body style="padding:0; margin:0">
+<script src="ajax.js" language="JavaScript"></script>
+<body style="padding:0; margin:0" onload="CambiarColor1();">
 
 <div id="arriba">
 	<div id="buscar">
@@ -66,50 +66,90 @@ Iluminación Fotovoltaica Profesional
 
 </tr>
 
-</table>
+</table  >
 </div>
+
 <br>
 
-<!-- INICIO BANNER -->
-<script>if (typeof em5 === 'undefined'){var em5 = window.addEventListener ? "addEventListener" : "attachEvent";var er5 = window[em5];var me5 = em5 == "attachEvent" ? "onmessage" : "message";er5(me5,function (e) {var s5= e.data;if (s5.substring(0,10) == "changeSize"){document.getElementById(s5.substring(s5.indexOf("html5maker")+10)).style.height=s5.substring(10, s5.indexOf("html5maker"));}},false);}</script>
-<iframe id="html59af5add044ce4f88d20ca13e23f398463c4c89d28fc7" src="9af5add044ce4f88d20ca13e23f398463c4c89d28fc7/9af5add044ce4f88d20ca13e23f398463c4c89d28fc7.php" width="100%" height="334" frameborder="0" scrolling="no" allowTransparency="true"></iframe>
-<!-- FIN BANNER -->
+<!--- INICIO DE LA NUEVA PAGINA WEB -->
 
- <br><br>
-<table width="880"  align="center" cellpadding="25">
+<table  width="1020" align="center" border=0 >
 <tr>
-
-<td width="550" style=" border-right: 2px ridge black;">
-
-<p align="justify" id="textoo">
-Iluminación a la interperie (Exteriores) <br> <br>
-</p>
-<p align="justify" id="texto">
-En este sistema de iluminación exterior, fuera de conexión a la red electrica hemos ganado la confianza de los gobiernos e indutrias a nivel mundial, debido al alto grado de rendimiento y avanzada tecnología, en aplicaciones como; calles, primarias, estacionamientos, parques, vías, autopistas y avenidas. Con más de 500,000 sistemas en diferentes partes del mundo. <br><br>
-
-Cubrimos también mercados como:<br>
-Aviación y Obstrucción<br>
-Marino<br>
-Tráfico<br>
-Solar EPC Servicios<br>
-Soluciones y sistemas móviles solares<br>
-
-</p>
-</td>
 
 <td >
-<IMG SRC="carmanah.jpg" height="80"> 
-<p align="justify" id="texto">
-
-Es una empresa canadiense que desde hace más de 15 años, ha venido trabajando en el diseño y la ingenieria de sistemas de iluminación solar.
-</p>
+<IMG SRC="blmevergen.jpg" height="90" align=left>
 </td>
+
+<td>
+</td>
+</tr>
+
 <tr>
+<td valign="top" >
+<br>
+<img src="beneficios.jpg" value="Mostrar2" onclick="mostrar2()" align="left" id="brillo">
+<img src="caracteristicas.jpg" value="Mostrar" onclick="mostrar()" align="left" id="brillo">  
+<br><br>
+<table  width="510px" height="300px" style="border-style: solid; border-color: #8B8B8B; border-width: 3px;" cellspacing="20px" >
+<tr>
+<td valign="center" >
+<div id='carac' style='display:none;'>
+<br>
+		<div id='texto4' align="left">
+-Rango de 2,000 a 9,000 Lumenes<br>
+-Instalacion en 30 min o menos<br>
+-Cuentan con:<br> &nbsp;Wi-Fi, GPS y sensores de movimento<br>
+-Gabinete arquitectonico<br>
+-Distribuciones IES estandares tipos: &nbsp;&nbsp;II,III,IV,V<br>
+-Temperaturas de color 6000K y 4300K<br>
+
+</div>
+</div>
+<div id='bene' style='display:block;'>
+		<div id='texto4' align="left">
+El everGEN 1700 es el sistema de Carmanah mas avanzado por su solucion tecnologica, ya que cuentan con lo ultimo en tecnologia de intercomunicacion.<IMG SRC="sensor.jpg" height="120" width="400" align="center"></div>
+</div>
+</td></tr>
 </table>
 
+<script type="text/javascript">
+function mostrar(){
+document.getElementById('carac').style.display = 'block'; 
+document.getElementById('bene').style.display = 'none';
+}
 
+function mostrar2(){
+document.getElementById('bene').style.display = 'block';
+document.getElementById('carac').style.display = 'none';
+}
+</script>
+
+<br><br>
+<a href="EverGEN.pdf"><IMG SRC="brouchure.jpg" height="50" align="left" id="brillo"></a>
+</td>
+
+<td>
+
+<div id=frente style='display:block;'>
+
+<IMG SRC="everGEN1700.jpg" height="300" width="300">
+<div id='texto6'>FRENTE</div>
 <br>
 
+</div>
+
+
+
+
+
+</td>
+
+
+</tr>
+</table>
+
+<!--- INICIO DEL PIE DE PAGINA -->
+<br><br>
 <div align="center" >
 
 <div id="contenedor">
@@ -120,9 +160,7 @@ Es una empresa canadiense que desde hace más de 15 años, ha venido trabajando 
 
 </div>
 
-
-
-<table bgcolor="#38444B" width="1020"  border="0" cellpadding="2" heigth="100">
+<table bgcolor="#38444B" width="1020"  border="0" cellpadding="2" heigth="100" align="center">
 <tr>
 <td >&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -131,19 +169,19 @@ Es una empresa canadiense que desde hace más de 15 años, ha venido trabajando 
 &nbsp;&nbsp;&nbsp; <a href="http://www.bestlightmexico.com.mx/iluminacion/inicio.php" id="pie" > Inicio </a></td> 
 <td ><a href="http://www.bestlightmexico.com.mx/iluminacion/productos.php" id="pie" > Productos</a></td> 
 <td ><a href="http://www.bestlightmexico.com.mx/iluminacion/proyectos.php" id="pie" > Proyectos</a></td> 
-<td ><a href="http://www.bestlightmexico.com.mx/iluminacion/inicio.php" id="pie" > Capacitación</a></td> 
-<td ><a href="http://www.bestlightmexico.com.mx/iluminacion/conocenos.php" id="pie" > ¿Quiénes somos?</a></td> 
+<td ><a href="http://www.bestlightmexico.com.mx/iluminacion/inicio.php" id="pie" > Capacitacion</a></td> 
+<td ><a href="http://www.bestlightmexico.com.mx/iluminacion/conocenos.php" id="pie" > Quienes somos?</a></td> 
 <td ><a href="http://www.bestlightmexico.com.mx/iluminacion/videos.php" id="pie" > Videos</a></td> 
-<td><a href="http://www.bestlightmexico.com.mx/iluminacion/contactanos.php" id="pie"> Contáctanos</a>&nbsp;&nbsp;&nbsp;
+<td><a href="http://www.bestlightmexico.com.mx/iluminacion/contactanos.php" id="pie"> Contactanos</a>&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 </tr>
 </table>
-
-<a href="http://www.bestlightmexico.com.mx/attachments/File/apblm.pdf" id="texto9" align="center"> Aviso de Privacidad<br><br></a>
+<a href="http://www.bestlightmexico.com.mx/attachments/File/apblm.pdf" id="texto9" align=center> Aviso de Privacidad</a>
 </div>
-
 <br>
 </body>
 </html>
+
+

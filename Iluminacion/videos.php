@@ -10,14 +10,12 @@
   ga('send', 'pageview');
 
 </script>
-
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link href="estilo.css" rel="stylesheet" type="text/css">
 <LINK REL="SHORTCUT ICON" TYPE="IMAGE/ICO" HREF="ico.png">
 <body style="padding:0; margin:0">
 
-<div id="arriba">
+<div id="arribaa">
 	<div id="buscar">
 <script>
   (function() {
@@ -34,16 +32,19 @@
 <gcse:searchbox-only></gcse:searchbox-only>
 </div></div>
 
+
+<div id="page-wrap">
+
 <div align="center" >
 <div id="logos_centrados"><IMG SRC="logo.png" height="90px" align="left"> <IMG SRC="logocarmanah.png" height="70" align="right"></div>
 <div class="break"></div>
-<br />
+<br>
 
 <div class="texto7">
 Iluminación Fotovoltaica Profesional 
 </div>
 
-<table bgcolor="#38444B" width="1020" >
+<table bgcolor="#38444b" width="1020" >
 
 <tr >
  
@@ -66,49 +67,66 @@ Iluminación Fotovoltaica Profesional
 
 </tr>
 
+</table >
+</div>
+<br><br>
+
+<table border="0" align="center" width="1000px">
+
+<tr>
+
+<td width="25%" >
+<iframe width="200" height="150" src="https://www.youtube.com/embed/cRCdC3GSAnI" frameborder="0" allowfullscreen></iframe>
+<br><br><br><br>
+</td>
+
+<td valign="top" width="25%">
+<div id="texto3">BEST LIGHT MÉXICO </div><br>
+<div id="texto2">Presentación formal de Best Light México</div>
+
+</td>
+
+<td width="25%">
+<iframe width="200" height="150" src="https://www.youtube.com/embed/fzp_GASd5Y8" frameborder="0" allowfullscreen></iframe>
+<br><br><br><br>
+</td>
+
+<td valign="top" width="25%">
+<p id="texto3">MESSAGE TO CARMANAH</p><br>
+<div id="texto2">Presentación de nuestros proveedores "Carmanah"</div>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+<iframe width="200" height="150" src="https://www.youtube.com/embed/3ERYtZiM0c8" frameborder="0" allowfullscreen></iframe>
+</td>
+
+<td>
+<p id="texto3">INSTALACIÓN EVERGEN 1710</p><br>
+<div id="texto2">Instalación del EverGEN 1710 en menos de 30 min.</div>
+</td>
+
+<td>
+<iframe width="200" height="150" src="https://www.youtube.com/embed/GVBkJxs1tMc" frameborder="0" allowfullscreen></iframe>
+</td>
+
+<td>
+<p id="texto3">EXTREME TESTING</p><br>
+<div id="texto2">Prueba de resistencia contra diferentes situaciones de nuestros productos</div>
+</td>
+
+</tr>
+
 </table>
 </div>
-<br>
 
-<!-- INICIO BANNER -->
-<script>if (typeof em5 === 'undefined'){var em5 = window.addEventListener ? "addEventListener" : "attachEvent";var er5 = window[em5];var me5 = em5 == "attachEvent" ? "onmessage" : "message";er5(me5,function (e) {var s5= e.data;if (s5.substring(0,10) == "changeSize"){document.getElementById(s5.substring(s5.indexOf("html5maker")+10)).style.height=s5.substring(10, s5.indexOf("html5maker"));}},false);}</script>
-<iframe id="html59af5add044ce4f88d20ca13e23f398463c4c89d28fc7" src="9af5add044ce4f88d20ca13e23f398463c4c89d28fc7/9af5add044ce4f88d20ca13e23f398463c4c89d28fc7.php" width="100%" height="334" frameborder="0" scrolling="no" allowTransparency="true"></iframe>
-<!-- FIN BANNER -->
+</body>
 
- <br><br>
-<table width="880"  align="center" cellpadding="25">
-<tr>
-
-<td width="550" style=" border-right: 2px ridge black;">
-
-<p align="justify" id="textoo">
-Iluminación a la interperie (Exteriores) <br> <br>
-</p>
-<p align="justify" id="texto">
-En este sistema de iluminación exterior, fuera de conexión a la red electrica hemos ganado la confianza de los gobiernos e indutrias a nivel mundial, debido al alto grado de rendimiento y avanzada tecnología, en aplicaciones como; calles, primarias, estacionamientos, parques, vías, autopistas y avenidas. Con más de 500,000 sistemas en diferentes partes del mundo. <br><br>
-
-Cubrimos también mercados como:<br>
-Aviación y Obstrucción<br>
-Marino<br>
-Tráfico<br>
-Solar EPC Servicios<br>
-Soluciones y sistemas móviles solares<br>
-
-</p>
-</td>
-
-<td >
-<IMG SRC="carmanah.jpg" height="80"> 
-<p align="justify" id="texto">
-
-Es una empresa canadiense que desde hace más de 15 años, ha venido trabajando en el diseño y la ingenieria de sistemas de iluminación solar.
-</p>
-</td>
-<tr>
-</table>
-
-
-<br>
+<footer>
 
 <div align="center" >
 
@@ -145,5 +163,6 @@ Es una empresa canadiense que desde hace más de 15 años, ha venido trabajando 
 </div>
 
 <br>
-</body>
+
+</footer>
 </html>

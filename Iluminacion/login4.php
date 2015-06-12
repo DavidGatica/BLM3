@@ -1,12 +1,18 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <?php
 
-if(!isset($_GET['op'])){
-$op="nada";}
-else {
-$op=$_GET['op']; }
+if(!isset($_GET['op']))
+$op=null;
+else 
+$op=$_GET['op'];
+if($op=='mal'){
+?>
+<script>
+alert('ERROR\n Usuario o contraseña incorrectos, intente de nuevo');
 
- ?>
+
+</script>
+<?php } ?>
 
 <html>
 <head>
@@ -168,14 +174,14 @@ Iluminación Fotovoltaica Profesional
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp; <a href="http://www.bestlightmexico.com.mx/iluminacion/index.html" id="inicio"> Inicio </a></td> 
-<td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/productos.html" id="inicio"> Productos</a></td> 
-<td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/proyectos.html" id="inicio"> Proyectos</a></td> 
-<td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/index.html" id="inicio"> Capacitación</a></td> 
-<td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/conocenos.html" id="inicio"> ¿Quiénes somos?</a></td> 
-<td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/videos.html" id="inicio"> Videos</a></td> 
-<td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/contactanos.html" id="inicio"> Contáctanos</a></td>
-<td><a href="http://www.bestlightmexico.com.mx/iluminacion/index.html" id="inicio">Iniciar Sesión</a>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <a href="http://www.bestlightmexico.com.mx/iluminacion/index.php" id="inicio"> Inicio </a></td> 
+<td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/productos.php" id="inicio"> Productos</a></td> 
+<td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/proyectos.php" id="inicio"> Proyectos</a></td> 
+<td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/index.php" id="inicio"> Capacitación</a></td> 
+<td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/conocenos.php" id="inicio"> ¿Quiénes somos?</a></td> 
+<td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/videos.php" id="inicio"> Videos</a></td> 
+<td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/contactanos.php" id="inicio"> Contáctanos</a></td>
+<td><a href="http://www.bestlightmexico.com.mx/iluminacion/index.php" id="inicio">Iniciar Sesión</a>&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
@@ -220,7 +226,7 @@ Contraseña:
 </form>
 
 <br />
-<div id="base"><a href="registrarblm.html" class="crece">Registrarse por primera vez</a></div>
+<div id="base"><a href="registrarblm.php" class="crece">Registrarse por primera vez</a></div>
 
 </div>
 
@@ -244,13 +250,13 @@ Contraseña:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp; <a href="http://www.bestlightmexico.com.mx/iluminacion/inicio.html" id="pie" > Inicio </a></td> 
-<td ><a href="http://www.bestlightmexico.com.mx/iluminacion/productos.html" id="pie" > Productos</a></td> 
-<td ><a href="http://www.bestlightmexico.com.mx/iluminacion/proyectos.html" id="pie" > Proyectos</a></td> 
-<td ><a href="http://www.bestlightmexico.com.mx/iluminacion/inicio.html" id="pie" > Capacitación</a></td> 
-<td ><a href="http://www.bestlightmexico.com.mx/iluminacion/conocenos.html" id="pie" > ¿Quiénes somos?</a></td> 
-<td ><a href="http://www.bestlightmexico.com.mx/iluminacion/videos.html" id="pie" > Videos</a></td> 
-<td><a href="http://www.bestlightmexico.com.mx/iluminacion/contactanos.html" id="pie"> Contáctanos</a>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <a href="http://www.bestlightmexico.com.mx/iluminacion/inicio.php" id="pie" > Inicio </a></td> 
+<td ><a href="http://www.bestlightmexico.com.mx/iluminacion/productos.php" id="pie" > Productos</a></td> 
+<td ><a href="http://www.bestlightmexico.com.mx/iluminacion/proyectos.php" id="pie" > Proyectos</a></td> 
+<td ><a href="http://www.bestlightmexico.com.mx/iluminacion/inicio.php" id="pie" > Capacitación</a></td> 
+<td ><a href="http://www.bestlightmexico.com.mx/iluminacion/conocenos.php" id="pie" > ¿Quiénes somos?</a></td> 
+<td ><a href="http://www.bestlightmexico.com.mx/iluminacion/videos.php" id="pie" > Videos</a></td> 
+<td><a href="http://www.bestlightmexico.com.mx/iluminacion/contactanos.php" id="pie"> Contáctanos</a>&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -261,16 +267,6 @@ Contraseña:
 </div>
 
 <br>
-
-
-<script>
-	var op = "<?php echo $op; ?>" ;
-	if(op=="mal")
-alert('ERROR\n Usuario o contraseña incorrectos, intente de nuevo');
-
-
-</script>
-
 </body>
 
 </html>
