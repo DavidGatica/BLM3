@@ -31,14 +31,14 @@
 	else
 		$permiso = $_SESSION['permiso'];
 
-	$sql = "SELECT version FROM Version WHERE version_no='$no_version'";
+	$sql = "SELECT * FROM Version WHERE version_no = '$no_version'";
 	$resultado = query($sql, $conexion);
 	while ($campo = mysql_fetch_array($resultado)) 
 	{
 		$version = $campo['version'];
 	}
 
-	$sql = "SELECT `nombre`,`apellido_p` FROM `Usuarios` WHERE `id_usuario` = '$id_usuario'";
+	$sql = "SELECT * FROM Usuarios WHERE id_usuario = '$id_usuario'";
 	$resultado = query($sql, $conexion);
 	while ($campo = mysql_fetch_array($resultado)) 
 	{
@@ -46,7 +46,7 @@
 		$apellido_p = $campo['apellido_p'];
 	}
 
-	$nombreCompleto = $nombre . " " . $apellido_p; 
+	$nombreCompleto = $nombre. " " .$apellido_p; 
 ?>
 
 
@@ -56,11 +56,8 @@
 	<head>
 		<link rel="icon" type="image/png" href="images/ico.png" />
 		<title>Consecutivo de cotizaciones</title>
-		<meta name="keywords" content="" />
-		<meta name="description" content="" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="language" content="en" />
-		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">  
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />  
 		<link href="stylenuevo.css" rel="stylesheet" type="text/css" />
 	</head>
 

@@ -10,7 +10,7 @@
 	//Funcion que conecta la base de datos
 	$conexion = conectar();
 
-	$sql = "SELECT version FROM Version WHERE version_no='$no_version'";
+	$sql = "SELECT version FROM Version WHERE version_no = '$no_version'";
 	$resultado = query($sql, $conexion);
 	
 	while ($campo = mysql_fetch_array($resultado)) 
@@ -31,7 +31,7 @@
 				if (isset($_SESSION['usuario'])) 
 				{
 					$id_usuario = $_SESSION['usuario'];
-					$query = "SELECT `permiso`, activo FROM `Usuarios` WHERE `id_usuario`='$id_usuario' ";
+					$query = "SELECT permiso, activo FROM Usuarios WHERE id_usuario='$id_usuario' ";
 					
 					//GENERA LA QUERY
 					$result = mysql_query($query);

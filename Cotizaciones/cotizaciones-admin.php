@@ -35,7 +35,7 @@
 					$cont = 0;
 
 					//Obtener Datos de la empresa a cambiar "tabla clientes"
-					$sql = "SELECT * FROM `Cotizaciones`";
+					$sql = "SELECT * FROM Cotizaciones";
 					$resultado = query($sql, $conexion);
 					
 					while ($campo = mysql_fetch_array($resultado)) 
@@ -60,7 +60,7 @@
 						
 						<?php
 						
-						$sql = "SELECT * FROM `Cotizaciones` ORDER BY id_cotizacion DESC";
+						$sql = "SELECT * FROM Cotizaciones ORDER BY id_cotizacion DESC";
 						$resultado = query($sql, $conexion);
 						while ($campo = mysql_fetch_array($resultado)) 
 						{
@@ -80,12 +80,12 @@
 								"</td>
 							";
 
-							$sql3 = "SELECT id_usuario FROM `Cotizaciones` WHERE id_cotizacion = '$id_cotizacion'";
+							$sql3 = "SELECT * FROM Cotizaciones WHERE id_cotizacion = '$id_cotizacion'";
 							$resultado3 = query($sql3, $conexion);
 							$campo3 = mysql_fetch_array($resultado3);
 							$id_usuario = $campo3['id_usuario'];
 
-							$sql0 = "SELECT nombre, apellido_p FROM `Usuarios` WHERE id_usuario = '$id_usuario'";
+							$sql0 = "SELECT * FROM Usuarios WHERE id_usuario = '$id_usuario'";
 							$resultado0 = query($sql0, $conexion);
 							$campo0 = mysql_fetch_array($resultado0);
 							$vendedor = $campo0['nombre']. ' ' .$campo0['apellido_p'];
@@ -98,7 +98,7 @@
 								"</td>
 							";
 
-							$sql2 = "SELECT * FROM `Clientes` WHERE id_num_cliente = '$id_cliente'";
+							$sql2 = "SELECT * FROM Clientes WHERE id_num_cliente = '$id_cliente'";
 							$resultado2 = query($sql2, $conexion);
 							$campo2 = mysql_fetch_array($resultado2);
 							$empresa = $campo2['empresa'];
