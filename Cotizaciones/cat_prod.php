@@ -45,7 +45,7 @@ if (!isset($_SESSION['usuario'])) {
 			<br />
 			<br />
 
-        <div id="buscadoresCentrados"> 
+        <div id="buscadoresCentrados2"> 
 						
 						<div class="alineaIzquierda centrar">
                         Mostrar todo:
