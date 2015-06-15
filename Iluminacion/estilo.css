@@ -209,7 +209,8 @@ border-radius:25px;
 {
 	margin: 0 auto;
 	width: 60em;
-	margin: 1em;
+	margin-top: 1em;
+	border: 1px solid black;
 }
 
 
@@ -277,31 +278,30 @@ margin: 0 auto;
 }
 
 #arribaa{
-        margin: 0 0 0 13em;
-		
-		width: 63.8em;
+
+        margin: 0 auto;		
+		width: 60em;
 		height:3.0em;
 		padding:.5em;
 		box-sizing:border-box;
 		background:#38444b;		
-		
+		border: 1px solid red;
 }
 
-#buscar{
-        
-		
+.centrar
+{
+	margin: 0 auto;
+}
+
+.centrarTexto
+{
+	text-align: center;
+}
+
+#buscar{		
 		width: 11.8em;
-		height:0.5em;
-		position:relative;
-	float:right;
+		float:right;		
 		
-		
-		
-}
-
-
-
-
 }
 
 
