@@ -556,6 +556,11 @@ footer
 	padding: 0.7em;
 }
 
+.selectDefault
+{
+	background-color: #DADADA;
+}
+
 @media only screen 
 and (min-width : 1280px)
 and (min-device-height : 600px)

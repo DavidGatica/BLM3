@@ -5,18 +5,6 @@
 		<div id="contenido">
 			<div id="contenidoCont">
 				<div class="centrar">
-					<script type="text/javascript">
-						function irAlIndice() {
-
-							if (confirm("¿Quieres eliminarlo")) {
-
-								document.location.href = 'bajausuario.php';
-
-							}
-
-						}
-
-					</script>
 
 					<?php					
 						$cont = 0;
@@ -37,24 +25,31 @@
 					<br />
 					<br />
 					
-					<form action="bajaproducto.php" method="POST">
+					<?php
 					
-						<?php
+							echo '<form action="index.php" method="GET">';
+						
 							$sql = "SELECT `id_catalogo` FROM `Catalogo` WHERE activo = 1";
-							$resultado = query($sql, $conexion);
+							$resultado = query($sql, $conexion);							
 							
 							echo 
 							'
 								<select id=bajaselect name=catalogo class="inputChico">
+								
+								<option class="selectDefault" disabled selected>
+									Seleccione...
+								</option>
 							';
 							
 							while ($campo = mysql_fetch_array($resultado)) 
 							{
+								$catalogo = $campo['id_catalogo'];
+								
 								echo 
 								'
-									<option>'
-										.$campo["id_catalogo"].
-									'<option>
+									<option value="'.$catalogo.'">'
+										.$catalogo.
+									'</option>
 								';
 							}
 							
@@ -62,14 +57,14 @@
 							'
 								</select>
 							';
-						?>
+					?>
 						
 						<br />
 						<br />
 						<br />
 						
-					<input type="submit" value="Eliminar" class="botonChico" >
-					</form>
+							<input type="submit" value="Eliminar" class="botonChico" >
+						</form>
 					
 					<?php 
 						}
@@ -87,4 +82,43 @@
 			</div>
 		</div>
 	</body>
+	<?php
+		if(isset($_GET['catalogo']))
+		{
+	?>
+			<script>
+			
+				function myFunction() 
+				{
+					var catalogo = "<?php echo $_GET['catalogo'];?>";
+					var r = confirm("¿Seguro que desea eliminar el producto " + catalogo + "?");
+					
+					if (r == true) 
+					{
+						location.href="bajaproducto.php?catalogo="+catalogo;
+					} 
+					
+					else 
+					{
+						location.href="index.php?sec=baja_p";
+					}					
+				}
+				
+				myFunction()				
+			</script>
+	<?php
+		}
+		
+		if(isset($_GET['borrar']))
+		{
+	?>
+			<script>
+			
+				alert("El producto ha sido borrado");
+				location.href="index.php?sec=baja_p"
+				
+			</script>
+	<?php
+		}
+	?>
 </html>

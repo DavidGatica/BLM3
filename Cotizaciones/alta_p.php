@@ -1,3 +1,13 @@
+<?php 
+	session_start();
+	
+	if (!isset($_GET['producto']))
+		$producto = NULL;
+	
+	else
+		$producto = $_GET['producto'];
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -13,8 +23,8 @@
 
 					<form action="altaproducto.php" method="POST">   
 						<input type="text" class="inputChico" placeholder="C&aacute;talogo" name="catalogo" autofocus required>
-						<select style="background-color: white" class="inputChico" name="unidad" required>
-							<option style="background-color: #DADADA" disabled selected>
+						<select class="inputChico" name="unidad" required>
+							<option class="selectDefault" disabled selected>
 								Unidad
 							</option>
 							
@@ -60,5 +70,22 @@
 				</div>
 			</div>
 		</div>
+		
+		<?php		
+			if($producto == "agregado")
+			{
+		?>		
+				<script>
+				
+					function agregado() 
+					{
+						alert("Se ha agregado el producto con exito");
+					}
+					
+					agregado()
+				</script>
+		<?php
+			}
+		?>
 	</body>
 </html>

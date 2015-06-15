@@ -29,7 +29,11 @@
 		$permiso = NULL;
 	
 	else
-		$permiso = $_SESSION['permiso'];
+		$permiso = $_SESSION['permiso'];	
+	
+	if (isset($_GET['catalogo']))
+		$seccion = "baja_p";
+	
 
 	$sql = "SELECT * FROM Version WHERE version_no = '$no_version'";
 	$resultado = query($sql, $conexion);
@@ -340,10 +344,26 @@
 						$atras="algo";
 					}
 					
-					if ($seccion == "baja_p") 
+					if (!isset($_GET['catalogo']))
 					{
-						require_once("baja_p.php");
-						$atras="algo";
+						$catalogo = NULL;
+
+						if ($seccion == "baja_p") 
+						{
+							require_once("baja_p.php");
+							$atras="algo";							
+						}
+					
+					}
+					
+					else
+					{						
+						if ($seccion == "baja_p") 
+						{
+							$seccion="baja_p";
+							require_once("baja_p.php");
+							$atras="algo";
+						}
 					}
 					
 					if ($seccion == "cambio_p") 
