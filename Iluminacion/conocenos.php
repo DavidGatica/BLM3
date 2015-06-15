@@ -23,7 +23,7 @@ if (isset($_SESSION['usuario'])){
 
 </script>
 
-<div id="arriba">
+<div id="arribaa">
 	<div id="buscar">
 <script>
   (function() {

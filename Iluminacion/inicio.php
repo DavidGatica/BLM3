@@ -24,7 +24,7 @@ if (isset($_SESSION['usuario'])){
 <LINK REL="SHORTCUT ICON" TYPE="IMAGE/ICO" HREF="ico.png">
 <body style="padding:0; margin:0">
 
-<div id="arriba">
+<div id="arribaa">
 	<div id="buscar">
 <script>
   (function() {

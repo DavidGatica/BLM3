@@ -24,7 +24,7 @@ if (isset($_SESSION['usuario'])){
 <script src="ajax.js" language="JavaScript"></script>
 <body style="padding:0; margin:0" onload="CambiarColor1();">
 
-<div id="arriba">
+<div id="arribaa">
 	<div id="buscar">
 <script>
   (function() {

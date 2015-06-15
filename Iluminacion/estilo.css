@@ -209,8 +209,7 @@ border-radius:25px;
 {
 	margin: 0 auto;
 	width: 60em;
-	margin-top: 1em;
-	border: 1px solid black;
+	margin: 1em;
 }
 
 
@@ -267,7 +266,10 @@ margin: 0 auto;
 	float:right;
 }
 
-#arriba{
+	
+
+
+#arribaa{
         margin: 0 auto;
 		
 		width: 63.8em;
@@ -275,34 +277,30 @@ margin: 0 auto;
 		padding:.5em;
 		box-sizing:border-box;
 		background:#38444b;		
-}
-
-#arribaa{
-
-        margin: 0 auto;		
-		width: 60em;
-		height:3.0em;
-		padding:.5em;
-		box-sizing:border-box;
-		background:#38444b;		
-		border: 1px solid red;
-}
-
-.centrar
-{
-	margin: 0 auto;
-}
-
-.centrarTexto
-{
-	text-align: center;
-}
-
-#buscar{		
-		width: 11.8em;
-		float:right;		
 		
 }
+
+#buscar{
+        
+		
+		width: 15.8em;
+		height:0.5em;
+		position:relative;
+	float:right;
+		
+		
+		
+}
+
+#centrar{
+margin: 0 auto;
+
+}
+
+
+
+
+
 
 
 

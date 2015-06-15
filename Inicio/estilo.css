@@ -240,7 +240,7 @@ margin: 0 auto;
 #contenedor{
         margin: 0 auto;
 		margin-top: 2em;
-		width: 70.6em;
+		width: 72.6em;
 		height:4.5em;
 		padding:.5em;
 		box-sizing:border-box;
@@ -257,17 +257,18 @@ margin: 0 auto;
 #arribaa{
         margin: 0 auto;
 		
-		width: 70.0em;
-		height:1.0em;
+		width: 72.8em;
+		height:3.0em;
 		padding:.5em;
 		box-sizing:border-box;
-		background:#38444b;	
+		background:#38444b;		
+		
 }
 
 #buscar{
         
 		
-		width: 11.8em;
+		width: 15.8em;
 		height:0.5em;
 		position:relative;
 	float:right;

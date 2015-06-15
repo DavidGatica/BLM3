@@ -42,7 +42,7 @@ if (isset($_SESSION['usuario'])){
 
 <div id="page-wrap">
 
-<div class="centrar centrarTexto" >
+<div align="center" >
 <div id="logos_centrados"><IMG SRC="logo.png" height="90px" align="left"> <IMG SRC="logocarmanah.png" height="70" align="right"></div>
 <div class="break"></div>
 <br>
@@ -50,7 +50,7 @@ if (isset($_SESSION['usuario'])){
 <div class="texto7">
 Iluminación Fotovoltaica Profesional 
 </div>
-<div class="centrar">
+
 <table bgcolor="#38444b" width="1020" >
 
 <tr >
@@ -75,7 +75,6 @@ Iluminación Fotovoltaica Profesional
 </tr>
 
 </table >
-</div>
 </div>
 <br><br>
 
