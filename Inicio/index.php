@@ -1,10 +1,3 @@
-<?php
-session_start();
-if (isset($_SESSION['usuario'])){
-	
-	echo '<a href="cerrar.php" >Cerrar Sesión</a>';
-}
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es-ES" lang="es-ES">
 <script>
@@ -74,8 +67,6 @@ if (isset($_SESSION['usuario'])){
 	});
 });</script>
 </head>
-
-
 <body id="template" class="">
 
 
@@ -94,9 +85,9 @@ if (isset($_SESSION['usuario'])){
 	<div id="header-top" class="top"><div><div></div></div></div>
 	<div id="header-side" class="side"><div id="header-side2" class="side2">
 		<div class="container-content">
-			<div id="header-content">
+			
 				<div class="container-content-inner" id="header-content-inner"></div>
-			</div>
+			
 		</div>
 	</div></div>
 	<div id="header-bottom" class="bottom"><div><div></div></div></div>
@@ -156,10 +147,14 @@ Iluminación Fotovoltaica Profesional
 
 
 
-<table bgcolor="#38444B" width="1020" >
+<table bgcolor="#38444b" width="1020" >
+
+
 
 <tr >
+
  
+
 <td style=" border-right: 2px ridge white;">&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -171,13 +166,18 @@ Iluminación Fotovoltaica Profesional
 <td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/conocenos.php" id="inicio"> ¿Quiénes somos?</a></td> 
 <td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/videos.php" id="inicio"> Videos</a></td> 
 <td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/contactanos.php" id="inicio"> Contáctanos</a></td>
-<td><?php if(isset($_SESSION['usuario'])) {echo "Bienvenido ".$_SESSION['usuario'];}else{echo '<a href="../iluminacion/login4.php" id="inicio">Iniciar Sesión</a>';}?>&nbsp;&nbsp;&nbsp;
+<td style=" color: white; font-family: Arial, sans serif; font-size: 8pt; font-weight: bold;"><?php if(isset($_SESSION['usuario'])) {echo "Bienvenido ".$_SESSION['usuario'];}else{echo '<a href="../iluminacion/login4.php" id="inicio">Iniciar Sesión</a>';}?>&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
 
 
+
+
+
 </tr>
+
+
 
 </table>
 
@@ -325,6 +325,7 @@ Iluminación Fotovoltaica Profesional
 <br>
 
 </body>
+
 </html>
 
 

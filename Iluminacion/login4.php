@@ -175,7 +175,7 @@ Iluminación Fotovoltaica Profesional
 <td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/conocenos.php" id="inicio"> ¿Quiénes somos?</a></td> 
 <td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/videos.php" id="inicio"> Videos</a></td> 
 <td style=" border-right: 2px ridge white;"><a href="http://www.bestlightmexico.com.mx/iluminacion/contactanos.php" id="inicio"> Contáctanos</a></td>
-<td><a href="http://www.bestlightmexico.com.mx/iluminacion/index.php" id="inicio">Iniciar Sesión</a>&nbsp;&nbsp;&nbsp;
+<td style=" color: white; font-family: Arial, sans serif; font-size: 8pt; font-weight: bold;"><a href="http://www.bestlightmexico.com.mx/iluminacion/index.php" id="inicio">Iniciar Sesión</a>&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
