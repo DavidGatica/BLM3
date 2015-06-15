@@ -34,6 +34,9 @@
 	if (isset($_GET['catalogo']))
 		$seccion = "baja_p";
 	
+	if (isset($_GET['catalogoCambio']))
+		$seccion = "cambioproducto";
+	
 
 	$sql = "SELECT * FROM Version WHERE version_no = '$no_version'";
 	$resultado = query($sql, $conexion);
@@ -369,6 +372,12 @@
 					if ($seccion == "cambio_p") 
 					{
 						require_once("cambio_p.php");
+						$atras="algo";
+					}
+					
+					if ($seccion == "cambioproducto") 
+					{
+						require_once("cambioproducto.php");
 						$atras="algo";
 					}
 

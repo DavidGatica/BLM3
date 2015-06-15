@@ -24,7 +24,7 @@
 							<br />
 							<br />
 							
-							<form action="cambioproducto.php" method="POST">
+							<form action="index.php" method="GET">
 
 							<?php
 								$sql = "SELECT `id_catalogo` FROM `Catalogo`  WHERE activo='1' ORDER BY `id_catalogo`";
@@ -32,7 +32,11 @@
 								
 								echo 
 								'
-									<select id=cambioselect name=catalogo class="inputChico">
+									<select id=cambioselect name=catalogoCambio class="inputChico">
+									
+									<option class="selectDefault" disabled selected>
+									Seleccione...
+									</option>
 								';
 								
 								while ($campo = mysql_fetch_array($resultado)) 
@@ -75,5 +79,23 @@
 				</div>
 			</div>
 		</div>
+		
+				
+		<?php 
+			if(isset($_GET['cambio']))
+			{
+		?>
+		
+				<script>
+				
+					alert("Los cambios se realizaron con éxito");
+					location.href="index.php?sec=cambio_p"
+				
+				</script>
+		
+		<?php
+			}
+		?>
+		
 	</body>
 </html>
