@@ -82,45 +82,117 @@ Iluminación Fotovoltaica Profesional
 
 <br><br>
 
-<?php
 
-/* Abrimos la base de datos */
-  $conx = mysql_connect ("localhost","bestl_servidor", "Zzs99vmoNT1krok!");
-  if (!$conx) die ("Error al abrir la base <br/>". mysql_error()); 
-  mysql_select_db("bestli01_pagina_cotizaciones", $conx) OR die("Connection Error to Database");    
+<table>
+						<tr>
+							<td>No Noticia</td>                        
+							<td>Titulo</td>
+							<td>Descripcion</td>
+							<td>Fecha</td>
+							<td>Autor</td>
+							
+						</tr>
+						
+						<?php
+						
+						$sql = "SELECT * FROM Noticias ORDER BY fecha DESC";
+						$resultado = query($sql, $conexion);
+						while ($campo = mysql_fetch_array($resultado)) 
+						{
+							$activo = $campo['activo'];
+							$id_noticias = $campo['id_noticias'];
+							
 
-/* Realizamos la consulta SQL */
+							echo 
+							"
+								<tr>
+							";
+							
+							echo 
+							"
+								<td align='center'>" 
+									.$campo['id_noticias'].
+								"</td>
+							";
 
-$sql="select * from Noticias";
-$result= mysql_query($sql) or die(mysql_error());
-if(mysql_num_rows($result)==0) die("No hay registros para mostrar");
+							$sql3 = "SELECT * FROM Noticias WHERE titulo = '$titulo'";
+							$resultado3 = query($sql3, $conexion);
+							$campo3 = mysql_fetch_array($resultado3);
+							$titulo = $campo3['tiulo'];
 
-/* Desplegamos cada uno de los registros dentro de una tabla */  
-echo "<table border=1 cellpadding=4 cellspacing=0>";
 
-/*Primero los encabezados*/
- echo "<tr>
-         <th colspan=5> Ultimas Noticias </th>
-       <tr>
-         <th> ID </th><th> Titulo </th><th> Descripcion </th>
-         <th> Fecha </th><th> Autor </th>
-      </tr>";
+							echo 
+							"
+								<td align='center'>"
+									.$campo['titulo']. 
+								"</td>
+							";
 
-/*Y ahora todos los registros */
-while($row=mysql_fetch_array($result))
-{
- echo "<tr>
-         <td align='right'> $row[id] </td>
-         <td> $row[titulo] </td>
-         <td> $row[descripcion] </td>
-         <td> $row[fecha] </td>
-         <td> $row[autor] </td>
-      </tr>";
-}
-echo "</table>";
+							$sql2 = "SELECT * FROM Noticias WHERE descricpcion = '$descripcion'";
+							$resultado2 = query($sql2, $conexion);
+							$campo2 = mysql_fetch_array($resultado2);
+							$descripcion = $campo2['descripcion'];
+						
 
-?>
+							echo 
+							"
+								<td>" 
+									.$campo2['descrpcion']. 
+								"</td>
+							";
 
+							
+
+							echo 
+							"
+								<td>
+									<a href='ver_cotizacion.php?id_cotizacion=".$id_cotizacion."' class='gestion'>
+										Ver
+									</a>
+								</td>
+								
+								<td>
+									<a href='editar_cotizacion.php?id_cotizacion=".$id_cotizacion."' class='gestion'>
+										Editar
+									</a>
+								</td>
+								
+								<td>
+									<a href='reusar.php?id_cotizacion=".$id_cotizacion."' class='gestion'>
+										Reusar
+									</a>
+								</td>
+								
+								<td>
+							";
+							
+							if ($activo == 1) 
+							{
+								echo 
+								"
+									<div class='eliminart gestion' align='center' onclick='Eliminar(".$id_cotizacion.")'>
+										Eliminar
+									</div>
+								</td>
+								";
+							}
+							
+							if ($activo == 0) 
+							{
+								echo 
+								"
+									<div class='restaurar gestion' align='center' onclick='Restaurar(".$id_cotizacion.")'>
+										Activar
+									</div>
+								</td>
+								";
+							}
+
+							echo "</tr>";
+						}
+						
+						?>
+					</table>
 
  
 
