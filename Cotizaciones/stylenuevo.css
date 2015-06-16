@@ -28,7 +28,7 @@ select option:hover
 a:link
 {
 	text-decoration: none;
-	color: white;
+	color: #434343;
 }
 
 
@@ -97,6 +97,11 @@ h2
 	transition: 0.3s;
 }
 
+.lineaHoverSeleccionado
+{
+	border-bottom:3px solid #e6712b;
+}
+
 .lineaHover:hover
 {
 	border-bottom:3px solid #e6712b;
@@ -104,6 +109,11 @@ h2
 }
 
 .sombraHover:hover
+{
+	-webkit-filter: drop-shadow( 0 0 5px #e4722b);
+}
+
+.sombraHoverSeleccionado
 {
 	-webkit-filter: drop-shadow( 0 0 5px #e4722b);
 }
@@ -326,8 +336,6 @@ h2
     background: #434343;
 }
 
-
-
 .CSSTableGenerator td:nth-child(5):hover
 {
     background: #f2e178;
@@ -371,12 +379,14 @@ h2
     border-width:0px 0px 1px 1px;
     font-size:14px;
     font-weight:bold;
-	color: #DB6E2C;
+	color: #DB6E2C;	
+	transition: 0.2s;
 }
 
-.CSSTableGenerator tr:first-child:hover td
-{
-	
+.CSSTableGenerator tr:first-child td:hover 
+{	
+	background: #2f2f2f;
+	text-decoration: underline;
 }
 
 .CSSTableGenerator tr:first-child td:first-child
@@ -527,7 +537,7 @@ footer
 
 #buscadoresCentrados2
 {
-	width: 37em;
+	width: 40em;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -559,6 +569,13 @@ footer
 .selectDefault
 {
 	background-color: #DADADA;
+}
+
+#busquedaCatalogo
+{
+	text-align: center;
+	padding: 0 auto;
+	margin-top: 13em;
 }
 
 @media only screen 

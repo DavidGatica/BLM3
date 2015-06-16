@@ -35,7 +35,14 @@
 		$seccion = "baja_p";
 	
 	if (isset($_GET['catalogoCambio']))
-		$seccion = "cambioproducto";
+		$seccion = "cambioproducto";	
+	
+	if(isset($_GET['busquedaProductoCatalogo']) OR isset($_GET['busquedaProductoDescripcion']))
+	{
+		$seccion = "verP";
+		$busquedaProductoCatalogo = $_GET['busquedaProductoCatalogo'];
+		$busquedaProductoDescripcion = $_GET['busquedaProductoDescripcion'];
+	}
 	
 
 	$sql = "SELECT * FROM Version WHERE version_no = '$no_version'";
@@ -169,35 +176,56 @@
 				<div id="iconos">
 					<?php
 						if(isset($_SESSION['usuario']))
-						{
+						{							
 							echo 
 							'
-								<img onclick="cotizar()" src="images/1generar.png" class="icono_encabezado lineaHover">
+								<img onclick="cotizar()" src="images/1generar.png" class="icono_encabezado lineaHover 
+							'; 		if($_GET['sec'] == "cotizar"){echo "lineaHoverSeleccionado";} 
+							
+							echo '" ">
 								
 								<div class="linea_verticalfd"></div>
 								
-								<img onclick="cotizaciones()" src="images/1cotizaciones.png" class="icono_encabezado lineaHover">
+								<img onclick="cotizaciones()" src="images/1cotizaciones.png" class="icono_encabezado lineaHover 
+							'; 		if($_GET['sec'] == "cotizaciones"){echo "lineaHoverSeleccionado";} 
+							
+							echo '" ">
 								
 								<div class="linea_verticalfd"></div>			
 								
 								<div class="mover">
 								
-									<img src="images/1clientes.png" class="icono_encabezado clientes lineaHover">
+									<img src="images/1clientes.png" class="icono_encabezado clientes lineaHover 
+							'; 			if($_GET['sec'] == "alta" OR $_GET['sec'] == "baja" OR $_GET['sec'] == "cambio" OR $_GET['sec'] == "visualizarC" OR isset($_GET['busquedaClienteCatalogo']) OR isset($_GET['busquedaClienteDescripcion'])){echo "lineaHoverSeleccionado";} 
+							
+							echo '" ">
 									
 									<div class="agregar">
-											<img onclick="agregar_c()" src="images/2anadir.png" class="icono_encabezado agregar sombraHover">
+											<img onclick="agregar_c()" src="images/2anadir.png" class="icono_encabezado agregar sombraHover 
+							'; 					if($_GET['sec'] == "alta"){echo "sombraHoverSeleccionado";} 
+							
+							echo '" ">
 									</div>
 									
 									<div class="eliminar">
-											<img onclick="eliminar_c()" src="images/1eliminar.png" class="icono_encabezado agregar sombraHover">
+											<img onclick="eliminar_c()" src="images/1eliminar.png" class="icono_encabezado agregar sombraHover 
+							'; 					if($_GET['sec'] == "baja"){echo "sombraHoverSeleccionado";} 
+							
+							echo '" ">
 									</div>
 									
 									<div onclick="modificar_c()" class="modificar">
-											<img src="images/1modificar.png" class="icono_encabezado agregar sombraHover">
+											<img src="images/1modificar.png" class="icono_encabezado agregar sombraHover
+							'; 					if($_GET['sec'] == "cambio"){echo "sombraHoverSeleccionado";} 
+							
+							echo '" ">
 									</div>
 									
 									<div class="visualizar">
-											<img onclick="visualizar_c()" src="images/1ver.png" class="icono_encabezado agregar sombraHover">
+											<img onclick="visualizar_c()" src="images/1ver.png" class="icono_encabezado agregar sombraHover 
+							'; 					if($_GET['sec'] == "visualizarC" OR isset($_GET['busquedaClienteCatalogo']) OR isset($_GET['busquedaClienteDescripcion'])){echo "sombraHoverSeleccionado";} 
+							
+							echo '" ">
 									</div>
 										
 								</div>
@@ -206,18 +234,30 @@
 								
 								<div class="mover2">
 								
-									<img src="images/1usuarios.png" class="icono_encabezado lineaHover">
+									<img src="images/1usuarios.png" class="icono_encabezado lineaHover
+							'; 			if($_GET['sec'] == "altaus" OR $_GET['sec'] == "bajaus" OR $_GET['sec'] == "cambious"){echo "lineaHoverSeleccionado";} 
+							
+							echo '" ">
 									
 									<div class="agregar">
-											<img onclick="agregar_u()" src="images/2anadir.png" class="icono_encabezado agregar sombraHover">
+											<img onclick="agregar_u()" src="images/2anadir.png" class="icono_encabezado agregar sombraHover 
+							'; 					if($_GET['sec'] == "altaus"){echo "sombraHoverSeleccionado";} 
+							
+							echo '" ">
 									</div>
 									
 									<div class="eliminar">
-											<img onclick="eliminar_u()" src="images/1eliminar.png" class="icono_encabezado agregar sombraHover">
+											<img onclick="eliminar_u()" src="images/1eliminar.png" class="icono_encabezado agregar sombraHover 
+							'; 					if($_GET['sec'] == "bajaus"){echo "sombraHoverSeleccionado";} 
+							
+							echo '" ">
 									</div>
 									
 									<div class="modificar">
-											<img onclick="modificar_u()" src="images/1modificar.png" class="icono_encabezado agregar sombraHover">
+											<img onclick="modificar_u()" src="images/1modificar.png" class="icono_encabezado agregar sombraHover 
+							'; 					if($_GET['sec'] == "cambious"){echo "sombraHoverSeleccionado";} 
+							
+							echo '" ">
 									</div>
 								</div>
 								
@@ -225,22 +265,37 @@
 								
 								<div class="mover">
 								
-									<img src="images/1productos.png" class="icono_encabezado lineaHover">
+									<img src="images/1productos.png" class="icono_encabezado lineaHover 
+							'; 			if($_GET['sec'] == "alta_p" OR $_GET['sec'] == "baja_p" OR $_GET['sec'] == "cambio_p" OR $_GET['sec'] == "verP" OR isset($_GET['busquedaProductoCatalogo']) OR isset($_GET['busquedaProductoDescripcion'])){echo "lineaHoverSeleccionado";} 
+							
+							echo '" ">
 								
 									<div class="agregar">
-											<img onclick="agregar_p()" src="images/2anadir.png" class="icono_encabezado agregar sombraHover">
+											<img onclick="agregar_p()" src="images/2anadir.png" class="icono_encabezado agregar sombraHover 
+							'; 					if($_GET['sec'] == "alta_p"){echo "sombraHoverSeleccionado";} 
+							
+							echo '" ">
 									</div>
 									
 									<div class="eliminar">
-											<img onclick="eliminar_p()" src="images/1eliminar.png" class="icono_encabezado agregar sombraHover">
+											<img onclick="eliminar_p()" src="images/1eliminar.png" class="icono_encabezado agregar sombraHover 
+							'; 					if($_GET['sec'] == "baja_p"){echo "sombraHoverSeleccionado";} 
+							
+							echo '" ">
 									</div>
 									
 									<div class="modificar">
-											<img onclick="modificar_p()" src="images/1modificar.png" class="icono_encabezado agregar sombraHover">
+											<img onclick="modificar_p()" src="images/1modificar.png" class="icono_encabezado agregar sombraHover 
+							'; 					if($_GET['sec'] == "cambio_p"){echo "sombraHoverSeleccionado";} 
+							
+							echo '" ">
 									</div>
 									
 									<div class="visualizar">
-											<img onclick="ver_p()" src="images/1ver.png" class="icono_encabezado agregar sombraHover">
+											<img onclick="ver_p()" src="images/1ver.png" class="icono_encabezado agregar sombraHover 
+							'; 					if($_GET['sec'] == "verP" OR isset($_GET['busquedaProductoCatalogo']) OR isset($_GET['busquedaProductoDescripcion'])){echo "sombraHoverSeleccionado";} 
+							
+							echo '" ">
 									</div>
 								
 								</div>
@@ -432,7 +487,38 @@
 				echo 
 				"
 					<div id='derechaFooter'>
+				";
+				
+				if($_GET['opcion'] == "todo")
+				{
+					echo
+					"
 						<div class='lineaVerticalPie'></div>
+						<div id='sesionFooter'>Mostrando todo el catálogo </div>
+					";
+				}				
+				
+				if(isset($_GET['busquedaProductoCatalogo']))
+				{
+					echo
+					"
+						<div class='lineaVerticalPie'></div>
+						<div id='sesionFooter'>Busqueda por catálogo: $busquedaProductoCatalogo </div>
+					";
+				}				
+				
+				if(isset($_GET['busquedaProductoDescripcion']))
+				{
+					echo
+					"
+						<div class='lineaVerticalPie'></div>
+						<div id='sesionFooter'>Busqueda por descripción: $busquedaProductoDescripcion </div>
+					";
+				}
+				
+				echo 
+				"
+					<div class='lineaVerticalPie'></div>
 				";
 				
 				if(isset($id_usuario))
