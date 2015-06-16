@@ -1,6 +1,6 @@
 <?php
     if (!isset($_GET['opcion']))
-        $opcion = "nada";
+        $opcion = null;
 	
     else
         $opcion = $_GET['opcion'];
@@ -19,6 +19,14 @@
 ?>
 <html>
 	<body>
+	
+		<script>
+			function todo()
+			{
+				location.href="?sec=verP&opcion=todo";
+			}
+		</script>
+		
 		<div id="contenido">
 			<div id="contenidoCont">
 				<div class="centrar">				
@@ -30,16 +38,12 @@
 
 				<div id="buscadoresCentrados2">								
 					<div class="alineaIzquierda centrar">
-						Mostrar todo:
 						
-						<br />
-						<br />
-						
-						<input type="button" value="Mostrar todo" class="botonChico">
+						<input type="button" value="Mostrar todo" class="botonChico" onclick="todo()">
 					</div>
 				
 					<div class="alineaIzquierda centrar">
-						Buscar por catalogo:
+						Por catalogo:
 						
 						<br />
 						<br />
@@ -55,7 +59,7 @@
 					</div>
 					
 					<div class="alineaIzquierda centrar">
-						Buscar por descripción:
+						Por descripción:
 						
 						<br />
 						<br />
@@ -71,10 +75,6 @@
 					</div>
 					
 					<div class="alineaIzquierda centrar">
-						Salir:
-						
-						<br />
-						<br />
 						
 						<a href="administracion.php?sec=productos">
 							<input name="button" type="submit" value="Salir" class="botonChico" />
@@ -85,7 +85,7 @@
 				<?php
 					if ($opcion == "todo") 
 					{
-						include("catalogo.php");
+						require_once("catalogo.php");
 					}
 
 					if ($producto != "nada") 

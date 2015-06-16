@@ -59,5 +59,24 @@
 				</div>
 			</div>
 		</div>
+		
+		<?php 
+		if(isset($_GET['altaus']))
+		{
+		?>
+	
+			<script>
+				function regresar() 
+				{
+					alert("Se ha agregado al usuario con éxito");
+					location.href = 'index.php?sec=altaus';
+				}
+				regresar()
+			</script>
+		
+		<?php
+		}
+		?>
+		?>
 	</body>
 </html>
