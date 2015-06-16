@@ -78,6 +78,52 @@ Iluminación Fotovoltaica Profesional
 </div>
 <br><br>
 
+<a href="noticias2.php" target="_self"> <input type="button" name="boton" value="Agregar Noticia" /> </a>
+
+<br><br>
+
+<?php
+
+/* Abrimos la base de datos */
+  $conx = mysql_connect ("localhost","bestl_servidor", "Zzs99vmoNT1krok!");
+  if (!$conx) die ("Error al abrir la base <br/>". mysql_error()); 
+  mysql_select_db("bestli01_pagina_cotizaciones", $conx) OR die("Connection Error to Database");    
+
+/* Realizamos la consulta SQL */
+
+$sql="select * from Noticias";
+$result= mysql_query($sql) or die(mysql_error());
+if(mysql_num_rows($result)==0) die("No hay registros para mostrar");
+
+/* Desplegamos cada uno de los registros dentro de una tabla */  
+echo "<table border=1 cellpadding=4 cellspacing=0>";
+
+/*Primero los encabezados*/
+ echo "<tr>
+         <th colspan=5> Ultimas Noticias </th>
+       <tr>
+         <th> ID </th><th> Titulo </th><th> Descripcion </th>
+         <th> Fecha </th><th> Autor </th>
+      </tr>";
+
+/*Y ahora todos los registros */
+while($row=mysql_fetch_array($result))
+{
+ echo "<tr>
+         <td align='right'> $row[id] </td>
+         <td> $row[titulo] </td>
+         <td> $row[descripcion] </td>
+         <td> $row[fecha] </td>
+         <td> $row[autor] </td>
+      </tr>";
+}
+echo "</table>";
+
+?>
+
+
+ 
+
 
 
 
