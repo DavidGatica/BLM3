@@ -34,8 +34,14 @@
 	if (isset($_GET['catalogo']))
 		$seccion = "baja_p";
 	
+	if (isset($_GET['nombreBajaUs']))
+		$seccion = "bajaus";
+	
 	if (isset($_GET['catalogoCambio']))
-		$seccion = "cambioproducto";	
+		$seccion = "cambioproducto";
+	
+	if (isset($_GET['nombreCambio']))
+		$seccion = "cambiousuario";	
 	
 	if(isset($_GET['busquedaProductoCatalogo']) OR isset($_GET['busquedaProductoDescripcion']))
 	{
@@ -433,6 +439,12 @@
 					if ($seccion == "cambioproducto") 
 					{
 						require_once("cambioproducto.php");
+						$atras="algo";
+					}
+					
+					if ($seccion == "cambiousuario") 
+					{
+						require_once("cambiousuarion.php");
 						$atras="algo";
 					}
 

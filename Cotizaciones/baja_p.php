@@ -81,44 +81,46 @@
 				</div>
 			</div>
 		</div>
-	</body>
-	<?php
-		if(isset($_GET['catalogo']))
-		{
-	?>
-			<script>
-			
-				function myFunction() 
-				{
-					var catalogo = "<?php echo $_GET['catalogo'];?>";
-					var r = confirm("¿Seguro que desea eliminar el producto " + catalogo + "?");
-					
-					if (r == true) 
-					{
-						location.href="bajaproducto.php?catalogo="+catalogo;
-					} 
-					
-					else 
-					{
-						location.href="index.php?sec=baja_p";
-					}					
-				}
+	
+		<?php
+			if(isset($_GET['catalogo']))
+			{
+		?>
+				<script>
 				
-				myFunction()				
-			</script>
-	<?php
-		}
+					function myFunction() 
+					{
+						var catalogo = "<?php echo $_GET['catalogo'];?>";
+						var r = confirm("¿Seguro que desea eliminar el producto " + catalogo + "?");
+						
+						if (r == true) 
+						{
+							location.href="bajaproducto.php?catalogo="+catalogo;
+						} 
+						
+						else 
+						{
+							location.href="index.php?sec=baja_p";
+						}					
+					}
+					
+					myFunction()				
+				</script>
+		<?php
+			}
+			
+			if(isset($_GET['borrar']))
+			{
+		?>
+				<script>
+				
+					alert("El producto ha sido borrado");
+					location.href="index.php?sec=baja_p"
+					
+				</script>
+		<?php
+			}
+		?>
 		
-		if(isset($_GET['borrar']))
-		{
-	?>
-			<script>
-			
-				alert("El producto ha sido borrado");
-				location.href="index.php?sec=baja_p"
-				
-			</script>
-	<?php
-		}
-	?>
+	</body>
 </html>

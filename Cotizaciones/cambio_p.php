@@ -26,40 +26,40 @@
 							
 							<form action="index.php" method="GET">
 
-							<?php
-								$sql = "SELECT `id_catalogo` FROM `Catalogo`  WHERE activo='1' ORDER BY `id_catalogo`";
-								$resultado = query($sql, $conexion);
-								
-								echo 
-								'
-									<select id=cambioselect name=catalogoCambio class="inputChico">
+								<?php
+									$sql = "SELECT `id_catalogo` FROM `Catalogo`  WHERE activo='1' ORDER BY `id_catalogo`";
+									$resultado = query($sql, $conexion);
 									
-									<option class="selectDefault" disabled selected>
-									Seleccione...
-									</option>
-								';
-								
-								while ($campo = mysql_fetch_array($resultado)) 
-								{
 									echo 
 									'
-										<option>'
-										.$campo["id_catalogo"].
-										'</option>
+										<select id=cambioselect name=catalogoCambio class="inputChico">
+										
+										<option class="selectDefault" disabled selected>
+											Seleccione...
+										</option>
 									';
-								}
+									
+									while ($campo = mysql_fetch_array($resultado)) 
+									{
+										echo 
+										'
+											<option>'
+											.$campo["id_catalogo"].
+											'</option>
+										';
+									}
+									
+									echo 
+									'
+										</select>
+									';
+								?>
 								
-								echo 
-								'
-									</select>
-								';
-							?>
-							
-							<br />
-							<br />
-							<br />
+								<br />
+								<br />
+								<br />
 
-							<input type="submit" value="Modificar" class="botonChico" >
+								<input type="submit" value="Modificar" class="botonChico" >
 							</form>
 
 					<?php 
@@ -74,7 +74,7 @@
 							</div>
 							
 					<?php 
-						} 
+						}
 					?>
 				</div>
 			</div>

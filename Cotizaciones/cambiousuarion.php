@@ -1,25 +1,12 @@
 <?php
-//Capturamos el usuario autenticado
-session_start();
-if (!isset($_SESSION['usuario'])) {
-    header('Location: log_in.php');
-}
-
-
-//incluimos el archivo con las funciones
-include ("funciones_mysql.php");
-
-//Funcion que conecta la base de datos
-$conexion = conectar();
-
-//Obtenemos el nombre de la empresa por el metodo POST
-$nombre = $_POST['nombre'];
+$nombre = $_GET['nombreCambio'];
 
 
 //Obtener Datos de la empresa a cambiar "tabla clientes"
-$sql = "SELECT * FROM `Usuarios` WHERE `nombre` = '$nombre'";
+$sql = "SELECT * FROM Usuarios WHERE nombre = '$nombre'";
 $resultado = query($sql, $conexion);
-while ($campo = mysql_fetch_array($resultado)) {
+while ($campo = mysql_fetch_array($resultado)) 
+{
     $id_usuario = $campo['id_usuario'];
     $permiso = $campo['permiso'];
     $nombre = $campo['nombre'];
@@ -38,57 +25,41 @@ while ($campo = mysql_fetch_array($resultado)) {
 
 <!DOCTYPE html >
 <html>
-    <head>
-        <title>Consecutivo de Cotizaciones</title>
-        <meta name="keywords" content="" />
-        <meta name="description" content="" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="language" content="en" />
-        <link href="style.css" rel="stylesheet" type="text/css" />
-    </head>
-
     <body>
-        <div id="page">
-            <div id="header">
-                <h1>Bestlight M&eacute;xico S.A. de C.V.</h1>
-            </div> <br><br><br>
+        <div id="contenido">
+            <div id="contenidoCont">
+				<div class="centrar">
 
-            <div id="modificar">
+					<div id="titulo2">Modifique los apartados del usuario:</div>
 
-                <div id="titulo2">Modifique los apartados del usuario:</div>
+					<form action="cambiousuarion2.php" method="POST">
 
-                <form action="cambiousuarion2.php" method="POST">
+							<input placeholder="Nombre de Usuario" type="text" class="inputChico"  name="usuario" value="<?php echo$id_usuario; ?>" autofocus  >
 
-                    <table align="center" border=0 id="tablacambio" cellspacing="5">
+							<input placeholder="Nombre" type="text" class="inputChico"  name="nombre" value="<?php echo$nombre; ?>" autofocus required>
 
-                        <tr><td>Nombre de Usuario<br><input type="text" class="formu"  name="usuario" value="<?php echo$id_usuario; ?>" autofocus  ></td>
+							<input placeholder="Apellido paterno" type="text" class="inputChico"  name="apellido_p" value="<?php echo$apellido_p; ?>" autofocus required>
 
-                            <td>Nombre<br><input type="text" class="formu"  name="nombre" value="<?php echo$nombre; ?>" autofocus required></td></tr>
+							<input placeholder="Apellido materno" type="text" class="inputChico"  name="apellido_m" value="<?php echo$apellido_m; ?>" autofocus >
 
-                        <tr><td>Apellido Paterno<br><input type="text" class="formu"  name="apellido_p" value="<?php echo$apellido_p; ?>" autofocus required></td>
+							<input placeholder="E-mail" type="text" class="inputChico"  name="e_mail" value="<?php echo$e_mail; ?>" autofocus>
 
-                            <td>Apellido Materno<br><input type="text" class="formu"  name="apellido_m" value="<?php echo$apellido_m; ?>" autofocus ></td></tr>
+							<input placeholder="Permisos" type="text" class="inputChico"  name="permiso" value="<?php echo$permiso; ?>" autofocus required>
 
-                        <tr><td>E-Mail<br><input type="text" class="formu"  name="e_mail" value="<?php echo$e_mail; ?>" autofocus></td>
-
-                            <td>Permisos<br><input type="text" class="formu"  name="permiso" value="<?php echo$permiso; ?>" autofocus required></td></tr>
-
-                        <td>Password<br><input type="text" class="formu"  name="password" value="<?php echo$password; ?>" autofocus required></td></tr>
-
-                    </table>
-            </div>
-
-            <div id=centrarcambio> 
-
-                <input type="submit" value="MODIFICAR!" class="formu-button2">
-
-                </form>
-
-                <a href="administracion.php"><button class="formu-button2"><div id="cambio">CANCELAR</div></button></a>
+							<input placeholder="Password" type="text" class="inputChico"  name="password" value="<?php echo$password; ?>" autofocus required>
 
 
-            </div>
+					<input type="submit" value="MODIFICAR!" class="botonChico">
 
+					</form>
+
+					<a href="administracion.php"><button class="botonChico"><div id="cambio">CANCELAR</div></button></a>
+
+
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
 
 

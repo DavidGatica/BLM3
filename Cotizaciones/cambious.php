@@ -15,14 +15,18 @@
 					<br />
 					<br />
 					
-					<form action="cambiousuarion.php" method="POST">
+					<form action="index.php" method="GET">
 					
 						<?php
 							$sql = "SELECT nombre, apellido_p FROM `Usuarios` WHERE activo='1'";
 							$resultado = query($sql, $conexion);
 							echo 
 							'
-								<select id=cambioselect name=nombre class="inputChico">
+								<select id=cambioselect name=nombreCambio class="inputChico">
+								
+								<option class="selectDefault" disabled selected>
+									Seleccione...
+								</option>
 							';
 							
 							while ($campo = mysql_fetch_array($resultado)) 
@@ -50,5 +54,22 @@
 				</div>
 			</div>
 		</div>
+		
+		<?php 
+			if(isset($_GET['cambioUs']))
+			{
+		?>
+		
+				<script>
+				
+					alert("Los cambios se realizaron con éxito");
+					location.href="index.php?sec=cambious"
+				
+				</script>
+		
+		<?php
+			}
+		?>
+		
 	</body>
 </html>
