@@ -197,21 +197,21 @@ clear: both;
 
 <div class="caja_centro">
 
-<form method="POST" action="noticias.php">
+<form method="POST" action="noticias3.php">
 
 <div class="izqder">
-<p>Numero de Noticia</p><br />
+<p>id_noticia</p><br />
 <input type="text" name="id_noticias" class="inputform" >
 </div>
 
 <div class="izqder">
-<p>Titulo de la noticia</p><br />
+<p>titulo</p><br />
 <input type="text" name="titulo" class="inputform" >
 </div>
 
 <div class="break"></div>
 <br />
-<p>Contenido</p><br />
+<p>descripcion</p><br />
 <input type="text" name="descripcion" class="inputform2">
 
 <br />
@@ -221,7 +221,7 @@ clear: both;
 
 <br />
 <br />
-<p>Autor</p><br />
+<p>autor</p><br />
 <input type="text" name="autor" class="inputform2">
 
 </div>
