@@ -298,6 +298,40 @@ margin: 0 auto;
 }
 
 
+#noti td 
+{
+font-size: 12px;
+font-weight:bold;
+background-color: white;
+
+
+color: black;
+font-family: “Trebuchet MS”, Arial;
+text-align:left;
+}
+
+#noti th{
+
+font-size: 12px;
+
+
+background-color: #e2ebef;
+
+color: #34484E;
+font-family: “Trebuchet MS”, Arial;
+border-right-width: 1px;
+border-bottom-width: 1px;
+border-right-style: solid;
+border-bottom-style: solid;
+border-right-color: #A4C4D0;
+border-bottom-color: #A4C4D0;
+
+}
+
+
+
+
+
 
 
 

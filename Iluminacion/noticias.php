@@ -81,6 +81,7 @@ Iluminación Fotovoltaica Profesional
 
 
 <br><br>
+
 <?php
 /* Abrimos la base de datos */
   $conx = mysql_connect ("localhost","bestl_servidor", "Zzs99vmoNT1krok!");
@@ -93,8 +94,9 @@ $sql="select * from Noticias ORDER BY fecha DESC";
 $result= mysql_query($sql) or die(mysql_error());
 if(mysql_num_rows($result)==0) die("No hay registros para mostrar");
 
+
 /* Desplegamos cada uno de los registros dentro de una tabla */  
-echo "<table border=1 cellpadding=4 cellspacing=0>";
+echo "<div id='noti'><table >";
 
 /*Primero los encabezados*/
  echo "<tr>
@@ -115,7 +117,7 @@ while($row=mysql_fetch_array($result))
          <td> $row[autor] </td>
       </tr>";
 }
-echo "</table>";
+echo "</table></div>";
 
 ?>
 
