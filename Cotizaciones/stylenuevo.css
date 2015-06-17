@@ -578,6 +578,30 @@ footer
 	margin-top: 13em;
 }
 
+.mensaje
+{	
+	opacity: 0;
+	visibility: hidden;
+	font-size: 14px;
+	color: #434343;
+	transition: 0.5s;
+}
+
+.mensajeIcono
+{	
+	opacity: 0;	
+	visibility: hidden;
+	position: fixed;
+	margin: 3.5em 0 0 1em;
+	font-size: 14px;
+	color: #434343;
+}
+
+#inputsForm
+{
+	width: 32.5em;
+}
+
 @media only screen 
 and (min-width : 1280px)
 and (min-device-height : 600px)

@@ -28,34 +28,59 @@ while ($campo = mysql_fetch_array($resultado)) {
     <body>
         <div id="contenido">
             <div id="contenidoCont">
-				<div class="centrar">
+				<p class="centrar">Modifique los apartados del usuario:</p>
+				
+				<br />
+				<br />
+				
+				<div id="inputsForm" class="centrar">
+					<form action="cambiousuarion2.php" method="POST">							
+						<div class="alineaIzquierda">
+							<div id="mensaje1" class="mensaje">Nombre de Usuario</div>
+							<input onfocus="mensaje1()" onblur="noMensaje1()" type="text" class="inputChico"  name="usuario" value="<?php echo$id_usuario; ?>" >
+						</div>
+						<div class="alineaIzquierda">
+							<div id="mensaje2" class="mensaje">Nombre</div>
+							<input onfocus="mensaje2()" onblur="noMensaje2()" type="text" class="inputChico"  name="nombre" value="<?php echo$nombre; ?>" required>
+						</div>						
+						
+						<div class="break"></div>
+						<br />						
+						
+						<div class="alineaIzquierda">
+							<div id="mensaje3" class="mensaje">Apellido paterno</div>
+							<input onfocus="mensaje3()" onblur="noMensaje3()" type="text" class="inputChico"  name="apellido_p" value="<?php echo$apellido_p; ?>" required>
+						</div>
+						<div class="alineaIzquierda">
+							<div id="mensaje4" class="mensaje">Apellido materno</div>
+							<input onfocus="mensaje4()" onblur="noMensaje4()" type="text" class="inputChico"  name="apellido_m" value="<?php echo$apellido_m; ?>">
+						</div>
+						
+						<div class="break"></div>
+						<br />
+						
+						<div class="alineaIzquierda">
+						<div id="mensaje5" class="mensaje">E-mail</div>
+						<input onfocus="mensaje5()" onblur="noMensaje5()" type="text" class="inputChico"  name="e_mail" value="<?php echo$e_mail; ?>">
+						</div>
+						<div class="alineaIzquierda">
+						<div id="mensaje6" class="mensaje">Permisos</div>
+						<input onfocus="mensaje6()" onblur="noMensaje6()" type="text" class="inputChico"  name="permiso" value="<?php echo$permiso; ?>"required>
+						</div>
+						
+						<div class="break"></div>
+						<br />
+						
+						<div id="mensaje7" class="mensaje">Password</div>
+						<input onfocus="mensaje7()" onblur="noMensaje7()" type="text" class="inputChico"  name="password" value="<?php echo$password; ?>"required>
+						
+						<div class="break"></div>
+						<br />
+						<br />
+						<br />
 
-					<div id="titulo2">Modifique los apartados del usuario:</div>
-
-					<form action="cambiousuarion2.php" method="POST">
-
-							<input placeholder="Nombre de Usuario" type="text" class="inputChico"  name="usuario" value="<?php echo$id_usuario; ?>" autofocus  >
-
-							<input placeholder="Nombre" type="text" class="inputChico"  name="nombre" value="<?php echo$nombre; ?>" autofocus required>
-
-							<input placeholder="Apellido paterno" type="text" class="inputChico"  name="apellido_p" value="<?php echo$apellido_p; ?>" autofocus required>
-
-							<input placeholder="Apellido materno" type="text" class="inputChico"  name="apellido_m" value="<?php echo$apellido_m; ?>" autofocus >
-
-							<input placeholder="E-mail" type="text" class="inputChico"  name="e_mail" value="<?php echo$e_mail; ?>" autofocus>
-
-							<input placeholder="Permisos" type="text" class="inputChico"  name="permiso" value="<?php echo$permiso; ?>" autofocus required>
-
-							<input placeholder="Password" type="text" class="inputChico"  name="password" value="<?php echo$password; ?>" autofocus required>
-
-
-					<input type="submit" value="MODIFICAR!" class="botonChico">
-
+						<input type="submit" value="MODIFICAR!" class="botonChico">								
 					</form>
-
-					<a href="administracion.php"><button class="botonChico"><div id="cambio">CANCELAR</div></button></a>
-
-
 				</div>
 			</div>
 		</div>

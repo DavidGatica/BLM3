@@ -82,6 +82,7 @@
 	</head>
 
 	<body> 	
+		<script src="apareceMensajes.js"></script>
 		<script>
 			function agregar_c() 
 			{
@@ -168,16 +169,21 @@
 		
 		<div id="Contenido">
 			<div id="encabezado_negro">
-			
-				<a href="http://www.bestlightmexico.com.mx" target="new">
+				<div>
+				<a href="http://www.bestlightmexico.com.mx" target="new" onmouseover="mensajeIcono1()" onmouseout="noMensajeIcono1()">
 					<img src="images/logo_encabezado.png" id="logo_encabezado">
 				</a>
+				</div>
 				
+				<div id="mensajeIcono1" class="mensajeIcono centrar">Ir a BLM</div>
 				<div class="linea_vertical"></div>
 				
+				<div>
 				<a href="index.php">
-					<img src="images/1home.png" class="iconoi_encabezado lineaHover">
+					<img src="images/1home.png" class="iconoi_encabezado lineaHover" onmouseover="mensajeIcono2()" onmouseout="noMensajeIcono2()">
 				</a>
+				<div id="mensajeIcono2" class="mensajeIcono">Home</div>
+				</div>
 				
 				<div id="iconos">
 					<?php
@@ -322,9 +328,8 @@
 			</div>
 					';
 				}	
-					?>
-				
-		</div>		
+					?>				
+		</div>				
 		
 		<div id="contenidoCont">			                      
 
