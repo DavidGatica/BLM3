@@ -297,14 +297,115 @@ margin: 0 auto;
 
 }
 
+#noti
+{
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	margin: 5em;
+	width: 20em;
+	height: 35em;
+	padding: 0;
+	transition: 1s;
+}
 
+#parrafo
+{
+	margin: 0 0.5em;
+	transition: 1s;
+}
+
+#verNoticia
+{
+	font-size: 13px;
+	padding: 0.5em;
+	background: #38444b;
+	color: white;
+	margin-top: 1em;
+	transition: 1s;
+}
+
+.lineaDivisora
+{
+	margin: 0 auto;
+	border-top: 0.1em solid #a3a8ab;
+	width: 15em;
+}
+
+#tituloTabla
+{
+	font-size: 25px;
+	color: white;
+	transition: 1s;
+}
+
+.fechaTabla
+{
+	color: white;
+}
+
+.imagenNoticia img
+{
+	margin: 0 auto;
+	margin-top: 1em;
+	max-width: 10em;
+	max-height: 10em;
+}
+
+.autorNoticia
+{
+	float: right;
+	font-size: 10px;
+	color: #9f9f9f;
+	margin: 0 3.8em 0.5em 0;
+}
+
+#noti table
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#noti tr
+{
+	
+}
+
+#noti tr:first-child td
+{
+	border-radius: 5px 5px 0 0;
+	height: 10em;
+}
+
+#headerTabla
+{
+	border-radius: 5px 5px 0 0;
+	background: #38444b;
+	height: 10em;
+	transition: 1s;
+}
+
+#noti tr:nth-child(2) td
+{
+	border-right: 0.1em solid #a3a8ab;
+	border-left: 0.1em solid #a3a8ab;
+}
+
+
+#noti tr:last-child td
+{
+	height: 8em;
+	border-right: 0.1em solid #a3a8ab;
+	border-left: 0.1em solid #a3a8ab;
+	border-bottom: 0.1em solid #a3a8ab;
+	border-radius: 0 0 5px 5px;
+}
+/*
 #noti td 
 {
 font-size: 12px;
 font-weight:bold;
 background-color: white;
-
-
 color: black;
 font-family: “Trebuchet MS”, Arial;
 text-align:left;
@@ -328,7 +429,7 @@ border-bottom-color: #A4C4D0;
 
 }
 
-
+*/
 
 
 

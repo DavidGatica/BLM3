@@ -76,11 +76,26 @@ Iluminación Fotovoltaica Profesional
 
 </table >
 </div>
-<br><br>
 
-
-
-<br><br>
+<script>
+	function resaltaNoticia()
+	{
+		document.getElementById('noti').style.fontSize = "17px";
+		document.getElementById('tituloTabla').style.fontSize = "27px";
+		document.getElementById('parrafo').style.fontSize = "17px";
+		document.getElementById('headerTabla').style.background = "#e4752f";
+		document.getElementById('verNoticia').style.background = "#e4752f";
+	}	
+	
+	function noResaltaNoticia()
+	{
+		document.getElementById('noti').style.fontSize = "16px";
+		document.getElementById('tituloTabla').style.fontSize = "25px";
+		document.getElementById('parrafo').style.fontSize = "16px";
+		document.getElementById('headerTabla').style.background = "#38444b";
+		document.getElementById('verNoticia').style.background = "#38444b";
+	}
+</script>
 
 <?php
 /* Abrimos la base de datos */
@@ -96,28 +111,35 @@ if(mysql_num_rows($result)==0) die("No hay registros para mostrar");
 
 
 /* Desplegamos cada uno de los registros dentro de una tabla */  
-echo "<div id='noti'><table >";
-
-/*Primero los encabezados*/
- echo "<tr>
-         <th colspan=5> Ultimas Noticias </th>
-       <tr>
-         <th> No. Publicación</th><th> Titulo </th><th> Contenido </th>
-         <th> Fecha de Noticia</th><th> Autor </th>
-      </tr>";
-
-/*Y ahora todos los registros */
-while($row=mysql_fetch_array($result))
-{
- echo "<tr>
-         <td align='right'> $row[id_noticias] </td>
-         <td> $row[titulo] </td>
-         <td> $row[descripcion] </td>
-         <td> $row[fecha] </td>
-         <td> $row[autor] </td>
-      </tr>";
-}
-echo "</table></div>";
+echo 
+"
+	<div id='noti'>
+		<table cellpadding='0' cellspacing='0' onmouseover='resaltaNoticia()' onmouseout='noResaltaNoticia()'>	
+			<tr id='headerTabla'>
+				<td>
+					<div id='tituloTabla'>Peña Nieto muere!!</div>
+					<br />
+					<br />
+					<div class='fechaTabla'>18/06/2015</div>
+				</td>
+			</tr>			
+			<tr>
+				<td>
+					<div id='parrafo'>Descuartizan a Peña Nieto por tratar de vender la nación a países extranjeros, fue horrible...</p>
+					<div class='imagenNoticia'><img src='imagenesNoticias/pena.png'></div>
+				</td>
+			</tr>	
+			<tr>
+				<td>
+					<div class='autorNoticia'>David Gatica</div>
+					<div class='break'></div>
+					<div class='lineaDivisora'>
+					<br />
+					<a id='verNoticia' href='https://www.google.com.mx/#q=pe%C3%B1a+nieto+muere'>Ver noticia</a>
+				</td>
+			</tr>
+		</table>	
+	</div>";
 
 ?>
 
