@@ -66,12 +66,14 @@
 				<br />
 				
 				<form action="validar_usuario.php" method="POST">
-					<input type="text" class="inputChico" placeholder="Usuario" name="id_usuario" autofocus required>
+					<div id="mensaje1" class="mensaje">Usuario</div>
+					<input type="text" class="inputChico" name="id_usuario" onfocus="mensaje1()" onblur="noMensaje1()" autofocus required>
 					
 					<br />
 					<br />
 					
-					<input type="password" class="inputChico" placeholder="Contraseña" name="password" required>
+					<div id="mensaje2" class="mensaje">Contraseña</div>
+					<input type="password" class="inputChico"  name="password" onfocus="mensaje2()" onblur="noMensaje2()" required>
 					
 					<br />
 					<br />

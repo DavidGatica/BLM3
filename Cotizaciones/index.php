@@ -209,7 +209,7 @@
 									" onmouseover="mensajeIcono3()" onmouseout="noMensajeIcono3()">
 							
 									<div id="mensajeIcono3" class="mensajeIcono">
-										Hacer cotizacion
+										Hacer cotización
 									</div>
 								</div>
 								
@@ -280,13 +280,16 @@
 								
 								<div class="linea_verticalfd"></div>
 								
-								<div class="mover2">
+								<div class="mover2" onmouseover="mensajeIcono6()" onmouseout="noMensajeIcono6()">
 									
 									<div class="acomodarMensaje centrar">
 									<img src="images/1usuarios.png" class="icono_encabezado lineaHover
 							'; 			if($_GET['sec'] == "altaus" OR $_GET['sec'] == "bajaus" OR $_GET['sec'] == "cambious"){echo "lineaHoverSeleccionado";} 
 							
-							echo '" ">
+							echo '">
+									<div id="mensajeIcono6" class="mensajeIcono">
+											Usuarios
+									</div>
 									</div>
 									
 									<div class="agregar">
@@ -319,13 +322,16 @@
 								
 								<div class="linea_verticalfd"></div>
 								
-								<div class="mover">
+								<div class="mover" onmouseover="mensajeIcono7()" onmouseout="noMensajeIcono7()">
 								
 									<div class="acomodarMensaje centrar">
 									<img src="images/1productos.png" class="icono_encabezado lineaHover 
 							'; 			if($_GET['sec'] == "alta_p" OR $_GET['sec'] == "baja_p" OR $_GET['sec'] == "cambio_p" OR $_GET['sec'] == "verP" OR isset($_GET['busquedaProductoCatalogo']) OR isset($_GET['busquedaProductoDescripcion'])){echo "lineaHoverSeleccionado";} 
 							
 							echo '" ">
+									<div id="mensajeIcono7" class="mensajeIcono">
+											Productos
+									</div>
 									</div>
 								
 									<div class="agregar">
@@ -370,7 +376,10 @@
 								<div class="linea_verticalfd"></div>
 								
 								<div class="acomodarMensaje centrar">
-								<img onclick="cerrarSesion()" src="images/1sesion.png" class="icono_encabezado lineaHover">
+								<img onclick="cerrarSesion()" src="images/1sesion.png" class="icono_encabezado lineaHover" onmouseover="mensajeIcono8()" onmouseout="noMensajeIcono8()">
+								<div id="mensajeIcono8" class="mensajeIcono">
+									Cerrar sesión
+								</div>
 								</div>
 				</div>
 							';
@@ -382,7 +391,10 @@
 						<div class="linea_verticalfd"></div>
 						
 						<div class="acomodarMensaje centrar">
-						<img onclick="log_in()" src="images/1sesion.png" class="icono_encabezado lineaHover">
+						<img onclick="log_in()" src="images/1sesion.png" class="icono_encabezado lineaHover" onmouseover="mensajeIcono9()" onmouseout="noMensajeIcono9()">
+						<div id="mensajeIcono9" class="mensajeIcono">
+							Iniciar sesión
+						</div>
 						</div>
 			</div>
 					';
@@ -541,22 +553,17 @@
 				if($atras=="algo")
 				{
 					echo '
-						<div class="efectArrow">
-							<a href="
-						';
-			?>
-			
-			<?=$_SERVER['HTTP_REFERER']?>
-			
-			<?php 
-					echo 
-					'
-							">
-								<img src="images/arrowLeft.png" id="arrowLeft">
-							</a>
+						<div class="acomodarMensaje centrar">
+							<div id="mensajeFooter1" class="mensajeFooter centrar">Atras</div>							
 						</div>
-							
+						<div class="efectArrow">							
+							<a href="'?>javascript:history.go(-1)<?php echo'">
+								<img src="images/arrowLeft.png" id="arrowLeft" onmouseover="mensajeFooter1()" onmouseout="noMensajeFooter1()">
+							</a>							
+							</div>						
+						
 						<div class="lineaVerticalPie"></div>
+							
 					'; 
 				}
 				

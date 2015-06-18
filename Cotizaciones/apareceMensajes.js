@@ -137,7 +137,7 @@ function noMensaje10()
 	document.getElementById("mensaje10").style.opacity = "0";			
 }
 
-/*Mensajes en iconos*/
+/*Mensajes en iconos encabezado*/
 function mensajeIcono1()
 {
 	document.getElementById("mensajeIcono1").style.marginTop = "3.3em";	
@@ -267,4 +267,15 @@ function noMensajeIcono10()
 	document.getElementById("mensajeIcono10").style.color = "#434343";
 }
 
-/**/
+/*Mensajes en elementos de footer*/
+function mensajeFooter1()
+{
+	document.getElementById("mensajeFooter1").style.marginTop = "-2em";	
+	document.getElementById("mensajeFooter1").style.color = "#434343";		
+}
+
+function noMensajeFooter1()
+{
+	document.getElementById("mensajeFooter1").style.marginTop = "0";
+	document.getElementById("mensajeFooter1").style.color = "#e6e6e6";
+}

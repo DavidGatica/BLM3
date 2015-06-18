@@ -41,39 +41,44 @@ if ($unidad == 'METRO') {
 					<br />
 						
 					<form action="cambioproducto2.php" method="POST">
-						<input type="text" class="inputChico"  name="id_catalogo" value="<?php echo$id_catalogo; ?>" placeholder="C&aacute;talogo" autofocus required>
-
-						<select style="background-color: white" class="inputChico" name="unidad" required>
-							<option class="selectDefault" disabled selected>
-								Unidad
-							</option>
+						<div id="inputsForm2" class="centrar">
+							<div class="alineaIzquierda">
+								<div id="mensaje1" class="mensaje">Nombre del producto</div>
+								<input onfocus="mensaje1()" onblur="noMensaje1()" type="text" class="inputChico"  name="id_catalogo" value="<?php echo$id_catalogo; ?>" placeholder="C&aacute;talogo" required>
+							</div>
+							<div class="alineaIzquierda">
+								<div id="mensaje2" class="mensaje">Unidad</div>
+								<select onfocus="mensaje2()" onblur="noMensaje2()" style="background-color: white" class="inputChico" name="unidad" required>								
+									<option name="PZA." <?php if ($i == 1) {echo"selected";} ?>>
+										PZA.
+									</option>
+									
+									<option name="JGO." <?php if ($i == 3) {echo"selected";} ?>>
+										JGO.
+									</option>
+									
+									<option name="METRO" <?php if ($i == 5) {echo"selected";} ?>>
+										METRO.
+									</option>
+									
+									<option value="CJTO." <?php if ($i == 2) {echo"selected";} ?>>
+										CJTO.
+									</option>
+									
+									<option value="ROLLO" <?php if ($i == 4) {echo"selected";} ?>>
+										ROLLO
+									</option>
+								</select>
+							</div>
+							<br />
+							<br />
 							
-							<option name="PZA." <?php if ($i == 1) {echo"selected";} ?>>
-								PZA.
-							</option>
-							
-							<option name="JGO." <?php if ($i == 3) {echo"selected";} ?>>
-								JGO.
-							</option>
-							
-							<option name="METRO" <?php if ($i == 5) {echo"selected";} ?>>
-								METRO.
-							</option>
-							
-							<option value="CJTO." <?php if ($i == 2) {echo"selected";} ?>>
-								CJTO.
-							</option>
-							
-							<option value="ROLLO" <?php if ($i == 4) {echo"selected";} ?>>
-								ROLLO
-							</option>
-						</select>
-						
-						<br />
-						<br />
-
-						<textarea  class="areaText" name="descripcion" placeholder="Descripción" required><?php echo $descripcion; ?></textarea>
-						
+							<div class="alineaIzquierda">
+								<div id="mensaje3" class="mensaje">Descripción del producto</div>
+								<textarea onfocus="mensaje3()" onblur="noMensaje3()" class="areaText" name="descripcion" placeholder="Descripción" required><?php echo $descripcion; ?></textarea>
+							</div>
+						</div>
+						<div class="break"></div>
 						<br />
 						<br />
 
