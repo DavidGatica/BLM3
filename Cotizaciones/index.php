@@ -169,20 +169,30 @@
 		
 		<div id="Contenido">
 			<div id="encabezado_negro">
-				<div>
+				<div class="acomodarMensaje centrar">
 				<a href="http://www.bestlightmexico.com.mx" target="new" onmouseover="mensajeIcono1()" onmouseout="noMensajeIcono1()">
 					<img src="images/logo_encabezado.png" id="logo_encabezado">
-				</a>
+				</a>				
+				<div id="mensajeIcono1" class="mensajeIcono centrar">Ir a bestlightmexico.com.mx</div>
 				</div>
 				
-				<div id="mensajeIcono1" class="mensajeIcono centrar">Ir a BLM</div>
 				<div class="linea_vertical"></div>
 				
-				<div>
+				<div class="acomodarMensaje centrar">
 				<a href="index.php">
-					<img src="images/1home.png" class="iconoi_encabezado lineaHover" onmouseover="mensajeIcono2()" onmouseout="noMensajeIcono2()">
+					<img src="images/1home.png" class="iconoi_encabezado lineaHover 
+					<?php 
+														if(!isset($_GET['nombreBajaUs']))
+														if(!isset($_GET['catalogo']))
+														if(!isset($_GET['busquedaProductoDescripcion']))
+														if(!isset($_GET['busquedaProductoCatalogo']))
+														if(!isset($_GET['catalogoCambio']))
+														if(!isset($_GET['nombreCambio']))
+														if($_GET['sec'] == "")
+															echo "lineaHoverSeleccionado";
+					?>																" onmouseover="mensajeIcono2()" onmouseout="noMensajeIcono2()">
 				</a>
-				<div id="mensajeIcono2" class="mensajeIcono">Home</div>
+				<div id="mensajeIcono2" class="mensajeIcono">Página principal</div>
 				</div>
 				
 				<div id="iconos">
@@ -191,53 +201,79 @@
 						{							
 							echo 
 							'
-								<img onclick="cotizar()" src="images/1generar.png" class="icono_encabezado lineaHover 
-							'; 		if($_GET['sec'] == "cotizar"){echo "lineaHoverSeleccionado";} 
+								<div class="acomodarMensaje centrar">
+									<img onclick="cotizar()" src="images/1generar.png" class="icono_encabezado lineaHover 
+							'; 															if($_GET['sec'] == "cotizar"){echo "lineaHoverSeleccionado";} 
 							
-							echo '" ">
+							echo '
+									" onmouseover="mensajeIcono3()" onmouseout="noMensajeIcono3()">
+							
+									<div id="mensajeIcono3" class="mensajeIcono">
+										Hacer cotizacion
+									</div>
+								</div>
 								
 								<div class="linea_verticalfd"></div>
 								
+								<div class="acomodarMensaje centrar">
 								<img onclick="cotizaciones()" src="images/1cotizaciones.png" class="icono_encabezado lineaHover 
 							'; 		if($_GET['sec'] == "cotizaciones"){echo "lineaHoverSeleccionado";} 
 							
-							echo '" ">
+							echo '" onmouseover="mensajeIcono4()" onmouseout="noMensajeIcono4()" >
+								<div id="mensajeIcono4" class="mensajeIcono">
+										Revisar cotizaciones
+								</div>
+								</div>
 								
-								<div class="linea_verticalfd"></div>			
+								<div class="linea_verticalfd"></div>
 								
-								<div class="mover">
 								
+								<div class="mover" onmouseover="mensajeIcono5()" onmouseout="noMensajeIcono5()">
+								
+								<div class="acomodarMensaje centrar">	
 									<img src="images/1clientes.png" class="icono_encabezado clientes lineaHover 
 							'; 			if($_GET['sec'] == "alta" OR $_GET['sec'] == "baja" OR $_GET['sec'] == "cambio" OR $_GET['sec'] == "visualizarC" OR isset($_GET['busquedaClienteCatalogo']) OR isset($_GET['busquedaClienteDescripcion'])){echo "lineaHoverSeleccionado";} 
 							
-							echo '" ">
+							echo '">
+									<div id="mensajeIcono5" class="mensajeIcono">
+											Clientes
+									</div>
+									</div>
 									
 									<div class="agregar">
+											<div class="acomodarMensaje centrar">
 											<img onclick="agregar_c()" src="images/2anadir.png" class="icono_encabezado agregar sombraHover 
 							'; 					if($_GET['sec'] == "alta"){echo "sombraHoverSeleccionado";} 
 							
 							echo '" ">
 									</div>
+											</div>
 									
 									<div class="eliminar">
+											<div class="acomodarMensaje centrar">
 											<img onclick="eliminar_c()" src="images/1eliminar.png" class="icono_encabezado agregar sombraHover 
 							'; 					if($_GET['sec'] == "baja"){echo "sombraHoverSeleccionado";} 
 							
 							echo '" ">
+											</div>
 									</div>
 									
 									<div onclick="modificar_c()" class="modificar">
+											<div class="acomodarMensaje centrar">
 											<img src="images/1modificar.png" class="icono_encabezado agregar sombraHover
 							'; 					if($_GET['sec'] == "cambio"){echo "sombraHoverSeleccionado";} 
 							
 							echo '" ">
+											</div>
 									</div>
 									
 									<div class="visualizar">
+											<div class="acomodarMensaje centrar">
 											<img onclick="visualizar_c()" src="images/1ver.png" class="icono_encabezado agregar sombraHover 
 							'; 					if($_GET['sec'] == "visualizarC" OR isset($_GET['busquedaClienteCatalogo']) OR isset($_GET['busquedaClienteDescripcion'])){echo "sombraHoverSeleccionado";} 
 							
 							echo '" ">
+											</div>
 									</div>
 										
 								</div>
@@ -245,31 +281,39 @@
 								<div class="linea_verticalfd"></div>
 								
 								<div class="mover2">
-								
+									
+									<div class="acomodarMensaje centrar">
 									<img src="images/1usuarios.png" class="icono_encabezado lineaHover
 							'; 			if($_GET['sec'] == "altaus" OR $_GET['sec'] == "bajaus" OR $_GET['sec'] == "cambious"){echo "lineaHoverSeleccionado";} 
 							
 							echo '" ">
+									</div>
 									
 									<div class="agregar">
+											<div class="acomodarMensaje centrar">
 											<img onclick="agregar_u()" src="images/2anadir.png" class="icono_encabezado agregar sombraHover 
 							'; 					if($_GET['sec'] == "altaus"){echo "sombraHoverSeleccionado";} 
 							
 							echo '" ">
 									</div>
+											</div>
 									
 									<div class="eliminar">
+											<div class="acomodarMensaje centrar">
 											<img onclick="eliminar_u()" src="images/1eliminar.png" class="icono_encabezado agregar sombraHover 
 							'; 					if($_GET['sec'] == "bajaus"){echo "sombraHoverSeleccionado";} 
 							
 							echo '" ">
 									</div>
+											</div>
 									
 									<div class="modificar">
+											<div class="acomodarMensaje centrar">
 											<img onclick="modificar_u()" src="images/1modificar.png" class="icono_encabezado agregar sombraHover 
 							'; 					if($_GET['sec'] == "cambious"){echo "sombraHoverSeleccionado";} 
 							
 							echo '" ">
+											</div>
 									</div>
 								</div>
 								
@@ -277,44 +321,57 @@
 								
 								<div class="mover">
 								
+									<div class="acomodarMensaje centrar">
 									<img src="images/1productos.png" class="icono_encabezado lineaHover 
 							'; 			if($_GET['sec'] == "alta_p" OR $_GET['sec'] == "baja_p" OR $_GET['sec'] == "cambio_p" OR $_GET['sec'] == "verP" OR isset($_GET['busquedaProductoCatalogo']) OR isset($_GET['busquedaProductoDescripcion'])){echo "lineaHoverSeleccionado";} 
 							
 							echo '" ">
+									</div>
 								
 									<div class="agregar">
+											<div class="acomodarMensaje centrar">
 											<img onclick="agregar_p()" src="images/2anadir.png" class="icono_encabezado agregar sombraHover 
 							'; 					if($_GET['sec'] == "alta_p"){echo "sombraHoverSeleccionado";} 
 							
 							echo '" ">
+											</div>
 									</div>
 									
 									<div class="eliminar">
+											<div class="acomodarMensaje centrar">
 											<img onclick="eliminar_p()" src="images/1eliminar.png" class="icono_encabezado agregar sombraHover 
 							'; 					if($_GET['sec'] == "baja_p"){echo "sombraHoverSeleccionado";} 
 							
 							echo '" ">
+											</div>
 									</div>
 									
 									<div class="modificar">
+											<div class="acomodarMensaje centrar">
 											<img onclick="modificar_p()" src="images/1modificar.png" class="icono_encabezado agregar sombraHover 
 							'; 					if($_GET['sec'] == "cambio_p"){echo "sombraHoverSeleccionado";} 
 							
 							echo '" ">
+											</div>
 									</div>
 									
 									<div class="visualizar">
+											<div class="acomodarMensaje centrar">
 											<img onclick="ver_p()" src="images/1ver.png" class="icono_encabezado agregar sombraHover 
 							'; 					if($_GET['sec'] == "verP" OR isset($_GET['busquedaProductoCatalogo']) OR isset($_GET['busquedaProductoDescripcion'])){echo "sombraHoverSeleccionado";} 
 							
 							echo '" ">
+											</div>
 									</div>
+									
 								
 								</div>
 								
 								<div class="linea_verticalfd"></div>
 								
+								<div class="acomodarMensaje centrar">
 								<img onclick="cerrarSesion()" src="images/1sesion.png" class="icono_encabezado lineaHover">
+								</div>
 				</div>
 							';
 						}
@@ -324,7 +381,9 @@
 					'
 						<div class="linea_verticalfd"></div>
 						
+						<div class="acomodarMensaje centrar">
 						<img onclick="log_in()" src="images/1sesion.png" class="icono_encabezado lineaHover">
+						</div>
 			</div>
 					';
 				}	
