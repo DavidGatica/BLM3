@@ -4,6 +4,15 @@ if (isset($_SESSION['usuario'])){
 	
 	echo '<a href="cerrar.php" >Cerrar Sesión</a>';
 }
+
+ 		if($_GET['id_imagen'])
+		{	
+			$id_imagen=$_GET['id_imagen'];
+			
+			$file = "imagenesNoticias/".$id_imagen;
+			$do = unlink($file);
+		}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -78,8 +87,7 @@ Iluminación Fotovoltaica Profesional
 </div>
 <br />
 <br />
-<div id="contenedorNoticias">
-<div id="contenedorInfinito">
+
 <?php
 /* Abrimos la base de datos */
   $conx = mysql_connect ("localhost","bestl_servidor", "Zzs99vmoNT1krok!");
@@ -90,14 +98,14 @@ Iluminación Fotovoltaica Profesional
 
 $sql="select * from Noticias ORDER BY fecha DESC";
 $result= mysql_query($sql) or die(mysql_error());
-if(mysql_num_rows($result)==0) die("No hay registros para mostrar");
+if(mysql_num_rows($result)==0) echo "No hay noticias para mostrar";
 
-
-/* Desplegamos cada uno de los registros dentro de una tabla */  
+echo '<div id="contenedorNoticias">
+	<div id="contenedorInfinito">';
 while ($campo = mysql_fetch_array($result)) 
 {
 echo 
-"	
+"		
 	<div id='noti' class='centrar floatLeft'>
 		<table cellpadding='0' cellspacing='0' >	
 			<tr id='headerTabla'>
@@ -111,7 +119,8 @@ echo
 			<tr>
 				<td>
 					<div id='parrafo'>".$campo['descripcion']."</div>
-					<div class='imagenNoticia'><img src='imagenesNoticias/pena.png'></div>
+";					 if($campo['id_imagen']==""){}else{ echo "<div class='imagenNoticia'><img src='imagenesNoticias/".$campo['id_imagen']."'></div>"; }
+				echo "
 				</td>
 			</tr>	
 			<tr>
@@ -133,9 +142,63 @@ echo
 </div>
 </div>
 <div class="break"></div>
- <a href="noticias2.php" target="_self"> <input type="button" name="boton" value="Agregar Noticia" /> </a>
+<? if(isset($_SESSION['usuario'])){?><button onclick="aparecePassword()" id="aparecePassword">Agregar Noticia </button> <?php } ?>
 
+ <script> 
 
+	function aparecePassword()
+	{	
+		document.getElementById('letrasPassword').style.visibility = "visible";
+		document.getElementById('inputPassword').style.visibility = "visible";
+		document.getElementById('botonIngresar').style.visibility = "visible";
+		document.getElementById('esconderPassword').style.visibility = "visible";
+		document.getElementById('aparecePassword').style.visibility = "hidden";
+		document.getElementById('letrasPassword').style.opacity = "1";
+		document.getElementById('inputPassword').style.opacity = "1";
+		document.getElementById('botonIngresar').style.opacity = "1";
+		document.getElementById('esconderPassword').style.opacity = "1";
+		document.getElementById('aparecePassword').style.opacity = "0";
+	}
+	
+	function esconderPassword()
+	{
+		document.getElementById('letrasPassword').style.visibility = "hidden";
+		document.getElementById('inputPassword').style.visibility = "hidden";
+		document.getElementById('botonIngresar').style.visibility = "hidden";
+		document.getElementById('aparecePassword').style.visibility = "visible";
+		document.getElementById('letrasPassword').style.opacity = "0";
+		document.getElementById('inputPassword').style.opacity = "0";
+		document.getElementById('botonIngresar').style.opacity = "0";
+		document.getElementById('esconderPassword').style.opacity = "0";
+		document.getElementById('aparecePassword').style.opacity = "1";
+		
+	}
+	
+	<?php 
+		if(isset($_GET['error']))
+		{
+	?>
+	
+			alert("Password incorrecto, intente de nuevo");
+			
+	<?php	
+		}
+	?>
+ </script>
+
+ <br />
+<br />
+<form action="noticias2.php" method="POST" class="centrar">
+<div id="letrasPassword">Ingresa Password</div>
+<br />
+<input id="inputPassword" type="text" name="password">
+<br />
+<br />
+<input id="botonIngresar" type="submit" value="Ingresar">
+</form>
+<br />
+<br />
+<button id="esconderPassword" onclick="esconderPassword()">Cancelar</button>
 
 
 <br>

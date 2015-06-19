@@ -1,14 +1,40 @@
 <?php 
-$password = "123456";
-if ($_POST['password'] != $password) { 
-?>
-<h2>Ingresa Password</h2>
-<form name="form" method="post" action="">
-<input type="password" name="password"><br>
-<input type="submit" value="Login"></form>
-<?php 
-}else{
+session_start();
+
+include ("funciones_mysql.php");
+
+$conexion = conectar();
+
+$id_usuario = $_SESSION['usuario'];
 	
+	$sql = "SELECT * FROM Registro WHERE id_usuario = '$id_usuario'";
+	$resultado = query($sql, $conexion);
+	
+	while ($campo = mysql_fetch_array($resultado)) 
+	{
+		$password = $campo['password'];
+	}
+	
+if(!isset($_POST['password'])){
+	$_POST['password']=$password;
+}
+
+$_SESSION['passwordNoticia']=$password;
+
+if ($_POST['password'] != $password OR $_SESSION['passwordNoticia']==null) 
+{ 
+	unset($_SESSION['passwordNoticia']);
+	header("Location: noticias.php?error=si");
+	
+}
+
+else
+{
+	
+if(isset($_GET['id_imagen']))
+{ 
+$id_imagen=$_GET['id_imagen'];
+}
 	
 ?>
 Contenido protegido
@@ -207,11 +233,6 @@ clear: both;
 <form method="POST" action="noticias3.php">
 
 <div class="izqder">
-<p>id_noticia</p><br />
-<input type="text" name="id_noticias" class="inputform" >
-</div>
-
-<div class="izqder">
 <p>titulo</p><br />
 <input type="text" name="titulo" class="inputform" >
 </div>
@@ -219,12 +240,8 @@ clear: both;
 <div class="break"></div>
 <br />
 <p>descripcion</p><br />
-<input type="text" name="descripcion" class="inputform2">
+<textarea name="descripcion" class="inputform2"></textarea>
 
-<br />
-<br />
-<p>fecha</p><br />
-<input type="text" name="fecha" class="inputform2">
 
 <br />
 <br />
@@ -235,7 +252,7 @@ clear: both;
 
 <br />
 <div id="botonc">
-<a href="http://www.bestlightmexico.com.mx/iluminacion/index.php" id="boton">Cancelar</a>
+<a href="http://www.bestlightmexico.com.mx/iluminacion/noticias.php?<?php echo "id_imagen=$id_imagen" ?>" id="boton">Cancelar</a>
 <input type="submit" value="Publicar Noticia" id="boton">
 </form>
 </div>

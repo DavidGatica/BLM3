@@ -441,36 +441,44 @@ text-align: center;
 	border-bottom: 0.1em solid #a3a8ab;
 	border-radius: 0 0 5px 5px;
 }
-/*
-#noti td 
+
+#aparecePassword
 {
-font-size: 12px;
-font-weight:bold;
-background-color: white;
-color: black;
-font-family: “Trebuchet MS”, Arial;
-text-align:left;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	transition: 1s;
 }
 
-#noti th{
-
-font-size: 12px;
-
-
-background-color: #e2ebef;
-
-color: #34484E;
-font-family: “Trebuchet MS”, Arial;
-border-right-width: 1px;
-border-bottom-width: 1px;
-border-right-style: solid;
-border-bottom-style: solid;
-border-right-color: #A4C4D0;
-border-bottom-color: #A4C4D0;
-
+#letrasPassword
+{
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	visibility: hidden;
+	opacity: 0;
+	transition: 1s;
 }
 
-*/
+#inputPassword
+{
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	visibility: hidden;
+	opacity: 0;
+	transition: 1s;
+}
+
+#botonIngresar
+{
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	visibility: hidden;
+	opacity: 0;
+	transition: 1s;
+}
+
+#esconderPassword
+{
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	visibility: hidden;
+	opacity: 0;
+	transition: 1s;
+}
 
 
 

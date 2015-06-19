@@ -6,15 +6,28 @@
 	
 	$conexion = conectar();
 	
-	$id_noticias = $_POST['id_noticias'];
+	$sql="SELECT * FROM Noticias ORDER BY id_noticias DESC LIMIT 1"
+$resultado = query($sql, $conexion);
+
+	$campo = mysql_fetch_row($resultado);
+	$id_noticias = $campo[0] + 1;
+
+	if ($id_noticias == "") 
+	{
+		$id_noticias= 1;
+	}
+	
 	$titulo = $_POST['titulo'];
 	$descripcion = $_POST['descripcion'];
-	$fecha = $_POST['fecha'];
+	$fecha = date(Y-m-d);
 	$autor = $_POST['autor'];
+	$id_imagen = $_SESSION['id_imagen'];
 	
-
-	$sql = "INSERT INTO Noticias (id_noticias, titulo, descripcion, fecha, autor) VALUES ('$id_noticias','$titulo','$descripcion','$fecha','$autor')";
+	
+	$sql = "INSERT INTO Noticias (id_noticias, titulo, descripcion, fecha, autor, id_imagen) VALUES ('$id_noticias','$titulo','$descripcion','$fecha','$autor','$id_imagen')";
 	$resultado = query($sql, $conexion);
+	
+	unset($_SESSION['id_imagen']);
 	
 ?>
 
