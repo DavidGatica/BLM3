@@ -40,7 +40,7 @@ if (isset($_SESSION['usuario'])){
 </div></div>
 
 
-<div id="page-wrap">
+<div id="page-wrap" class='centrar'>
 
 <div align="center" >
 <div id="logos_centrados"><IMG SRC="logo.png" height="90px" align="left"> <IMG SRC="logocarmanah.png" height="70" align="right"></div>
@@ -76,27 +76,10 @@ Iluminación Fotovoltaica Profesional
 
 </table >
 </div>
-
-<script>
-	function resaltaNoticia()
-	{
-		document.getElementById('noti').style.fontSize = "17px";
-		document.getElementById('tituloTabla').style.fontSize = "27px";
-		document.getElementById('parrafo').style.fontSize = "17px";
-		document.getElementById('headerTabla').style.background = "#e4752f";
-		document.getElementById('verNoticia').style.background = "#e4752f";
-	}	
-	
-	function noResaltaNoticia()
-	{
-		document.getElementById('noti').style.fontSize = "16px";
-		document.getElementById('tituloTabla').style.fontSize = "25px";
-		document.getElementById('parrafo').style.fontSize = "16px";
-		document.getElementById('headerTabla').style.background = "#38444b";
-		document.getElementById('verNoticia').style.background = "#38444b";
-	}
-</script>
-
+<br />
+<br />
+<div id="contenedorNoticias">
+<div id="contenedorInfinito">
 <?php
 /* Abrimos la base de datos */
   $conx = mysql_connect ("localhost","bestl_servidor", "Zzs99vmoNT1krok!");
@@ -111,38 +94,45 @@ if(mysql_num_rows($result)==0) die("No hay registros para mostrar");
 
 
 /* Desplegamos cada uno de los registros dentro de una tabla */  
+while ($campo = mysql_fetch_array($result)) 
+{
 echo 
-"
-	<div id='noti'>
-		<table cellpadding='0' cellspacing='0' onmouseover='resaltaNoticia()' onmouseout='noResaltaNoticia()'>	
+"	
+	<div id='noti' class='centrar floatLeft'>
+		<table cellpadding='0' cellspacing='0' >	
 			<tr id='headerTabla'>
 				<td>
-					<div id='tituloTabla'>Peña Nieto muere!!</div>
+					<div id='tituloTabla'>".$campo['titulo']."</div>
 					<br />
 					<br />
-					<div class='fechaTabla'>18/06/2015</div>
+					<div class='fechaTabla'>".$campo['fecha']."</div>
 				</td>
 			</tr>			
 			<tr>
 				<td>
-					<div id='parrafo'>Descuartizan a Peña Nieto por tratar de vender la nación a países extranjeros, fue horrible...</p>
+					<div id='parrafo'>".$campo['descripcion']."</div>
 					<div class='imagenNoticia'><img src='imagenesNoticias/pena.png'></div>
 				</td>
 			</tr>	
 			<tr>
 				<td>
-					<div class='autorNoticia'>David Gatica</div>
+					<div class='autorNoticia'>".$campo['autor']."</div>
 					<div class='break'></div>
-					<div class='lineaDivisora'>
+					<div class='lineaDivisora'></div>
 					<br />
 					<a id='verNoticia' href='https://www.google.com.mx/#q=pe%C3%B1a+nieto+muere'>Ver noticia</a>
 				</td>
 			</tr>
 		</table>	
-	</div>";
+	</div>
+	
+";
+}
 
 ?>
-
+</div>
+</div>
+<div class="break"></div>
  <a href="noticias2.php" target="_self"> <input type="button" name="boton" value="Agregar Noticia" /> </a>
 
 
