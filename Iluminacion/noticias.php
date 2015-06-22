@@ -93,6 +93,52 @@ Iluminación Fotovoltaica Profesional
   $conx = mysql_connect ("localhost","bestl_servidor", "Zzs99vmoNT1krok!");
   if (!$conx) die ("Error al abrir la base <br/>". mysql_error()); 
   mysql_select_db("bestli01_pagina_cotizaciones", $conx) OR die("Connection Error to Database");    
+  
+
+	if(isset($_GET['verNoticia']))
+{
+	$verNoticia = $_GET['verNoticia'];
+	$sql="select * from Noticias WHERE id_noticias='$verNoticia'";
+	$result= mysql_query($sql) or die(mysql_error());
+	while ($campo = mysql_fetch_array($result))
+	{
+		
+		echo 
+			"<div id='revisarNoticia'>
+			<h1>".$campo['titulo']."</h1>
+				
+				<br />
+				
+				<div id='fechaRevisarNoticia'>"			
+				.$campo['fecha'].				
+				"</div>
+				
+				<br />
+				<br />
+				
+				<div id='descripcionRevisarNoticia'>"				
+					.$campo['descripcion'].				
+				"</div>
+				
+				<br />
+				
+				<img src='imagenesNoticias/".$campo['id_imagen']."'>
+				
+				<br />
+				<br />
+				
+				<div id='autorRevisarNoticia'>"				
+					.$campo['autor']."
+				</div>
+				
+				
+				
+				
+			</div>"
+		;
+	}
+}
+
 
 /* Realizamos la consulta SQL */
 
@@ -106,6 +152,8 @@ while ($campo = mysql_fetch_array($result))
 {
 	
 	$limitar = substr($campo['descripcion'],0,100);
+	$id_noticia=$campo['id_noticias'];
+	
 echo 
 "		
 	<div id='noti' class='centrar floatLeft'>
@@ -120,7 +168,7 @@ echo
 			</tr>			
 			<tr>
 				<td>
-					<div id='parrafo'>".$limitar."...<br /><a href='https://www.google.com.mx'>Leer más...</a></div>
+					<div id='parrafo'>".$limitar."...<br /><a href='noticias.php?verNoticia=$id_noticia'>Leer más...</a></div>
 ";					 if($campo['id_imagen']==""){}else{ echo "<div class='imagenNoticia'><img src='imagenesNoticias/".$campo['id_imagen']."'></div>"; }
 				echo "
 				</td>
@@ -131,7 +179,7 @@ echo
 					<div class='break'></div>
 					<div class='lineaDivisora'></div>
 					<br />
-					<a id='verNoticia' href='https://www.google.com.mx/#q=pe%C3%B1a+nieto+muere'>Ver noticia</a>
+					<a id='verNoticia' href='noticias.php?verNoticia=$id_noticia'>Ver noticia</a>
 				</td>
 			</tr>
 		</table>	
@@ -139,6 +187,7 @@ echo
 	
 ";
 }
+
 
 ?>
 </div>
@@ -185,6 +234,7 @@ echo
 			
 	<?php	
 		}
+		
 	?>
  </script>
 
@@ -201,7 +251,6 @@ echo
 <br />
 <br />
 <button id="esconderPassword" onclick="esconderPassword()">Cancelar</button>
-
 
 <br>
 
