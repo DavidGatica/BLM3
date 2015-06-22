@@ -246,7 +246,7 @@ clear: both;
 <br />
 <br />
 <p>autor</p><br />
-<input type="text" name="autor" class="inputform2" value="<?php echo $_SESSION['usuario'];?>" disabled>
+<input type="text" name="autor" class="inputform2">
 
 </div>
 

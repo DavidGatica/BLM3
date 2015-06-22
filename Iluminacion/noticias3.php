@@ -20,7 +20,7 @@ $resultado = query($sql, $conexion);
 	$titulo = $_POST['titulo'];
 	$descripcion = $_POST['descripcion'];
 	$fecha = date("Y-m-d");
-	$autor = $_SESSION['usuario'];
+	$autor = $_POST['autor'];
 	$id_imagen = $_SESSION['id_imagen'];
 	
 	
