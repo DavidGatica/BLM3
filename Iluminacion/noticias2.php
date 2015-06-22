@@ -31,9 +31,9 @@ if ($_POST['password'] != $password OR $_SESSION['passwordNoticia']==null)
 else
 {
 	
-if(isset($_GET['id_imagen']))
+if(isset($_SESSION['id_imagen']))
 { 
-$id_imagen=$_GET['id_imagen'];
+$id_imagen=$_SESSION['id_imagen'];
 }
 	
 ?>

@@ -104,6 +104,8 @@ echo '<div id="contenedorNoticias">
 	<div id="contenedorInfinito">';
 while ($campo = mysql_fetch_array($result)) 
 {
+	
+	$limitar = substr($campo['descripcion'],0,100);
 echo 
 "		
 	<div id='noti' class='centrar floatLeft'>
@@ -118,7 +120,7 @@ echo
 			</tr>			
 			<tr>
 				<td>
-					<div id='parrafo'>".$campo['descripcion']."</div>
+					<div id='parrafo'>".$limitar."...<br /><a href='https://www.google.com.mx'>Leer más...</a></div>
 ";					 if($campo['id_imagen']==""){}else{ echo "<div class='imagenNoticia'><img src='imagenesNoticias/".$campo['id_imagen']."'></div>"; }
 				echo "
 				</td>

@@ -6,7 +6,7 @@
 	
 	$conexion = conectar();
 	
-	$sql="SELECT * FROM Noticias ORDER BY id_noticias DESC LIMIT 1"
+	$sql="SELECT * FROM Noticias ORDER BY id_noticias DESC LIMIT 1";
 $resultado = query($sql, $conexion);
 
 	$campo = mysql_fetch_row($resultado);
@@ -19,7 +19,7 @@ $resultado = query($sql, $conexion);
 	
 	$titulo = $_POST['titulo'];
 	$descripcion = $_POST['descripcion'];
-	$fecha = date(Y-m-d);
+	$fecha = date("Y-m-d");
 	$autor = $_POST['autor'];
 	$id_imagen = $_SESSION['id_imagen'];
 	
