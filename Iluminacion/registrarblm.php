@@ -238,6 +238,10 @@ Iluminación Fotovoltaica Profesional
 </tr>
 
 </table >
+<div id="menu">
+<a href="index.php" style="color:white">Inicio « </a><a href="login4.php" style="color:white">Iniciar Sesión « </a> <span> Registrarse por primera vez </span> 
+</div>
+
 </div>
 <br><br>
 
@@ -269,7 +273,7 @@ Iluminación Fotovoltaica Profesional
 <br />
 <br />
 <p>Contraseña</p><br />
-<input type="text" name="password" class="inputform2" placeholder="minimo 8 caracteres"required>
+<input type="password" name="password" class="inputform2" placeholder="minimo 8 caracteres"required>
 
 <br />
 <br />

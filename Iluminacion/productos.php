@@ -49,8 +49,6 @@
 Iluminación Fotovoltaica Profesional 
 </div>
 
-<a href="index.php">Inicio« </a><a >Productos </a>
-
 <table bgcolor="#38444b" width="1020" >
 
 <tr >
@@ -76,6 +74,11 @@ Iluminación Fotovoltaica Profesional
 </tr>
 
 </table  >
+<div id="menu">
+<a href="index.php" style="color:white">Inicio « </a> <span> Productos </span> 
+</div>
+
+
 </div>
 
 

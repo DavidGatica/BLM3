@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="estilo.css" rel="stylesheet" type="text/css">
+<LINK REL="SHORTCUT ICON" TYPE="IMAGE/ICO" HREF="ico.png">
+<script src="ajax.js" language="JavaScript"></script>
+<body style="padding:0; margin:0">
 
-
+<div id="arribaa">
+	<div id="buscar">
 
 
 <script>
@@ -27,16 +33,10 @@
 				}
 			}
 </script>
-<div id="arribaa">
-	<div id="buscar">
 
-<script src="ajax.js" language="JavaScript"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link href="estilo.css" rel="stylesheet" type="text/css">
-<LINK REL="SHORTCUT ICON" TYPE="IMAGE/ICO" HREF="ico.png">
-<body style="padding:0; margin:0" onload="CambiarColor1();">
-
+<gcse:searchbox-only></gcse:searchbox-only>
 </div></div>
+
 
 <div align="center" >
 <div id="logos_centrados"><IMG SRC="logo.png" height="90px" align="left"> <IMG SRC="logocarmanah.png" height="70" align="right"></div>
@@ -71,7 +71,11 @@ Iluminación Fotovoltaica Profesional
 
 </tr>
 
-</table>
+</table  >
+<div id="menu">
+<a href="index.php" style="color:white">Inicio « </a> <span> Producto BLM-EG-300</span> 
+</div>
+
 </div>
 
 <br>

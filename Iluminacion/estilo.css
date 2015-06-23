@@ -485,7 +485,7 @@ text-align: center;
 	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 	margin: 2em 0 3em 0;
 	padding: 2em;
-	width: 59.5em;
+	width: 55em;
 	height: 35em;
 	border: 2px solid #b2b2b2;
 	overflow: scroll;
@@ -502,6 +502,19 @@ text-align: center;
 #fechaRevisarNoticia
 {
 	color: #b2b2b2;
+}
+
+#menu{
+margin: 0 auto;
+text-align: center;
+background-color: #38444b;
+width: 95.626em;
+color: white; 
+font-family: Arial, sans serif; 
+font-size: 8pt; 
+font-weight: bold;
+
+
 }
 
 

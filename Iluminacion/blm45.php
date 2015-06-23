@@ -71,6 +71,10 @@ Iluminación Fotovoltaica Profesional
 </tr>
 
 </table  >
+<div id="menu">
+<a href="index.php" style="color:white">Inicio « </a> <span> Producto BLM-EG-40-80-145</span> 
+</div>
+
 </div>
 
 <br>

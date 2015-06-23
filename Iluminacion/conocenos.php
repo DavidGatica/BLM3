@@ -81,6 +81,11 @@ Iluminación Fotovoltaica Profesional
 </tr>
 
 </table >
+<div id="menu">
+<a href="index.php" style="color:white">Inicio « </a> <span> ¿Quiénes somos? </span> 
+</div>
+
+
 </div>
 <br><br>
 

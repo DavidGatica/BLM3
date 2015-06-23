@@ -83,6 +83,10 @@ Iluminación Fotovoltaica Profesional
 </tr>
 
 </table  >
+<div id="menu">
+<a href="index.php" style="color:white">Inicio « </a> <span> Producto BLM-everGEN 1700</span> 
+</div>
+
 </div>
 
 <br>

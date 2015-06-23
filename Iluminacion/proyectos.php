@@ -84,6 +84,10 @@ Iluminación Fotovoltaica Profesional
 </tr>
 
 </table >
+<div id="menu">
+<a href="index.php" style="color:white">Inicio « </a> <span> Proyectos </span> 
+</div>
+
 </div>
 <br>
 <div id="texto8">&nbsp;Proyectos en México</div>

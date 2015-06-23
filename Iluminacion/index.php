@@ -82,6 +82,9 @@ Iluminación Fotovoltaica Profesional
 </tr>
 
 </table>
+<div id="menu">
+</a> <span> Inicio « </span>
+</div>
 </div>
 <br>
 
