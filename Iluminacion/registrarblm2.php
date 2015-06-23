@@ -15,11 +15,11 @@ $correo=$_POST['correo'];
 $estado=$_POST['estado'];
 $sexo=$_POST['sexo'];
 $telefono=$_POST['telefono'];
-$tipo=$_POST['tipo'];
+$tipo_usuario=$_POST['tipo_usuario'];
 
 
 //Agregar Campos en la Tabla Cotizaciones
-$sqla = "INSERT INTO `Registro` (nombre, apellidos, id_usuario, contraseña, correo, estado, sexo, telefono, tipo_usuario) values ('$nombre', '$apellidos', '$id_usuario', '$password', '$correo', '$estado', '$sexo', '$telefono', '$tipo')";
+$sqla = "INSERT INTO `Registro` (nombre, apellidos, id_usuario, password, correo, estado, sexo, telefono, tipo_usuario) values ('$nombre', '$apellidos', '$id_usuario', '$password', '$correo', '$estado', '$sexo', '$telefono', '$tipo_usuario')";
 $resultadoa = query($sqla, $conexion);
 ?>
 

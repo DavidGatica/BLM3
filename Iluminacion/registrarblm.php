@@ -274,7 +274,7 @@ Iluminación Fotovoltaica Profesional
 <br />
 <br />
 <p>Correo</p><br />
-<input type="text" name="correo" class="inputform2" placeholder="Ejem. JuanGarciaqhotmail.com" required>
+<input type="text" name="correo" class="inputform2" placeholder="Ejem. JuanGarcia@hotmail.com" required>
 
 <br />
 <br />
