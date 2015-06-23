@@ -37,13 +37,24 @@ $id_imagen=$_SESSION['id_imagen'];
 }
 	
 ?>
-Contenido protegido
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <style type="text/css">
+html
+{
+	height: 100%;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
 
 input:hover
 {
@@ -84,15 +95,17 @@ input:hover
 
 #caja
 {
-margin: 0 auto;
-margin-top: 2em;
-width: 37.7em;
-height: auto;
-padding: 2em;
+
+float: left;
+width: 50%;
+height: 100%;
+padding: 1em;
+bottom: 0;
 box-sizing: border-box;
 background: #E4E5E6;
-border-radius: 10px;
 border: 1px solid #C3C3C4;
+overflow: scroll;
+overflow-y: hidden !important;
 }
 
 #botonc
@@ -131,11 +144,10 @@ h4
 .inputform
 {
 	border-color: #BEC4D3;
-	width: 15em;
+	width: 30em;
 padding: 4px 8px;
 border-style: solid;
 border-width: 2px;
-margin-right: 2em;
 transition: padding .25s;
 
 }
@@ -143,11 +155,11 @@ transition: padding .25s;
 .inputform2
 {
 	border-color: #BEC4D3;
-	width: 33.4em;
+	width: 50em;
+	min-height: 20em;
 padding: 4px 8px;
 border-style: solid;
 border-width: 2px;
-margin-right: 2em;
 transition: padding .25s;
 
 }
@@ -219,44 +231,46 @@ clear: both;
 </style>
 <div id="caja">
 
-<h2>Nueva entrada de notica<br>Best Ligth México</h2>
+<h2>Nueva noticia</h2>
 
-<div class="caja_centro">
+<div class="caja_centro centrar">
 
 <?php 
 if($_GET['archivo'] == "subido")
 {
-	echo "La imagen ha sido subida exitosamente";
+	echo "
+	<br>
+	<br>
+	La imagen ha sido subida exitosamente<br>";
 }
 else
 {
 	echo'
+	<br>
+	<br>
 <form action="uploader.php" method="POST" enctype="multipart/form-data">
-	<label for="imagen">Imagen:</label>
-	<input type="file" name="imagen" id="imagen" />
+	<p for="imagen">Imagen:</p><br />
+	<input type="file" name="imagen" id="imagen" /><br /><br />
 	<input type="submit" name="subir" value="Subir"/>
-</form>';
+</form><br>';
 }
 ?>
 
 
 <form method="POST" action="noticias3.php" accept-charset="UTF-8">
 
-<div class="izqder">
 <p>Título</p><br />
-<input type="text" name="titulo" class="inputform" >
-</div>
+<input type="text" name="titulo" class="inputform" required>
 
-<div class="break"></div>
 <br />
-<p>Descripcion</p><br />
+<p>Descripción</p><br />
 <textarea name="descripcion" class="inputform2"></textarea>
 
 
 <br />
 <br />
 <p>Autor</p><br />
-<input type="text" name="autor" class="inputform2" value="<?php echo $_SESSION['usuario']; ?>" disabled>
+<?php echo $_SESSION['usuario']; ?>
 
 </div>
 
