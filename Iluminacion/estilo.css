@@ -331,12 +331,12 @@ text-align: center;
 {
 	font-size: 17px;
 }
-/*
-		document.getElementById('noti').style.fontSize = "17px";
-		document.getElementById('tituloTabla').style.fontSize = "27px";
-		document.getElementById('parrafo').style.fontSize = "17px";
-		document.getElementById('headerTabla').style.background = "#e4752f";
-		document.getElementById('verNoticia').style.background = "#e4752f";*/
+
+#imagenVerNoticia
+{
+	max-width: 50em;
+}
+
 
 #parrafo
 {
@@ -478,6 +478,30 @@ text-align: center;
 	visibility: hidden;
 	opacity: 0;
 	transition: 1s;
+}
+
+#revisarNoticia
+{
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	margin: 2em 0 3em 0;
+	padding: 2em;
+	width: 59.5em;
+	height: 35em;
+	border: 2px solid #b2b2b2;
+	overflow: scroll;
+	overflow-x: hidden !important;
+}
+
+#autorRevisarNoticia
+{
+	float: right;
+	color: #b2b2b2;
+	margin: 2em;
+}
+
+#fechaRevisarNoticia
+{
+	color: #b2b2b2;
 }
 
 

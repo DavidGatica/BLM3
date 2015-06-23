@@ -72,7 +72,7 @@
 				
 				if($resultado)
 				{
-					header("Location: noticias2.php");
+					header("Location: noticias2.php?archivo=subido");
 				}
 				
 				else

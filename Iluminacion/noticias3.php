@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	
+	header('Content-Type: text/html; charset=UTF-8'); 
 	
 	include ("funciones_mysql.php");
 	
@@ -23,6 +23,10 @@ $resultado = query($sql, $conexion);
 	$autor = $_POST['autor'];
 	$id_imagen = $_SESSION['id_imagen'];
 	
+	utf8_decode($titulo);
+	utf8_decode($descripcion);
+	utf8_decode($autor);
+	
 	
 	$sql = "INSERT INTO Noticias (id_noticias, titulo, descripcion, fecha, autor, id_imagen) VALUES ('$id_noticias','$titulo','$descripcion','$fecha','$autor','$id_imagen')";
 	$resultado = query($sql, $conexion);
@@ -32,7 +36,9 @@ $resultado = query($sql, $conexion);
 ?>
 
 <html>
-
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
     <script type="text/javascript">
         function regresar() {
             alert("La noticia se publico con exito");

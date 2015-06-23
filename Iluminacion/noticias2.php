@@ -1,6 +1,6 @@
 <?php 
 session_start();
-
+header('Content-Type: text/html; charset=UTF-8'); 
 include ("funciones_mysql.php");
 
 $conexion = conectar();
@@ -42,7 +42,7 @@ Contenido protegido
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <style type="text/css">
 
 input:hover
@@ -223,30 +223,40 @@ clear: both;
 
 <div class="caja_centro">
 
+<?php 
+if($_GET['archivo'] == "subido")
+{
+	echo "La imagen ha sido subida exitosamente";
+}
+else
+{
+	echo'
 <form action="uploader.php" method="POST" enctype="multipart/form-data">
 	<label for="imagen">Imagen:</label>
 	<input type="file" name="imagen" id="imagen" />
 	<input type="submit" name="subir" value="Subir"/>
-</form>
+</form>';
+}
+?>
 
 
-<form method="POST" action="noticias3.php">
+<form method="POST" action="noticias3.php" accept-charset="UTF-8">
 
 <div class="izqder">
-<p>titulo</p><br />
+<p>Título</p><br />
 <input type="text" name="titulo" class="inputform" >
 </div>
 
 <div class="break"></div>
 <br />
-<p>descripcion</p><br />
+<p>Descripcion</p><br />
 <textarea name="descripcion" class="inputform2"></textarea>
 
 
 <br />
 <br />
-<p>autor</p><br />
-<input type="text" name="autor" class="inputform2">
+<p>Autor</p><br />
+<input type="text" name="autor" class="inputform2" value="<?php echo $_SESSION['usuario']; ?>" disabled>
 
 </div>
 
