@@ -4,6 +4,10 @@ include ("funciones_mysql.php");
 
 $conexion = conectar();
 
+include ("herramientaEdicion/diaEspaniol.php");
+
+$fecha = fechaHoy();
+
 $id_usuario = $_SESSION['usuario'];
 	
 	$sql = "SELECT * FROM Registro WHERE id_usuario = '$id_usuario'";
@@ -153,17 +157,17 @@ transition: padding .25s;
 
 .inputform2
 {
-	min-width: 58.6em;
-	max-width: 58.6em;
-	max-height: 20em;
-	min-height: 20em;
+	min-width: 31em;
+	max-width: 31em;
+	max-height: 15em;
+	min-height: 15em;
 	padding: 4px 8px;
 }
 
 #herramientaEdicion
 {
-	width: 50em;
-	height: 20em;
+	width: 28em;
+	height: 15em;
 	padding: 0;
 }
 
@@ -251,10 +255,9 @@ clear: both;
 
 #visualizador
 {
-	overflow-x: hidden !important;
 	overflow: scroll;
-	mas-width: 55em;
-	height: 35em;
+	min-width: 55em;
+	height: 45em;
 	box-sizing: border-box;
 	border: 2px solid #C3C3C4;
 	margin: 5em 2em;
@@ -266,6 +269,7 @@ clear: both;
 	font-size: 2em;
 	font-weight: bold;
 	color: black;
+	margin: 2em;
 }
 
 .tool
@@ -312,6 +316,38 @@ clear: both;
 {
 	background: linear-gradient(135deg, rgba(179,179,179,1) 0%, rgba(255,255,255,1) 100%);
 }
+
+#fechav
+{
+	color: #a9a9a9;
+	font-size: 14px;
+}
+
+#horav
+{
+	color: #a9a9a9;
+	font-size: 12px;
+	margin-bottom: 2em;
+}
+
+#autorv
+{
+	float: right;
+	color: #a9a9a9;
+	font-size: 14px;
+	margin-top: 2em;
+	bottom: 0;
+}
+
+#imagenv img
+{
+	max-width: 30em;
+}
+
+#contenidov
+{
+	margin-bottom: 2em;
+}
 </style>
 <body>
 
@@ -322,12 +358,20 @@ clear: both;
 <div class="caja_centro centrar">
 
 <?php 
-if($_GET['archivo'] == "subido")
+if(isset($_GET['archivo']))
 {
-	echo "
+	$self = $_SERVER['PHP_SELF']; //Obtenemos la página en la que nos encontramos
+	header("url=$self"); //Refrescamos cada 300 segundos
+	echo '
 	<br>
 	<br>
-	La imagen ha sido subida exitosamente<br>";
+	La imagen ha sido subida exitosamente<br>
+	Si desea subir una imagen diferente: <br>
+	<form action="uploader.php" method="POST" enctype="multipart/form-data">
+	<p for="imagen">Imagen:</p><br />
+	<input type="file" name="imagen" id="imagen" /><br /><br />
+	<input type="submit" name="subir" value="Subir"/>
+</form><br>';
 }
 else
 {
@@ -346,19 +390,19 @@ else
 <form method="POST" action="noticias3.php">
 
 <p>Título</p><br />
-<input type="text" id="primerTitulo" oninput="visualizarT();" onkeypress="onTestChange();">
+<input type="text" id="primerTitulo" oninput="visualizarT();">
 
 <br />
-<p>Descripción</p><br />
+<p>Contenido</p><br />
 <div id="herramientaEdicion" class="centrar">
 	<div id="herramientas">
 		<div class="tool"><img src="herramientaEdicion/tamanio.png"></div>
-		<div class="tool"><img src="herramientaEdicion/tamanio.png"></div>
+		<div class="tool"><img src="herramientaEdicion/link.png"></div>
 		<div class="tool2"><img src="herramientaEdicion/italica.png"></div>
 		<div class="tool2"><img src="herramientaEdicion/subrayar.png"></div>
 		<div class="tool2"><img src="herramientaEdicion/negrita.png"></div>
 	</div>
-	<textarea name="descripcion" class="inputform2" ></textarea>
+	<textarea id="contenido" name="descripcion" class="inputform2" oninput="visualizarContenidoT();"></textarea>
 </div>
 
 
@@ -379,7 +423,12 @@ else
 
 <div id="cajaVisualizador">
 	<div id="visualizador" class="centrar">
-		<div id="titulov" ></div>
+		<div id="titulov"></div>
+		<div id="fechav"><?php echo $fecha; ?></div>
+		<div id="horav"><?php echo date('h:i:s A'); ?></div>
+		<div id="contenidov"></div>
+		<div id="imagenv"><?php if(isset($_GET['archivo'])) echo '<img src="imagenesNoticias/'.$_GET['archivo'].'">' ?></div>
+		<div id="autorv"><?php echo $_SESSION['usuario']; ?></div>
 	</div>
 </div>
 <script type="text/javascript">
@@ -388,6 +437,12 @@ else
 		{
 			var x = document.getElementById("primerTitulo").value;
 			document.getElementById("titulov").innerHTML = x;
+		}
+		
+		function visualizarContenidoT()
+		{
+			var x = document.getElementById("contenido").value;
+			document.getElementById("contenidov").innerHTML = x;
 		}
 </script>
 </body>
