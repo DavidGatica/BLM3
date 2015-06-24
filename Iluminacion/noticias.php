@@ -1,7 +1,4 @@
 <?php
-header('Content-Type: text/html; charset=UTF-8'); 
-include('funciones_mysql.php');
-$conexion = conectar();
 session_start();
 
 
@@ -99,11 +96,21 @@ Iluminación Fotovoltaica Profesional
 </tr>
 
 </table >
+<div id="menu">
+<a href="index.php" style="color:white">Inicio « </a> <span> Noticias </span> 
+</div>
+
 </div>
 <br />
 <br />
 
 <?php
+/* Abrimos la base de datos */
+  $conx = mysql_connect ("localhost","bestl_servidor", "Zzs99vmoNT1krok!");
+  if (!$conx) die ("Error al abrir la base <br/>". mysql_error()); 
+  mysql_select_db("bestli01_pagina_cotizaciones", $conx) OR die("Connection Error to Database");    
+  
+
 	if(isset($_GET['verNoticia']))
 {
 	$verNoticia = $_GET['verNoticia'];
@@ -111,14 +118,6 @@ Iluminación Fotovoltaica Profesional
 	$result= mysql_query($sql) or die(mysql_error());
 	while ($campo = mysql_fetch_array($result))
 	{
-		
-		
-		$titulo = $campo['titulo'];
-		$descripcion = $campo['descripcion'];
-		$autor = $campo['autor'];
-		utf8_encode($titulo);
-		utf8_encode($descripcion);
-		utf8_encode($autor);
 		
 		echo 
 			"<div id='revisarNoticia'>
@@ -134,12 +133,12 @@ Iluminación Fotovoltaica Profesional
 				<br />
 				
 				<div id='descripcionRevisarNoticia'>"				
-					.$descripcion.				
+					.$campo['descripcion'].				
 				"</div>
 				
 				<br />
 				
-				<img id='imagenVerNoticia' src='imagenesNoticias/".$campo['id_imagen']."'>
+				<img src='imagenesNoticias/".$campo['id_imagen']."'>
 				
 				<br />
 				<br />
@@ -167,7 +166,7 @@ echo '<div id="contenedorNoticias">
 	<div id="contenedorInfinito">';
 while ($campo = mysql_fetch_array($result)) 
 {
-	header('Content-Type: text/html; charset=UTF-8'); 
+	
 	$limitar = substr($campo['descripcion'],0,100);
 	$id_noticia=$campo['id_noticias'];
 	
@@ -260,7 +259,7 @@ echo
 <form action="noticias2.php" method="POST" class="centrar">
 <div id="letrasPassword">Ingresa Password</div>
 <br />
-<input id="inputPassword" type="text" name="password">
+<input id="inputPassword" type="password" name="password">
 <br />
 <br />
 <input id="botonIngresar" type="submit" value="Ingresar">
