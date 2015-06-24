@@ -1,6 +1,5 @@
 <?php 
 session_start();
-header('Content-Type: text/html; charset=UTF-8'); 
 include ("funciones_mysql.php");
 
 $conexion = conectar();
@@ -28,8 +27,7 @@ if ($_POST['password'] != $password OR $_SESSION['passwordNoticia']==null)
 	
 }
 
-else
-{
+
 	
 if(isset($_SESSION['id_imagen']))
 { 
@@ -42,6 +40,7 @@ $id_imagen=$_SESSION['id_imagen'];
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
 <style type="text/css">
 html
 {
@@ -141,7 +140,7 @@ h4
 	text-align: center;
 }
 
-.inputform
+#primerTitulo
 {
 	border-color: #BEC4D3;
 	width: 30em;
@@ -154,14 +153,24 @@ transition: padding .25s;
 
 .inputform2
 {
-	border-color: #BEC4D3;
-	width: 50em;
+	min-width: 58.6em;
+	max-width: 58.6em;
+	max-height: 20em;
 	min-height: 20em;
-padding: 4px 8px;
-border-style: solid;
-border-width: 2px;
-transition: padding .25s;
+	padding: 4px 8px;
+}
 
+#herramientaEdicion
+{
+	width: 50em;
+	height: 20em;
+	padding: 0;
+}
+
+#herramientas
+{
+	width: inherit;
+	height: 2.7em;
 }
 
 .inputform3
@@ -228,7 +237,84 @@ clear: both;
 {
 	font-weight: bold;
 }
+
+#cajaVisualizador
+{
+	float: right;
+	border: 5px solid #C3C3C4;
+	width: 50%;
+	height: 100%;
+	box-sizing: border-box;
+	overflow: scroll;
+	overflow-y: hidden !important;	
+}
+
+#visualizador
+{
+	overflow-x: hidden !important;
+	overflow: scroll;
+	mas-width: 55em;
+	height: 35em;
+	box-sizing: border-box;
+	border: 2px solid #C3C3C4;
+	margin: 5em 2em;
+	padding: 1em;
+}
+
+#titulov
+{
+	font-size: 2em;
+	font-weight: bold;
+	color: black;
+}
+
+.tool
+{
+	z-index: 5;
+	float: left;
+	margin: 0 0.5em;
+	width: 1em;
+	height: 1em;
+	border: 1px solid #9f9f9f;
+	border-radius: 3px;
+	background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(179,179,179,1) 100%);
+	transition: 0.3s;
+}
+
+.tool:hover
+{
+	border: 2px solid #c5c5c5;
+}
+
+.tool:active
+{
+	background: linear-gradient(135deg, rgba(179,179,179,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.tool2
+{
+	float: right;
+	margin: 0 0.5em;
+	width: 1em;
+	height: 1em;
+	border: 1px solid #9f9f9f;
+	border-radius: 3px;
+	background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(179,179,179,1) 100%);
+	transition: 0.3s;
+}
+
+.tool2:hover
+{
+	border: 2px solid #c5c5c5;
+}
+
+.tool2:active
+{
+	background: linear-gradient(135deg, rgba(179,179,179,1) 0%, rgba(255,255,255,1) 100%);
+}
 </style>
+<body>
+
 <div id="caja">
 
 <h2>Nueva noticia</h2>
@@ -257,14 +343,23 @@ else
 ?>
 
 
-<form method="POST" action="noticias3.php" accept-charset="UTF-8">
+<form method="POST" action="noticias3.php">
 
 <p>Título</p><br />
-<input type="text" name="titulo" class="inputform" required>
+<input type="text" id="primerTitulo" oninput="visualizarT();" onkeypress="onTestChange();">
 
 <br />
 <p>Descripción</p><br />
-<textarea name="descripcion" class="inputform2"></textarea>
+<div id="herramientaEdicion" class="centrar">
+	<div id="herramientas">
+		<div class="tool"><img src="herramientaEdicion/tamanio.png"></div>
+		<div class="tool"><img src="herramientaEdicion/tamanio.png"></div>
+		<div class="tool2"><img src="herramientaEdicion/italica.png"></div>
+		<div class="tool2"><img src="herramientaEdicion/subrayar.png"></div>
+		<div class="tool2"><img src="herramientaEdicion/negrita.png"></div>
+	</div>
+	<textarea name="descripcion" class="inputform2" ></textarea>
+</div>
 
 
 <br />
@@ -280,9 +375,20 @@ else
 <input type="submit" value="Publicar Noticia" id="boton">
 </form>
 </div>
-<br />
-<br />
-<?php 
-} 
-?>
+</div>
 
+<div id="cajaVisualizador">
+	<div id="visualizador" class="centrar">
+		<div id="titulov" ></div>
+	</div>
+</div>
+<script type="text/javascript">
+
+		function visualizarT()
+		{
+			var x = document.getElementById("primerTitulo").value;
+			document.getElementById("titulov").innerHTML = x;
+		}
+</script>
+</body>
+</html>
