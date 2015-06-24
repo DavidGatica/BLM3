@@ -106,11 +106,9 @@ Iluminación Fotovoltaica Profesional
 
 <?php
 /* Abrimos la base de datos */
-  $conx = mysql_connect ("localhost","bestl_servidor", "Zzs99vmoNT1krok!");
-  if (!$conx) die ("Error al abrir la base <br/>". mysql_error()); 
-  mysql_select_db("bestli01_pagina_cotizaciones", $conx) OR die("Connection Error to Database");    
-  
 
+	include('funciones_mysql.php');
+	$conexion = conectar();
 	if(isset($_GET['verNoticia']))
 {
 	$verNoticia = $_GET['verNoticia'];
