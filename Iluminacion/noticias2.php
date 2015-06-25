@@ -44,6 +44,8 @@ $id_imagen=$_SESSION['id_imagen'];
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" language="javascript" src="colorPicker/js/colorPicker.js"></script>
+<link rel="stylesheet" href="colorPicker/css/colorPicker.css" type="text/css"></link>
 </head>
 <style type="text/css">
 html
@@ -69,25 +71,7 @@ color:#A2A2A3;
 
 p{
 color:#6F7086;
-
-
 }
-input:focus
-{
-	border-color: #FFC423;
-	box-shadow: 0 0 2px #FFC423;
-	padding: 0.4em 1em 0.4em 0.5em;
-	
-}
-
-input:hover
-{
-	border-color: #FFC423;
-	box-shadow: 0 0 14px #FFC423;
-	
-	
-}
-
 
 .verdesin:focus
 {
@@ -175,6 +159,12 @@ transition: padding .25s;
 {
 	width: inherit;
 	height: 2.7em;
+}
+
+#herramientas input
+{
+	width: 4.5em;
+	border: none;
 }
 
 .inputform3
@@ -285,6 +275,35 @@ clear: both;
 	transition: 0.3s;
 }
 
+.toolHidden
+{
+	float: left;
+	margin: 0 1em;
+	width: 1em;
+	height: 1em;
+}
+
+.todosTamanios
+{
+	z-index: 5;
+	float: left;
+	margin: 0 0.5em;
+	width: 1em;
+	height: 1em;
+	border: 1px solid #9f9f9f;
+	border-radius: 3px;
+	background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(179,179,179,1) 100%);
+	transition: 0.5s;
+	position: absolute;
+	overflow: hidden;
+}
+
+.todosTamanios:hover
+{
+	width: 7em;
+	height: 7.8em;
+}
+
 .tool:hover
 {
 	border: 2px solid #c5c5c5;
@@ -348,6 +367,57 @@ clear: both;
 {
 	margin-bottom: 2em;
 }
+
+.colorLetra
+{
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.tamanio1
+{
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.tamanio2
+{
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.tamanio3
+{
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.tamanio4
+{
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.tamanio5
+{
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.casilla1
+{
+	border-bottom: 1px solid gray;
+}
+
+.casilla
+{
+	border-bottom: 1px solid gray;
+}
+
+.casilla:hover
+{
+	background: #e4e5e6;
+}
 </style>
 <body>
 
@@ -396,8 +466,32 @@ else
 <p>Contenido</p><br />
 <div id="herramientaEdicion" class="centrar">
 	<div id="herramientas">
-		<div class="tool"><img src="herramientaEdicion/tamanio.png"></div>
+		<div class="toolHidden">
+			<div class="todosTamanios">
+				<div class="casilla1">
+					<img src="herramientaEdicion/tamanio.png">
+				</div>
+				<div class="casilla">
+				<div class="tamanio1">Tamaño1</div>
+				</div>
+				
+				<div class="casilla">
+				<div class="tamanio2">Tamaño2</div>
+				</div>
+				
+				<div class="casilla">
+				<div class="tamanio3">Tamaño3</div>
+				</div>
+				<div class="casilla">
+				<div class="tamanio4">Tamaño4</div>
+				</div>
+				<div class="casilla">
+				<div class="tamanio5">Tamaño5</div>
+				</div>
+			</div>
+		</div>
 		<div class="tool"><img src="herramientaEdicion/link.png"></div>
+		<input type="text" onclick="startColorPicker(this)" onkeyup="maskedHex(this)" oninput="color(this)" value="Color">
 		<div class="tool2"><img src="herramientaEdicion/italica.png"></div>
 		<div class="tool2"><img src="herramientaEdicion/subrayar.png"></div>
 		<div class="tool2"><img src="herramientaEdicion/negrita.png"></div>
@@ -443,6 +537,15 @@ else
 		{
 			var x = document.getElementById("contenido").value;
 			document.getElementById("contenidov").innerHTML = x;
+		}
+		
+		function color()
+		{
+			var color document.getElementById(inputObj).value;
+	   var div1 = "<div style=' color:>";
+	   var div2 = ";'></div>"
+	   var divFinal = div1+color+div2;
+	   document.getElementById("contenido").innerHTML = divFinal;
 		}
 </script>
 </body>
