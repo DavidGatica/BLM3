@@ -161,7 +161,7 @@ transition: padding .25s;
 	height: 2.7em;
 }
 
-#herramientas input
+.herramientasInput
 {
 	width: 4.5em;
 	border: none;
@@ -304,6 +304,28 @@ clear: both;
 	height: 7.8em;
 }
 
+.todosTamanios2
+{
+	z-index: 4;
+	float: left;
+	margin: 0 0.5em;
+	width: 1em;
+	height: 1em;
+	border: 1px solid #9f9f9f;
+	border-radius: 3px;
+	background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(179,179,179,1) 100%);
+	transition: 0.5s;
+	position: absolute;
+	overflow: hidden;
+}
+
+.todosTamanios2:hover
+{
+	width: 20em;
+	height: 9.5em;
+}
+
+
 .tool:hover
 {
 	border: 2px solid #c5c5c5;
@@ -418,6 +440,31 @@ clear: both;
 {
 	background: #e4e5e6;
 }
+
+.left
+{
+	margin: 0 0 0 1em;
+	float: left;
+}
+
+.right
+{
+	margin: 0 1em 0 0;
+	float: right;
+}
+
+.inputLink
+{
+	position: absolute;
+	width: 10em;
+	z-index: 0;
+}
+
+.letraLink
+{
+	position: absolute;
+	z-index: 1;
+}
 </style>
 <body>
 
@@ -472,31 +519,55 @@ else
 					<img src="herramientaEdicion/tamanio.png">
 				</div>
 				<div class="casilla">
-				<div class="tamanio1">Tamaño1</div>
+				<div onclick="tamanio1()" class="tamanio1">Tamaño1</div>
 				</div>
 				
 				<div class="casilla">
-				<div class="tamanio2">Tamaño2</div>
+				<div onclick="tamanio2()" class="tamanio2">Tamaño2</div>
 				</div>
 				
 				<div class="casilla">
-				<div class="tamanio3">Tamaño3</div>
+				<div onclick="tamanio3()" class="tamanio3">Tamaño3</div>
 				</div>
 				<div class="casilla">
-				<div class="tamanio4">Tamaño4</div>
+				<div onclick="tamanio4()" class="tamanio4">Tamaño4</div>
 				</div>
 				<div class="casilla">
-				<div class="tamanio5">Tamaño5</div>
+				<div onclick="tamanio5()" class="tamanio5">Tamaño5</div>
 				</div>
 			</div>
 		</div>
-		<div class="tool"><img src="herramientaEdicion/link.png"></div>
-		<input type="text" onclick="startColorPicker(this)" onkeyup="maskedHex(this)" oninput="color(this)" value="Color">
-		<div class="tool2"><img src="herramientaEdicion/italica.png"></div>
-		<div class="tool2"><img src="herramientaEdicion/subrayar.png"></div>
-		<div class="tool2"><img src="herramientaEdicion/negrita.png"></div>
+				
+		<div class="toolHidden">
+			<div class="todosTamanios2">
+				<div class="casilla1">
+					<img src="herramientaEdicion/link.png">
+				</div>
+				<div class="casilla">
+					<br />
+					<div class="left letraLink">https://</div> <input id="url" type="text" class="inputLink right">
+					<br />
+				</div>
+				
+				<div class="casilla">
+					<br />
+					<div class="left letraLink">Texto:</div> <input id="textoUrl" type="text" class="inputLink right">
+					<br />
+				</div>
+				
+				<div class="casilla">
+					<br />
+					<button onclick="introducirUrl()" form="noExiste">Aceptar</button>
+					<br />
+				</div>
+			</div>
+		</div>
+		<input class="herramientasInput" id="selector" type="text" onclick="startColorPicker(this)" onkeyup="maskedHex(this)" onfocusout="color()" value="Color">
+		<div class="tool2"><img onclick="italica()" src="herramientaEdicion/italica.png"></div>
+		<div class="tool2"><img onclick="subrayada()" src="herramientaEdicion/subrayar.png"></div>
+		<div class="tool2"><img onclick="negrita()"  src="herramientaEdicion/negrita.png"></div>
 	</div>
-	<textarea id="contenido" name="descripcion" class="inputform2" oninput="visualizarContenidoT();"></textarea>
+	<textarea id="contenido" name="descripcion" class="inputform2" onkeypress="onTestChange();" oninput="visualizarContenidoT();"></textarea>
 </div>
 
 
@@ -527,26 +598,97 @@ else
 </div>
 <script type="text/javascript">
 
-		function visualizarT()
+	function onTestChange() {
+		var key = window.event.keyCode;
+		
+		// If the user has pressed enter
+		if (key == 13) 
 		{
-			var x = document.getElementById("primerTitulo").value;
-			document.getElementById("titulov").innerHTML = x;
+			document.getElementById("contenido").value =document.getElementById("contenido").value + "<br />";
+			return false;			
 		}
 		
-		function visualizarContenidoT()
+		else 
 		{
-			var x = document.getElementById("contenido").value;
-			document.getElementById("contenidov").innerHTML = x;
+			return true;
 		}
+	}
+
+	function italica()
+	{
+		document.getElementById("contenido").value += "<i></i>";		
+	}	
 		
-		function color()
-		{
-			var color document.getElementById(inputObj).value;
-	   var div1 = "<div style=' color:>";
-	   var div2 = ";'></div>"
-	   var divFinal = div1+color+div2;
-	   document.getElementById("contenido").innerHTML = divFinal;
-		}
+	function negrita()
+	{
+		document.getElementById("contenido").value += "<b></b>";		
+	}	
+	
+	function subrayada()
+	{
+		document.getElementById("contenido").value += "<u></u>";		
+	}
+	
+	function introducirUrl()
+	{
+		var url = document.getElementById('url').value;h
+		var textoUrl = document.getElementById('textoUrl').value;
+		var link = "<a href='https://" + url + "'>" + textoUrl + "</a>";
+		document.getElementById("contenido").value += link;		
+	}
+	
+	function visualizarT()
+	{
+		var x = document.getElementById("primerTitulo").value;
+		document.getElementById("titulov").innerHTML = x;
+	}
+
+	function tamanio1()
+	{
+		var x = "<span class='tamanio1'></span>";
+		document.getElementById("contenido").value += x;
+	}	
+	
+	function tamanio2()
+	{
+		var x = "<span class='tamanio2'></span>";
+		document.getElementById("contenido").value += x;
+	}	
+	
+	function tamanio3()
+	{
+		var x = "<span class='tamanio3'></span>";
+		document.getElementById("contenido").value += x;
+	}	
+	
+	function tamanio4()
+	{
+		var x = "<span class='tamanio4'></span>";
+		document.getElementById("contenido").value += x;
+	}	
+	
+	function tamanio5()
+	{
+		var x = "<span class='tamanio5'></span>";
+		document.getElementById("contenido").value += x;
+	}	
+	
+	
+	function visualizarContenidoT()
+	{
+		var x = document.getElementById("contenido").value;
+		document.getElementById("contenidov").innerHTML = x;
+	}
+
+	function color()
+	{		
+		var color = document.getElementById('selector').value;
+		var div1 = "<span style='color:";
+		var div2 = ";'></span>";
+		var divFinal = div1 + color + div2;
+		document.getElementById("contenido").value += divFinal;	
+	}
+	
 </script>
 </body>
 </html>
