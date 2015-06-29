@@ -102,16 +102,15 @@ a
 	font-size: 1.1em;
 }
 
-#boton
+#boton:hover
 {
-	border: none;
-	background: #F6F6F6;
-	padding: .5em;
+
+	background: #38444b;
+	
 	border-radius: 7px;
 	font-weight: bold;
-	transition: padding .25s;
-	text-decoration: none;
-	color: black;
+	transition: padding .10s;
+	color: white;
 	
 	
 }

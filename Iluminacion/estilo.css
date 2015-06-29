@@ -517,11 +517,113 @@ font-weight: bold;
 
 }
 
+/*----------------------------------------------
+Acordeon de imagenes
+-----------------------------------------------*/
+
+.acordeon {
+   border-collapse:collapse;
+   padding:0px;
+   margin:0px auto;
+   width:690px;
+   height:400px;
+   box-shadow: 0 0 10px #333;
+}
+
+
+.acordeon td {
+   padding:0;
+   width:136px;
+   height:117px;
+   border:2px solid #fff;
+   -moz-transition: 0.7s;
+   -ms-transition: 0.7s;
+   -o-transition: 0.7s;
+   -webkit-transition: 0.7s;
+   transition: 0.7s;
+}
+
+.acordeon td.p1 {
+   background:url("1.png") no-repeat center center; }
+.acordeon td.p2 {
+   background:url("0.png") no-repeat center center; }
+.acordeon td.p3 {
+   background:url("2.png") no-repeat center center;}
+.acordeon td.p4 {
+   background:url("3.png") no-repeat center center;}
+.acordeon td.p5 {
+   background:url("4.png") no-repeat center center;}
+.acordeon td.p6 {
+   background:url("5.png") no-repeat center center;}
+
+
+   
+   
+.acordeon td {
+   width:50px;
+   height:50px;
+}
+
+.acordeon tr:hover td {
+   height:320px;
+}
+
+.acordeon td:hover {
+   width:480px;
+   height:320px;
+}  
 
 
 
 
 
+
+
+.box {
+width:53%;
+height:430px;
+background:#e2e2e2;
+margin:40px auto;
+}
+/*==================================================
+* Efecto 8
+* ===============================================*/
+.effect8
+{
+position:relative;
+-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after
+{
+content:"";
+position:absolute;
+z-index:-1;
+-webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+-moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+box-shadow:0 0 20px rgba(0,0,0,0.8);
+top:10px;
+bottom:10px;
+left:0;
+right:0;
+-moz-border-radius:100px / 10px;
+border-radius:100px / 10px;
+}
+.effect8:after
+{
+right:10px;
+left:auto;
+-webkit-transform:skew(8deg) rotate(3deg);
+-moz-transform:skew(8deg) rotate(3deg);
+-ms-transform:skew(8deg) rotate(3deg);
+-o-transform:skew(8deg) rotate(3deg);
+transform:skew(8deg) rotate(3deg);
+}
+
+/*--------------------------------------------------------
+FIN ACORDEON IMAGENES
+---------------------------------------------------------/*
 
 
 

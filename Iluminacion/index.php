@@ -44,7 +44,68 @@
 					document.location.href = 'index.php';
 				}
 			}
+			
+	function aparecer1(){
+		document.getElementById('ver1').style.opacity='1';
+		document.getElementById('ver1').style.fontSize='1em';
+		
+	}		
+	
+	function desaparecer1(){
+		document.getElementById('ver1').style.opacity='0';
+		document.getElementById('ver1').style.fontSize='0.1em';
+		
+	}
+
+	function aparecer3(){
+		document.getElementById('ver3').style.opacity='1';
+		document.getElementById('ver3').style.fontSize='1em';
+		
+	}		
+	
+	function desaparecer3(){
+		document.getElementById('ver3').style.opacity='0';
+		document.getElementById('ver3').style.fontSize='0.1em';
+		
+	}	
+
+	function aparecer4(){
+		document.getElementById('ver4').style.opacity='1';
+		document.getElementById('ver4').style.fontSize='1em';
+		
+	}		
+	
+	function desaparecer4(){
+		document.getElementById('ver4').style.opacity='0';
+		document.getElementById('ver4').style.fontSize='0.1em';
+		
+	}	
+
+	function aparecer5(){
+		document.getElementById('ver5').style.opacity='1';
+		document.getElementById('ver5').style.fontSize='1em';
+		
+	}		
+	
+	function desaparecer5(){
+		document.getElementById('ver5').style.opacity='0';
+		document.getElementById('ver5').style.fontSize='0.1em';
+		
+	}	
+
+	function aparecer6(){
+		document.getElementById('ver6').style.opacity='1';
+		document.getElementById('ver6').style.fontSize='1em';
+		
+	}		
+	
+	function desaparecer6(){
+		document.getElementById('ver6').style.opacity='0';
+		document.getElementById('ver6').style.fontSize='0.1em';
+		
+	}		
 </script>
+
 <gcse:searchbox-only></gcse:searchbox-only>
 </div></div>
 
@@ -89,8 +150,26 @@ Iluminación Fotovoltaica Profesional
 <br>
 
 <!-- INICIO BANNER -->
-<script>if (typeof em5 === 'undefined'){var em5 = window.addEventListener ? "addEventListener" : "attachEvent";var er5 = window[em5];var me5 = em5 == "attachEvent" ? "onmessage" : "message";er5(me5,function (e) {var s5= e.data;if (s5.substring(0,10) == "changeSize"){document.getElementById(s5.substring(s5.indexOf("html5maker")+10)).style.height=s5.substring(10, s5.indexOf("html5maker"));}},false);}</script>
-<iframe id="html59af5add044ce4f88d20ca13e23f398463c4c89d28fc7" src="9af5add044ce4f88d20ca13e23f398463c4c89d28fc7/9af5add044ce4f88d20ca13e23f398463c4c89d28fc7.php" width="100%" height="334" frameborder="0" scrolling="no" allowTransparency="true"></iframe>
+
+
+<div class="box effect8">
+
+<br>
+<table class="acordeon">
+			<tr>
+			<td onmouseover="aparecer1()" onmouseout="desaparecer1()" class="p1"><button href="blm340.php" id="ver1" style= " font-size:0.1em; transition:0.6s; opacity:0; float:left;">ver más</button> </td>
+			<td class="p2"> </td>
+			<td onmouseover="aparecer3()" onmouseout="desaparecer3()" class="p3"><a href="blm320.php" id="ver3" style= "font-size:0.1em; transition:0.6s; opacity:0; color: white; float:left;"> ver más</a> </td>
+			</tr>
+			<tr>
+			<td onmouseover="aparecer4()" onmouseout="desaparecer4()" class="p4"><a href="blm340.php" id="ver4" style=  "font-size:0.1em; transition:0.6s; opacity:0; color: white; float:left;"> ver más</a> </td>
+			<td onmouseover="aparecer5()" onmouseout="desaparecer5()" class="p5"><a href="blm500.php" id="ver5" style= "font-size:0.1em; transition:0.6s; opacity:0; color: white; float:left;"> ver más</a> </td>
+			<td onmouseover="aparecer6()" onmouseout="desaparecer6()" class="p6"><a href="blmevergen.php" id="ver6" style= "font-size:0.1em; transition:0.6s; opacity:0; color: white; float:left;"> ver más</a> </td>
+			</tr>
+		</table>	 
+        
+      </div>
+    
 <!-- FIN BANNER -->
 
  <br><br>

@@ -50,6 +50,7 @@
 
 <div id="page-wrap">
 
+
 <div align="center" >
 <div id="logos_centrados"><IMG SRC="logo.png" height="90px" align="left"> <IMG SRC="logocarmanah.png" height="70" align="right"></div>
 <div class="break"></div>
@@ -308,7 +309,6 @@ Uno de los parques más representativos en el Distrito Federal sus caminos está
 
 <a href="http://www.bestlightmexico.com.mx/attachments/File/apblm.pdf" id="texto9" align="center"> Aviso de Privacidad<br><br></a>
 </div>
-
 <br>
 </body>
 
