@@ -72,7 +72,7 @@
 				
 				if($resultado)
 				{
-					header("Location: noticias2.php");
+					header("Location: noticias2.php?archivo=$id_imagen");
 				}
 				
 				else
@@ -83,8 +83,20 @@
 			}
 			
 			else
-			{
-				echo $_FILES['imagen']['name'].", este archivo existe";
+			{			
+				$do = unlink($ruta);
+				
+				$resultado = move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta);
+				
+				if($resultado)
+				{
+					header("Location: noticias2.php?archivo=$id_imagen");
+				}
+				
+				else
+				{
+					echo "ocurrio un error al mover el archivo";
+				}
 			}
 			
 		}
