@@ -28,9 +28,9 @@
 			<div id="contenidoCont">
 			
 			<?php
-				if (isset($_SESSION['usuario'])) 
+				if (isset($_SESSION['usuarioc'])) 
 				{
-					$id_usuario = $_SESSION['usuario'];
+					$id_usuario = $_SESSION['usuarioc'];
 					$query = "SELECT permiso, activo FROM Usuarios WHERE id_usuario='$id_usuario' ";
 					
 					//GENERA LA QUERY

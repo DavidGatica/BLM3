@@ -23,7 +23,10 @@ select option:hover
 	border: 5px solid green;
 }
 
-
+#contenido
+{
+	height: 100%;
+}
 
 a:link
 {
@@ -424,6 +427,9 @@ footer
 	height: 3em;
 	border-top: 1px solid #c7c7c7;
 	background: #e6e6e6;	
+	left: 0;
+	position: fixed;
+	bottom: 0;	
 }
 
 
@@ -504,6 +510,14 @@ footer
 	float: left;
 	color: #7e7e7e;
 	margin: 0.8em 0 0 0 ;
+}
+
+#sesionFooter2
+{
+	float: left;
+	color: #db6e2c;
+	margin: 0.8em 0 0 0 ;
+	font-weight: bold;
 }
 
 #versionFooter
@@ -603,7 +617,7 @@ footer
 .mensajeFooter
 {	
 	padding: 0.3em;
-	position: absolute;
+	position: fixed;
 	background: #e6e6e6;
 	margin-top: 0;
 	font-size: 12px;
@@ -614,6 +628,7 @@ footer
 	border-top: 1px solid #b8b8b8;
 	border-left: 1px solid #b8b8b8;
 	border-right: 1px solid #b8b8b8;
+	opacity: 0;
 }
 
 .acomodarMensaje
@@ -635,11 +650,6 @@ footer
 and (min-width : 1280px)
 and (min-device-height : 600px)
 {
-
-	#contenido
-	{
-		min-height: 27.1em;
-	}
 	#contenidoCont
 	{
 		padding: 1em;
@@ -650,10 +660,6 @@ and (min-device-height : 600px)
 and (min-width : 1280px)
 and (min-device-height : 720px)
 {
-	#contenido
-	{
-		min-height: 27.1em;
-	}
 	#contenidoCont
 	{
 		padding: 2em;
@@ -664,10 +670,6 @@ and (min-device-height : 720px)
 and (min-width : 1280px)
 and (min-device-height : 768px)
 {
-	#contenido
-	{
-		min-height: 28.1em;
-	}
 	#contenidoCont
 	{
 		padding: 3em;
@@ -678,10 +680,6 @@ and (min-device-height : 768px)
 and (min-width : 1280px)
 and (min-device-height : 800px)
 {
-	#contenido
-	{
-		min-height: 30.1em;
-	}
 	#contenidoCont
 	{
 		padding: 3em;
@@ -692,10 +690,6 @@ and (min-device-height : 800px)
 and (min-width : 1280px)
 and (min-device-height : 960px)
 {
-	#contenido
-	{
-		min-height: 32em;
-	}
 	#contenidoCont
 	{
 		padding: 7em;
@@ -706,10 +700,6 @@ and (min-device-height : 960px)
 and (min-width : 1280px)
 and (min-device-height : 1024px)
 {
-	#contenido
-	{
-		min-height: 36.1em;
-	}
 	#contenidoCont
 	{
 		padding: 7em;
@@ -719,10 +709,6 @@ and (min-device-height : 1024px)
 @media only screen 
 and (min-width : 1360px)
 {
-	#contenido
-	{
-		min-height: 29.9em;
-	}
 	#contenidoCont
 	{
 		padding: 2em;
@@ -733,10 +719,6 @@ and (min-width : 1360px)
 and (min-width : 642px)
 and (min-device-height : 768px)
 {
-	#contenido
-	{
-		min-height: 35.8em;
-	}
 	#contenidoCont
 	{
 		padding: 2em;
@@ -747,10 +729,6 @@ and (min-device-height : 768px)
 and (min-width : 673px)
 and (min-device-height : 768px)
 {
-	#contenido
-	{
-		min-height: 33.3em;
-	}
 	#contenidoCont
 	{
 		padding: 2em;
@@ -760,10 +738,6 @@ and (min-device-height : 768px)
 @media only screen 
 and (min-width : 1304px)
 {
-	#contenido
-	{
-		min-height: 37.1em;
-	}
 	#contenidoCont
 	{
 		padding: 2em;
@@ -773,10 +747,6 @@ and (min-width : 1304px)
 @media only screen 
 and (min-width : 1366px)
 {
-	#contenido
-	{
-		min-height: 33.6em;
-	}
 	#contenidoCont
 	{
 		padding: 2.5em;
@@ -786,10 +756,6 @@ and (min-width : 1366px)
 @media only screen 
 and (min-width : 1400px)
 {
-	#contenido
-	{
-		min-height: 41.7em;
-	}
 	#contenidoCont
 	{
 		padding: 5em;
@@ -799,10 +765,6 @@ and (min-width : 1400px)
 @media only screen 
 and (min-width : 1440px)
 {
-	#contenido
-	{
-		min-height: 32.4em;
-	}
 	#contenidoCont
 	{
 		padding: 5em;
@@ -816,10 +778,6 @@ and (min-width : 1440px)
 @media only screen 
 and (min-width : 1600px)
 {
-	#contenido
-	{
-		min-height: 32.4em;
-	}
 	#contenidoCont
 	{
 		padding: 5em;
@@ -834,10 +792,6 @@ and (min-width : 1600px)
 @media only screen 
 and (min-width : 1680px)
 {
-	#contenido
-	{
-		min-height: 41.7em;
-	}
 	#contenidoCont
 	{
 		padding: 5em;
@@ -852,10 +806,6 @@ and (min-width : 1680px)
 and (min-width : 919px)
 and (min-device-height : 1080px)
 {
-	#contenido
-	{
-		min-height: 47.8em;
-	}
 	#contenidoCont
 	{
 		padding: 5em;
@@ -870,10 +820,6 @@ and (min-device-height : 1080px)
 and (min-width : 950px)
 and (min-device-height : 1080px)
 {
-	#contenido
-	{
-		min-height: 49.3em;
-	}
 	#contenidoCont
 	{
 		padding: 3em;
@@ -888,10 +834,6 @@ and (min-device-height : 1080px)
 and (min-width : 1858px)
 and (min-device-height : 1080px)
 {
-	#contenido
-	{
-		min-height: 49.1em;
-	}
 	#contenidoCont
 	{
 		padding: 2em;
@@ -906,10 +848,6 @@ and (min-device-height : 1080px)
 and (min-width : 1920px)
 and (min-device-height : 1080px)
 {
-	#contenido
-	{
-		min-height: 50.6em;
-	}
 	#contenidoCont
 	{
 		padding: 3em;

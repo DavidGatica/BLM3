@@ -3,13 +3,14 @@
 session_start();
 
 
-if (isset($_SESSION['usuario'])) {
+if (isset($_SESSION['usuarioc'])) {
     header('Location: log_in.php');
 }
-$_SESSION['usuario'] = $_POST['id_usuario'];
+
+$_SESSION['usuarioc'] = $_POST['id_usuario'];
 $_SESSION['password'] = $_POST['password'];
 
-$id_usuario = $_SESSION['usuario'];
+$id_usuario = $_SESSION['usuarioc'];
 $password = $_SESSION['password'];
 
 $usuario = 'ninguno';

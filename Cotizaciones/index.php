@@ -18,11 +18,11 @@
 		$seccion = $_GET['sec'];
 
 
-	if (!isset($_SESSION['usuario']))
+	if (!isset($_SESSION['usuarioc']))
 		$id_usuario = null;
 	
 	else
-		$id_usuario = $_SESSION['usuario'];
+		$id_usuario = $_SESSION['usuarioc'];
 
 
 	if (!isset($_SESSION['permiso']))
@@ -197,7 +197,7 @@
 				
 				<div id="iconos">
 					<?php
-						if(isset($_SESSION['usuario']))
+						if(isset($_SESSION['usuarioc']))
 						{							
 							echo 
 							'
@@ -405,7 +405,7 @@
 		<div id="contenidoCont">			                      
 
 			<?php			
-				if (!isset($_SESSION['usuario'])) 
+				if (!isset($_SESSION['usuarioc'])) 
 				{
 					require_once('log_in.php');
 				}
@@ -577,7 +577,7 @@
 					echo
 					"
 						<div class='lineaVerticalPie'></div>
-						<div id='sesionFooter'>Mostrando todo el catálogo </div>
+						<div id='sesionFooter2'>Mostrando todo el catálogo </div>
 					";
 				}				
 				
@@ -586,7 +586,7 @@
 					echo
 					"
 						<div class='lineaVerticalPie'></div>
-						<div id='sesionFooter'>Busqueda por catálogo: $busquedaProductoCatalogo </div>
+						<div id='sesionFooter2'>Busqueda por catálogo: $busquedaProductoCatalogo </div>
 					";
 				}				
 				
@@ -595,7 +595,7 @@
 					echo
 					"
 						<div class='lineaVerticalPie'></div>
-						<div id='sesionFooter'>Busqueda por descripción: $busquedaProductoDescripcion </div>
+						<div id='sesionFooter2'>Busqueda por descripción: $busquedaProductoDescripcion </div>
 					";
 				}
 				

@@ -13,13 +13,14 @@ while ($campo = mysql_fetch_array($resultado))
     $apellido_p = $campo['apellido_p'];
     $apellido_m = $campo['apellido_m'];
     $e_mail = $campo['e_mail'];
+    $no_usuario = $campo['no_usuario'];
 }
 
 //Obtener Datos de la empresa a cambiar "tabla clientes"
-$sql = "SELECT password FROM `Log_in` WHERE `id_usuario` = '$id_usuario'";
-$resultado = query($sql, $conexion);
-while ($campo = mysql_fetch_array($resultado)) {
-    $password = $campo['password'];
+$sql2 = "SELECT * FROM `Log_In` WHERE `no_usuario` = '$no_usuario'";
+$resultado2 = query($sql2, $conexion);
+while ($campo2 = mysql_fetch_array($resultado2)) {
+    $password = $campo2['password'];
 }
 ?>
 
@@ -37,7 +38,7 @@ while ($campo = mysql_fetch_array($resultado)) {
 					<form action="cambiousuarion2.php" method="POST">							
 						<div class="alineaIzquierda">
 							<div id="mensaje1" class="mensaje">Nombre de Usuario</div>
-							<input onfocus="mensaje1()" onblur="noMensaje1()" type="text" class="inputChico"  name="usuario" value="<?php echo$id_usuario; ?>" >
+							<input onfocus="mensaje1()" onblur="noMensaje1()" type="text" class="inputChico"  name="usuario" value="<?php echo$id_usuario; ?>" required>
 						</div>
 						<div class="alineaIzquierda">
 							<div id="mensaje2" class="mensaje">Nombre</div>
@@ -71,8 +72,10 @@ while ($campo = mysql_fetch_array($resultado)) {
 						<div class="break"></div>
 						<br />
 						
+						
+						
 						<div id="mensaje7" class="mensaje">Password</div>
-						<input onfocus="mensaje7()" onblur="noMensaje7()" type="text" class="inputChico"  name="password" value="<?php echo$password; ?>"required>
+						<input onfocus="mensaje7()" onblur="noMensaje7()" type="password" class="inputChico"  name="password" value="<?php echo $password; ?>"required>
 						
 						<div class="break"></div>
 						<br />

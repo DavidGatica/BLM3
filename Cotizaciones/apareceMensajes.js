@@ -271,11 +271,13 @@ function noMensajeIcono10()
 function mensajeFooter1()
 {
 	document.getElementById("mensajeFooter1").style.marginTop = "-2em";	
-	document.getElementById("mensajeFooter1").style.color = "#434343";		
+	document.getElementById("mensajeFooter1").style.color = "#434343";	
+	document.getElementById("mensajeFooter1").style.opacity = "1";
 }
 
 function noMensajeFooter1()
 {
 	document.getElementById("mensajeFooter1").style.marginTop = "0";
 	document.getElementById("mensajeFooter1").style.color = "#e6e6e6";
+	document.getElementById("mensajeFooter1").style.opacity = "0";
 }
