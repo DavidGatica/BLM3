@@ -34,16 +34,9 @@
 				   
 				    <br />
 				    <br />
+				    <br />
 					
-					<div id="buscadoresCentrados">					
-						<div class="alineaIzquierda centrar">
-							Mostrar todo:
-							
-							<br />
-							<br />
-							
-							<input type="button" value="Mostrar todo" onclick="todo()" class="botonChico">							
-						</div>
+					<div id="buscadoresCentrados2">						
 
 						<div class="alineaIzquierda centrar">
 							Buscar por rfc:
@@ -60,9 +53,20 @@
 								<input type=submit value="Buscar" class="botonChico">
 							</form>
 						</div>
+						
+						<div class="alineaIzquierda centrar">
+							
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							
+							<input type="button" value="Mostrar todo" onclick="todo()" class="botonChico">							
+						</div>
 
 						<div class="alineaIzquierda centrar">
-							Buscar por nombre de empresa:
+							Buscar por empresa:
 							
 							<br />
 							<br />
@@ -75,18 +79,7 @@
 								
 								<input type=submit value="Buscar" class="botonChico">
 							</form>
-						</div>
-
-						<div class="alineaIzquierda centrar">
-							Salir:
-							
-							<br />
-							<br />
-							
-							<a href="administracion.php">
-								<input name="button" type="submit" value="Salir" class="botonChico"/>
-							</a>
-						</div>					
+						</div>				
 					</div>
 								
 					<div class="break"></div>
@@ -98,7 +91,7 @@
 				</div>
 
 				<?php
-					if ($opcion == "todo") 
+					if ($opcion == "todoClientes") 
 					{
 						include("catalogo_clientes.php");
 					}

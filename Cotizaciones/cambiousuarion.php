@@ -35,10 +35,10 @@ while ($campo2 = mysql_fetch_array($resultado2)) {
 				<br />
 				
 				<div id="inputsForm" class="centrar">
-					<form action="cambiousuarion2.php" method="POST">							
+					<?php echo '<form action="cambiousuarion2.php?usuario='.$id_usuario.'" method="POST">'; ?>
 						<div class="alineaIzquierda">
 							<div id="mensaje1" class="mensaje">Nombre de Usuario</div>
-							<input onfocus="mensaje1()" onblur="noMensaje1()" type="text" class="inputChico"  name="usuario" value="<?php echo$id_usuario; ?>" required>
+							<div onmouseover="mensaje1()" onmouseout="noMensaje1()"><input type="text" class="inputChico"  name="usuario" value="<?php echo$id_usuario; ?>" disabled="disabled"></div>
 						</div>
 						<div class="alineaIzquierda">
 							<div id="mensaje2" class="mensaje">Nombre</div>
@@ -62,11 +62,14 @@ while ($campo2 = mysql_fetch_array($resultado2)) {
 						
 						<div class="alineaIzquierda">
 						<div id="mensaje5" class="mensaje">E-mail</div>
-						<input onfocus="mensaje5()" onblur="noMensaje5()" type="text" class="inputChico"  name="e_mail" value="<?php echo$e_mail; ?>">
+						<input onfocus="mensaje5()" onblur="noMensaje5()" type="email" class="inputChico"  name="e_mail" value="<?php echo$e_mail; ?>" required>
 						</div>
 						<div class="alineaIzquierda">
 						<div id="mensaje6" class="mensaje">Permisos</div>
-						<input onfocus="mensaje6()" onblur="noMensaje6()" type="text" class="inputChico"  name="permiso" value="<?php echo$permiso; ?>"required>
+						<select onfocus="mensaje6()" onblur="noMensaje6()" class="inputChico"  name="permiso">
+							<option value="1" <?php if($permiso == 1)echo"selected" ?>>Administrador</option>
+							<option value="2" <?php if($permiso == 2)echo"selected" ?>>Vendedor</option>
+						</select>	
 						</div>
 						
 						<div class="break"></div>

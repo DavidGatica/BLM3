@@ -56,7 +56,7 @@
 		</div>
 		
 		<?php 
-			if(isset($_GET['cambioUs']))
+			if($_GET['cambioUs'] == "hecho")
 			{
 		?>
 		
