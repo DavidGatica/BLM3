@@ -3,6 +3,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link href="estilo.css" rel="stylesheet" type="text/css">
+ <link rel="stylesheet" type="text/css" href="css/style4.css" />
 <LINK REL="SHORTCUT ICON" TYPE="IMAGE/ICO" HREF="ico.png">
 <script src="ajax.js" language="JavaScript"></script>
 <body style="padding:0; margin:0" onload="CambiarColor1();">
@@ -132,7 +133,21 @@ document.getElementById('carac').style.display = 'none';
 </script>
 
 <br><br>
-<a href="http://bestlightmexico.com.mx/attachments/File/EG-40.pdf"><IMG SRC="brouchure.jpg" height="50" align="left" id="brillo"></a>
+<div class="container">
+			
+			
+			<section>
+                <div id="container_buttons">
+                    <p>
+                        <a class="a_demo_four" href="http://bestlightmexico.com.mx/attachments/File/EG-40.pdf">
+                            Ficha Técnica!
+                        </a>
+                    </p>
+                   
+                </div>
+			</section>
+        </div>
+
 </td>
 
 <td>

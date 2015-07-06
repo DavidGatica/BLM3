@@ -4,6 +4,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link href="estilo.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/style4.css" />
 <LINK REL="SHORTCUT ICON" TYPE="IMAGE/ICO" HREF="ico.png">
 <body style="padding:0; margin:0">
 <script>
@@ -111,7 +112,22 @@ Carmanah Tecnologies, sistemas solares autónomos con tecnología LED es una alt
 <td width="70%" valing="top">
 <div id="texto1" align="justify">
 Con más de 40 años en experiencia en la iluminación nuestro equipo esta capacitado  para darle la mejor solución en iluminación solar. Es por esto que nuestro compromiso es llegar a cada rincón del país, creando una conciencia ecológica en el ahorro de energía, en todos y cada uno de los usuarios y consumidores.</div><br><br><br>
-<a href="http://bestlightmexico.com.mx/attachments/File/Carta_de_Presentacion.pdf"><IMG id="brillo"  SRC="conocenos3.jpg" height="80"> </a><br>
+
+<div class="container">
+			
+			
+			<section>
+                <div id="container_buttons">
+                    <p>
+                        <a class="a_demo_four" href="http://bestlightmexico.com.mx/attachments/File/Carta_de_Presentacion.pdf">
+                            Carta de Presentación!
+                        </a>
+                    </p>
+                   
+                </div>
+			</section>
+        </div>
+
 
 <div id="texto4" align="center">Para saber más de nosotros puedes ver nuestra carta de presentación.</div><br><br>
 </td>

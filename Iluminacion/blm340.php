@@ -3,6 +3,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link href="estilo.css" rel="stylesheet" type="text/css">
+ <link rel="stylesheet" type="text/css" href="css/style4.css" />
 <LINK REL="SHORTCUT ICON" TYPE="IMAGE/ICO" HREF="ico.png">
 <script src="ajax.js" language="JavaScript"></script>
 <body style="padding:0; margin:0" onload="CambiarColor1();">
@@ -214,8 +215,22 @@ theim.style.background= "#333333";
 
 </tr>
 <td valign="top" align="left">
+ <div class="container">
+			
+			
+			<section>
+                <div id="container_buttons">
+                    <p>
+                        <a class="a_demo_four" href="http://bestlightmexico.com.mx/attachments/File/EG-300ientos.pdf">
+                            Ficha Técnica!
+                        </a>
+                    </p>
+                   
+                </div>
+			</section>
+        </div>
 	
-<a href="http://bestlightmexico.com.mx/attachments/File/EG-300ientos.pdf"><IMG SRC="brouchure.jpg" height="50"  id="brillo" align="left" ></a>
+
 </td>
 </table>
 

@@ -13,7 +13,7 @@ height:100%;
 } 
 
 a{text-decoration:none}
-a:hover{text-decoration: underline ; color:black;} 
+a:hover{text-decoration: underline ; color:white;} 
 
 td{ text-align:center}
 
@@ -580,7 +580,7 @@ Acordeon de imagenes
 
 
 .box {
-width:53%;
+width:730px;;
 height:430px;
 background:#e2e2e2;
 margin:40px auto;
@@ -613,7 +613,7 @@ border-radius:100px / 10px;
 .effect8:after
 {
 right:10px;
-left:auto;
+left:10px;
 -webkit-transform:skew(8deg) rotate(3deg);
 -moz-transform:skew(8deg) rotate(3deg);
 -ms-transform:skew(8deg) rotate(3deg);
@@ -790,5 +790,7 @@ margin-left:30px;
 
 }
 
-
+/*----------------------------------------------------------
+TERMINA IMAGEN DESLIZANTE
+------------------------------------------------------------*/
 
