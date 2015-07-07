@@ -149,12 +149,12 @@
 			}
 
 			.switch.demo1 input:checked ~ label:before {
-			  background: #25d025;
-			  background: radial-gradient(40% 35%, #5aef5a, #25d025 60%);
+			  background: rgba(255,214,163,1);
+			  background: radial-gradient(ellipse at center, rgba(255,214,163,1) 0%, rgba(255,146,10,1) 51%, rgba(255,231,201,1) 100%);
 			  box-shadow:
-				  inset 0 3px 5px 1px rgba(0,0,0,0.1),
-				  0 1px 0 rgba(255,255,255,0.4),
-				  0 0 10px 2px rgba(0, 210, 0, 0.5);
+				  inset 0 3px 5px 1px #e09c48,
+				  0 1px 0 #c77e24,
+				  0 0 10px 2px #f56f31;
 			}
 			
 			#luminaria
@@ -169,7 +169,7 @@
 			{
 				position: absolute;	
 				margin: 2em 0 0 10em;
-				z-index: 1;
+				z-index: 0;
 				transition: 0.1s;
 				opacity: 0;
 			}			
@@ -186,8 +186,9 @@
 			
 			#flecha
 			{
+				z-index: 20;
 				position: absolute;
-				right: 1em;
+				right: 0.5em;
 				top: 50%;
 				opacity: 0.5;
 				transition: 0.7s;
@@ -195,7 +196,18 @@
 			
 			#flecha:hover
 			{
-				opacity: 1;
+				opacity: 1.6;
+			}
+			
+			#areaFlecha
+			{
+				min-height: 100%;
+				width: 4em;
+				top: 0;
+				right: 0;
+				opacity: 0.6;
+				position: absolute;
+				background-color: #d4d4d4;
 			}
 		</style>
 		<script>
@@ -203,6 +215,19 @@
 			{
 				if(document.getElementById('checkbox').checked)
 				{
+					document.getElementById('especial').style.color = "black";
+					document.getElementById('body').style.background = "black";
+					document.getElementById('nombreCompleto').style.marginRight = "4em";
+					document.getElementById('nombreCompleto').style.opacity = "0";
+					document.getElementById('curva').style.opacity = "0";
+					document.getElementById('curva').style.transition = "4s";
+					document.getElementById('luces').style.opacity = "0";
+					document.getElementById('luces').style.transition = "3s";
+					document.getElementById('luminaria').style.opacity = "0.5";
+					document.getElementById('switch').style.opacity = "0.5";					
+				}
+				else
+				{					
 					document.getElementById('body').style.background = "white";
 					document.getElementById('especial').style.color = "#db6e2c";
 					document.getElementById('nombreCompleto').style.marginRight = "0";
@@ -214,23 +239,24 @@
 					document.getElementById('luminaria').style.opacity = "1";
 					document.getElementById('switch').style.opacity = "1";
 				}
-				else
-				{					
-					document.getElementById('especial').style.color = "black";
-					document.getElementById('body').style.background = "black";
-					document.getElementById('nombreCompleto').style.marginRight = "4em";
-					document.getElementById('nombreCompleto').style.opacity = "0";
-					document.getElementById('curva').style.opacity = "0";
-					document.getElementById('curva').style.transition = "4s";
-					document.getElementById('luces').style.opacity = "0";
-					document.getElementById('luces').style.transition = "3s";
-					document.getElementById('luminaria').style.opacity = "0.5";
-					document.getElementById('switch').style.opacity = "0.5";
-				}
+			}
+			
+			function primerCambio()
+			{
+				document.getElementById('body').style.background = "white";
+				document.getElementById('especial').style.color = "#db6e2c";
+				document.getElementById('nombreCompleto').style.marginRight = "0";
+				document.getElementById('nombreCompleto').style.opacity = "1";
+				document.getElementById('curva').style.opacity = "1";
+				document.getElementById('curva').style.transition = "0.7s";
+				document.getElementById('luces').style.opacity = "1";
+				document.getElementById('luces').style.transition = "0.7s";
+				document.getElementById('luminaria').style.opacity = "1";
+				document.getElementById('switch').style.opacity = "1";
 			}
 		</script>
 	</head>
-    <body id="body">
+    <body id="body" onload="primerCambio()">
 		<div id="movimientoLogo">
 			<div id="curva">
 				<img src="curva.png" />				
@@ -238,7 +264,11 @@
 			<h1 id="especial">BLM</h1>
 			<h3 id="nombreCompleto">Best Light M&eacute;xico</a></h3>
 		</div>
-		<a href="iluminacion/index.php"><img id="flecha" src="flecha.png" /></a>
+		<div id="areaFlecha">
+			<a href="iluminacion/index.php">
+				<img id="flecha" src="flecha.png" />
+			</a>
+		</div>
 		<div id="luminaria1">
 			<img id="luminaria" src="Luminaria1.png" />
 			<img id="luces" src="brillito.png" />
