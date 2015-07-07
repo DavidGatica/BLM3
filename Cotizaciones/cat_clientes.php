@@ -23,7 +23,7 @@
 		<script>
 			function todo() 
 			{
-				location.href = "?sec=visualizarC&opcion=todo";
+				location.href = "?sec=visualizarC&opcion=todoClientes";
 			}
 		</script>
 	
