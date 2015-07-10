@@ -14,10 +14,9 @@ a {
     text-decoration: none;
 }
 h1 {
-    font-family: 'league_gothicregular';
+	font-family: Arial, sans-serif;
     text-align: center;
     margin: 40px 0;
-    text-shadow: 0 3px 1px hsl(0,0%,100%);
 }
 header {
     text-transform: uppercase;
@@ -28,7 +27,6 @@ header h1 {
     margin: 0;
     font-size: 40px;
     color: hsl(0,0%,100%);
-    text-shadow: 0 3px 4px hsl(0,0%,0%);
 }
 nav ul {
     height: 30px;

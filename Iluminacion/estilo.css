@@ -645,9 +645,9 @@ IMAGEN DESLIZANTE
 .vista {
     width: 300px;
     height: 200px;
-   	margin-left:370px;
+   	margin-left:200px;
     float: left;
-    border: 10px solid #fff;
+    border: none;
     overflow: hidden;
     position: relative;
     text-align: center;
@@ -708,7 +708,7 @@ IMAGEN DESLIZANTE
 }
 .vista .mascara {
     opacity: 0;
-    background-color: hsla(34,93%,45%,0.7);
+    background-color: hsla(28,100%,49%,0.47);
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
@@ -793,4 +793,20 @@ margin-left:30px;
 /*----------------------------------------------------------
 TERMINA IMAGEN DESLIZANTE
 ------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+DIV PRODUCTOS
+------------------------------------------------------------*/
+.box2 {
+padding:1em;
+width:700px;
+height:450px;
+
+margin:60px auto;
+}
+
+/*------------------------------------------
+FIN DIV PRODUCTOS
+-------------------------------------------*/
 

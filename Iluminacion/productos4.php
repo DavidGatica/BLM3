@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link href="default.css" rel="stylesheet" type="text/css">
@@ -8,6 +7,12 @@
 <link rel="stylesheet" type="text/css" href="css/style4.css" />
 <script src="ajax.js" language="JavaScript"></script>
 <LINK REL="SHORTCUT ICON" TYPE="IMAGE/ICO" HREF="ico.png">
+
+	
+		<link rel="stylesheet" type="text/css" href="css/vicons-font.css" />
+		
+		<link rel="stylesheet" type="text/css" href="css/buttons.css" />
+
 <body style="padding:0; margin:0" onload="CambiarColor1();">
 
 <div id="arribaa">
@@ -82,42 +87,25 @@ Iluminación Fotovoltaica Profesional
 
 
 </div>
-
-<div id="mover">
-<h1>Series BLM-EG</h1>
-<nav>
-<ul>
-<li>
-<a href="productos.php">EG-40-80-145</a>
-</li>
-<li>
-<a href="productos2.php">EG-320</a>
-</li>
-<li>
-<a href="productos3.php">EG-340</a>
-</li>
-<li>
-<a href="#" class="activo">EG-500</a>
-</li>
-<li>
-<a href="productos5.php">EverGEN 1700</a>
-</li>
-</ul>
-</nav>        
-<div class="contenedor">
-
-
-<div class="vista">
-<img src="des4.png">
-<div class="mascara"></div>
-<div class="contenido">
-<h2>Modelo BLM EG-500</h2>
-<p>El EG500 es el mas potente sistema de iluminacion LED solar de la Serie EG y puede producir hasta 12,500 lumenes...</P>
-<a href="blm500.php" class="informacion">leer más</a>
-</div>
-</div>
-</div>
-
+<div class="box2">
+	<h1>Series BLM-EG</h1>
+	
+	<a href="productos.php" class="button button--wayra button--border-thick button--text-upper button--size-s">EG-145</a>
+	<a href="productos2.php" class="button button--wayra button--border-thick button--text-upper button--size-s">EG-320</a>
+    <a href="productos3.php" class="button button--wayra button--border-thick button--text-upper button--size-s">EG-340</a>
+    <a href="productos4.php" class="button button--wayra button--border-thick button--text-upper button--size-s">EG-500</a>
+    <a href="productos5.php" class="button button--wayra button--border-thick button--text-upper button--size-s">everGEN</a>    
+			
+				
+			<div class="vista">
+			<img src="des4.png">
+			<div class="mascara"></div>
+			<div class="contenido">
+			<h2>Modelo BLM EG-500</h2>
+			<p>El EG500 es el mas potente sistema de iluminacion LED solar de la Serie EG y puede producir hasta 12,500 lumenes...</P>
+			<a href="blm500.php" class="informacion">leer más</a>
+			</div>
+			</div>
 </div>
 
 <table align="center" width="980" border=0 cellpadding="50">
@@ -137,13 +125,14 @@ Iluminación Fotovoltaica Profesional
                 <div id="container_buttons">
                     <p>
                         <a class="a_demo_four" href="http://bestlightmexico.com.mx/attachments/File/brochure.pdf">
-                            Ver Catalogo!
+                            Ver cátalogo!
                         </a>
                     </p>
                    
                 </div>
 			</section>
         </div>
+		<br>
 <div id="texto4" align="center" >Para saber más de nuestros productos, puedes descargar nuestro cátalogo. </div>
 </td>
 
