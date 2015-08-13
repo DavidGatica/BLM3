@@ -49,6 +49,10 @@
 		$busquedaProductoCatalogo = $_GET['busquedaProductoCatalogo'];
 		$busquedaProductoDescripcion = $_GET['busquedaProductoDescripcion'];
 	}
+  
+  if(isset($_GET['empresaBuscar'])) {
+    $seccion = "empresaBuscar";
+  }
 	
 
 	$sql = "SELECT * FROM Version WHERE version_no = '$no_version'";
@@ -69,21 +73,24 @@
 	$nombreCompleto = $nombre. " " .$apellido_p; 
 ?>
 
+<!doctype html >
 
-<!DOCTYPE html >
-
-<html>
+<html lang="es-MX">
 	<head>
 		<link rel="icon" type="image/png" href="images/ico.png" />
 		<title>Consecutivo de cotizaciones</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />  
 		<link href="stylenuevo.css" rel="stylesheet" type="text/css" />
 	</head>
 
-	<body> 	
+	<body onload="cargaPagina()"> 	
 		<script src="apareceMensajes.js"></script>
 		<script>
+      function cargaPagina() {
+        document.getElementsByTagName('body')[0].style.opacity = "1";
+      }
+      
 			function agregar_c() 
 			{
 				location.href = "?sec=alta";
@@ -400,7 +407,8 @@
 					';
 				}	
 					?>				
-		</div>				
+		</div>
+    <div id="ocupaHeader"></div>
 		
 		<div id="contenidoCont">			                      
 
@@ -415,7 +423,6 @@
 					if ($seccion == null) 
 					{
 						require_once("home.php");
-						$atras="algo";
 					}
 					
 					if ($seccion == "log_in") 
@@ -541,11 +548,16 @@
 						require_once("cat_prod.php");
 						$atras="algo";
 					}	
+          
+          if ($seccion == "empresaBuscar") {            
+            $empresaBuscar = $_GET['empresaBuscar'];
+            require_once("cat_clientes.php?empresaBuscar=$empresaBuscar");
+            $atras="algo";
+          }
 				}				
 			?>    		
 
 		</div>
-		
 		<footer>
 			
 			<?php
@@ -596,6 +608,24 @@
 					"
 						<div class='lineaVerticalPie'></div>
 						<div id='sesionFooter2'>Busqueda por descripción: $busquedaProductoDescripcion </div>
+					";
+				}
+        
+        if(isset($_POST['empresaBuscar'])) {
+          $empresaBuscar = $_POST['empresaBuscar'];
+					echo
+					"
+						<div class='lineaVerticalPie'></div>
+						<div id='sesionFooter2'>Busqueda por empresa: $empresaBuscar </div>
+					";
+				}
+        
+        if(isset($_POST['rfc'])) {
+          $rfc = $_POST['rfc'];
+					echo
+					"
+						<div class='lineaVerticalPie'></div>
+						<div id='sesionFooter2'>Busqueda por rfc: $rfc </div>
 					";
 				}
 				

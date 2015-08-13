@@ -362,7 +362,7 @@
                                         <thead>
                                             <tr>
                                                 <th>NO.</th>
-                                                <th>DESCRIPCIÓN</th>
+                                                <th class="descripcionEncabezado">DESCRIPCIÓN</th>
                                             </tr>
                                         </thead>
 
@@ -375,7 +375,7 @@ while ($campo = mysql_fetch_array($resultado)) {
     echo
     "<tr>" .
     "<td>" . $i . "</td>" .
-    "<td>" . $campo['descripcion'] . "</td>" .
+    "<td id='texto1'>" . $campo['descripcion'] . "</td>" .
     "</tr>";
     $i++;
 }

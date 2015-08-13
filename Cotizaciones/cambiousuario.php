@@ -1,54 +1,41 @@
 <?php
-//Capturamos el usuario autenticado
-session_start();
-if (!isset($_SESSION['usuario'])) {
-    header('Location: log_in.php');
-}
-$id_usuario = $_SESSION['usuario'];
-
-//incluimos el archivo con las funciones
-include ("funciones_mysql.php");
-
-//Funcion que conecta la base de datos
-$conexion = conectar();
-
-//Obtenemos el nombre de la empresa por el metodo POST
-$empresa = $_POST['empresa'];
-//echo $empresa;
-//$empresa = preg_replace("/ +/"," ",$empresa);
-///Obtener Datos de la empresa a cambiar "tabla clientes"
-$sql = "SELECT * FROM `Clientes` WHERE `empresa` = '$empresa'";
-$resultado = query($sql, $conexion);
-$campo = mysql_fetch_array($resultado);
-$id_cliente = $campo['id_cliente'];
-$id_direccion = $campo['id_direccion'];
-$id_contacto = $campo['id_contacto'];
-$id_usuario = $campo['id_usuario'];
-$id = $campo['id_num_cliente'];
+  //Obtenemos el nombre de la empresa por el metodo POST
+  $empresa = $_POST['empresa'];
+  //echo $empresa;
+  //$empresa = preg_replace("/ +/"," ",$empresa);
+  ///Obtener Datos de la empresa a cambiar "tabla clientes"
+  $sql = "SELECT * FROM `Clientes` WHERE `empresa` = '$empresa'";
+  $resultado = query($sql, $conexion);
+  $campo = mysql_fetch_array($resultado);
+  $id_cliente = $campo['id_cliente'];
+  $id_direccion = $campo['id_direccion'];
+  $id_contacto = $campo['id_contacto'];
+  $id_usuario = $campo['id_usuario'];
+  $id = $campo['id_num_cliente'];
 
 
-//Obtener Datos de la empresa a cambiar "tabla direcciones"
-$sql = "SELECT * FROM `Direcciones` WHERE `id_direccion` = '$id_direccion'";
-$resultado = query($sql, $conexion);
-$campo = mysql_fetch_array($resultado);
-$calle = $campo['calle'];
-$num_int = $campo['num_int'];
-$num_ext = $campo['num_ext'];
-$colonia = $campo['colonia'];
-$municipio = $campo['municipio'];
-$estado = $campo['estado'];
-$cp = $campo['cp'];
+  //Obtener Datos de la empresa a cambiar "tabla direcciones"
+  $sql = "SELECT * FROM `Direcciones` WHERE `id_direccion` = '$id_direccion'";
+  $resultado = query($sql, $conexion);
+  $campo = mysql_fetch_array($resultado);
+  $calle = $campo['calle'];
+  $num_int = $campo['num_int'];
+  $num_ext = $campo['num_ext'];
+  $colonia = $campo['colonia'];
+  $municipio = $campo['municipio'];
+  $estado = $campo['estado'];
+  $cp = $campo['cp'];
 
 
-//Obtener Datos de la empresa a cambiar "tabla direcciones"
-$sql = "SELECT * FROM `Contacto` WHERE `id_contacto` = '$id_contacto'";
-$resultado = query($sql, $conexion);
-$campo = mysql_fetch_array($resultado);
-$nombre = $campo['nombre_c'];
-$departamento = $campo['departamento'];
-$telefono1 = $campo['telefono1'];
-$telefono2 = $campo['telefono2'];
-$email = $campo['e_mail_c'];
+  //Obtener Datos de la empresa a cambiar "tabla direcciones"
+  $sql = "SELECT * FROM `Contacto` WHERE `id_contacto` = '$id_contacto'";
+  $resultado = query($sql, $conexion);
+  $campo = mysql_fetch_array($resultado);
+  $nombre = $campo['nombre_c'];
+  $departamento = $campo['departamento'];
+  $telefono1 = $campo['telefono1'];
+  $telefono2 = $campo['telefono2'];
+  $email = $campo['e_mail_c'];
 ?>
 
 <!DOCTYPE html >

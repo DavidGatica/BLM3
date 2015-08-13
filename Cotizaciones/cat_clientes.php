@@ -9,10 +9,10 @@
     else
         $rfc = $_POST['rfc'];
 
-    if (!isset($_POST['empresa']))
+    if (!isset($_POST['empresaBuscar']))
         $empresa = "nada";
     else
-        $empresa = $_POST['empresa'];
+        $empresa = $_POST['empresaBuscar'];
 ?>
 	
 <!DOCTYPE html>
@@ -44,8 +44,8 @@
 							<br />
 							<br />
 							
-							<form action="cat_clientes.php" method="POST">
-								<input type=text name=rfc class="inputChico" required> 
+							<form action="index.php?sec=visualizarC" method="POST">
+								<input type=text name=rfc class="inputChico"> 
 								
 								<br />
 								<br />
@@ -71,8 +71,8 @@
 							<br />
 							<br />
 							
-							<form action="cat_clientes.php" method="POST">
-								<input type=text name=empresa class="inputChico" required> 
+							<form action="index.php?sec=visualizarC" method="POST">
+								<input type=text name=empresaBuscar class="inputChico" required> 
 								
 								<br />
 								<br />

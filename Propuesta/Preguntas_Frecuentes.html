@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="keywords" content="HTML, CSS, PHP, JavaScript" />
+        <meta name="description" content="Venta de artefactos fotoluminiscentes"/>
+        <title>Prueba de diseño</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="css/menu.css" rel="stylesheet" type="text/css" />
+        
+    </head>
+    <body>
+    
+        <header>
+         <img id="logo" src="logo ALSA blanquitas.svg" /> <br><br><br>
+         <h1 id="tittle">Tu solución en iluminación<h1>
+         <div id="search">
+                     <script>
+            (function() {
+              var cx = '013486087382821800792:pihurugfvgo';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                  '//cse.google.com/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          </script>
+          <gcse:search></gcse:search>
+         </div>
+         
+        </header>
+        
+        <div id="DownHeader"></div>
+        
+        <div class="menuContainer">
+         <ul id="nav">
+             
+                <li><a class="hsubs" href="index.html">Inicio</a>
+                 <div class="linea_vertical"></div> 
+                </li>
+                <li><a class="hsubs" href="#">Presentación</a>
+                  <div class="linea_vertical"></div>    
+                    <ul class="subs">
+                        <li><a href="#">Objetivo</a></li>
+                        <li><a href="#">Misión</a></li>
+                        <li><a href="#">Visión</a></li>
+                        <li><a href="#">¿Quiénes somos?</a></li>
+                        <li><a href="Preguntas_Frecuentes.html">Preguntas Frecuentes</a></li>
+                    </ul>
+                </li>
+                <li><a class="hsubs" href="#">Proyectos</a>
+                  <div class="linea_vertical"></div>
+                    <ul class="subs">
+                        <li><a href="#">Super Via Santa Fe</a></li>
+                        <li><a href="#">Túnel Santa Fe</a></li>
+                        <li><a href="#">Circuito Mexiquense</a></li>
+                        <li><a href="#">Estación Buenavista</a></li>
+                        <li><a href="#">Edificio Politecnico</a></li>
+                        <li><a href="#">Politecnico Hidalgo</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Productos</a>
+                  <ul class="subs">
+                        <li><a href="#">Iluminación industrial</a></li>
+                        <li><a href="#">Ilumincación fluorescente</a></li>
+                        <li><a href="#">Iluminación exterior</a></li>
+                        <li><a href="#">Iluminacón interior</a></li>
+                        <li><a href="#">Iluminación de emergencia</a></li>
+                        <li><a href="#">Iluminación con leds</a></li>
+                        <li><a href="#">Sistemas de alto montaje</a></li>
+                        <li><a href="#">Iluminación solar</a></li>
+                    </ul>
+                </li>
+                  <div class="linea_vertical"></div>
+                <li><a href="#">Biblioteca de Iluminación</a></li>
+                  <div class="linea_vertical"></div>
+                <li><a href="#">Galeria de videos</a></li>
+                  <div class="linea_vertical"></div>
+                <li><a href="#">Formas de Pago</a></li>
+                  <div class="linea_vertical"></div>
+                <li><a href="#">Contáctanos</a></li>
+                  
+            </ul>
+        </div>  
+       <div id="titlePreguntas">       
+        <h1>Preguntas Frecuentes</h1>
+       </div>
+       
+        <dl>
+          <dt>¿Quienes somos?</dt>
+          <dd>Artefactos Luminicos S.A. de C.V.</dd>
+
+          <dt>¿Como puedes contactarnos?</dt>
+          <dd>Respuesta</dd>
+
+          <dt>¿Cuales son nuestros productos?</dt>
+          <dd>Respuesta</dd>
+          
+          <dt>¿Cuales son las formas de pago?
+          <dd>Respuesta</dd>
+
+          <dt>¿Donde estamos ubicados?</dt>
+          <dd>Respuesta</dd>
+
+          <dt>¿Para qué fines utilizaremos sus datos personales?</dt>
+          <dd>Los datos personales que recabamos de usted, los utilizaremos para las siguientes finalidades que son necesarias<br/>
+              para el servicio que solicita:<br/>
+              ● Facturación<br/>
+              De manera adicional, utilizaremos su información personal para las siguientes finalidades secundarias que no son<br/>
+              necesarias para el servicio solicitado, pero que nos permiten y facilitan brindarle una mejor atención:<br/>
+              ● Calidad del servicio<br/>
+              ● Promociones<br/>
+              ● Mercadotecnia o publicitaria<br/>
+              ● Prospección comercial<br/>
+              <br/>
+              La negativa para el uso de sus datos personales para estas finalidades no podrá ser un motivo para que le neguemos<br/>
+              los servicios y productos que solicita o contrata con nosotros.<br/></dd>
+        </dl>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript">
+          $('dl dd').not('dt.activo + dd').hide();
+             $('dl dt').click(function(){
+                if ($(this).hasClass('activo')) {
+                     $(this).removeClass('activo');
+                     $(this).next().slideUp();
+                } else {
+                     $('dl dt').removeClass('activo');
+                     $(this).addClass('activo');
+                     $('dl dd').slideUp();
+                     $(this).next().slideDown();
+                }
+             });
+         </script>
+      
+       
+        
+     
+        
+        <div id="Provider">
+        <a id="ProviderText"> Nuestros proveedores:</a>
+         <img id="Holophane" src="LogoHolophane.svg" />
+         <img id="Lithonia" src="LogoLithonia.svg"/>
+         <img id="AEL" src="LogoAEL.svg" />
+          <img id="Hydrel" src="LogoHYDREL.svg" />
+         <img id="Killark" src="LogoKILLARK.svg" />
+        </div>
+        
+        
+        <footer>
+        <div align="center" >
+        <h4 id="TitleFoot">Artefactos Lumínicos es una marca registrada</h4>
+          <a href="#" id="texto9" align="center"> Aviso de Privacidad<br><br></a>
+         </div> 
+        </footer> 
+         
+        
+
+    </body>
+</html>

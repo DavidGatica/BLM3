@@ -4,7 +4,7 @@
 	<body>	
 		<div id="contenido" class="bienvenida">
 			<div id="contenidoCont">
-				<img src="images/logo_home.png" id="logoHome">
+				<img src="images/logoBestLightMexico.svg" id="logoHome">
 				
 				<br />
 				<br />

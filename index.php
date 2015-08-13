@@ -1,7 +1,12 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es-MX">
 	<head>
+		<meta name="keywords" content="HTML, CSS, PHP, JavaScript" />
+		<meta name="description" content="Venta de artefactos fotoluminiscentes" />
+		<meta charset="UTF-8" />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+		<meta name="author" content="Nevin Santana" />
+		<title>Best Light México</title>
 		<style type="text/css">
 		
 		*,
@@ -255,23 +260,24 @@
 				document.getElementById('switch').style.opacity = "1";
 			}
 		</script>
+	
 	</head>
     <body id="body" onload="primerCambio()">
 		<div id="movimientoLogo">
 			<div id="curva">
-				<img src="curva.png" />				
+				<img alt="Curva del logo de BLM" src="curva.png" />				
 			</div>
 			<h1 id="especial">BLM</h1>
-			<h3 id="nombreCompleto">Best Light M&eacute;xico</a></h3>
+			<h3 id="nombreCompleto">Best Light M&eacute;xico</h3>
 		</div>
 		<div id="areaFlecha">
 			<a href="iluminacion/index.php">
-				<img id="flecha" src="flecha.png" />
+				<img alt="Botón para ir a iluminacion/index.php" id="flecha" src="flecha.png" />
 			</a>
 		</div>
 		<div id="luminaria1">
-			<img id="luminaria" src="Luminaria1.png" />
-			<img id="luces" src="brillito.png" />
+			<img alt="Imágen de luminaria tipo 1" id="luminaria" src="Luminaria1.png" />
+			<img alt="Efecto de luz para luminaria" id="luces" src="brillito.png" />
 		</div>
 		<div class="switch demo1">
 			<input id="checkbox" type="checkbox" onchange="cambiaTodo()">

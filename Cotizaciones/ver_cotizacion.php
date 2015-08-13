@@ -214,7 +214,7 @@
                                     <th width="7%">Cantidad</th>
                                     <th width="7%">Unidad</th>
                                     <th width="7%">Catálogo</th>
-                                    <th width="58%">Descripción</th>
+                                    <th width="50%">Descripción</th>
                                     <th width="7%">Precio unitario</th>
                                     <th width="7%">Precio total</th>
                                 </tr>
@@ -271,7 +271,7 @@
                                             </tr>
                                             <tr>
                                                 <th width="20%" align="center">No de nota</th>
-                                                <th width="80%" align="center">Descripción</th>
+                                                <th class="descripcionEncabezado" align="center">Descripción</th>
                                             </tr>
                                         </thead>
 <?php
